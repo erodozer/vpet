@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dxekr2d6at65e"]
+[gd_scene load_steps=19 format=3 uid="uid://dxekr2d6at65e"]
 
 [ext_resource type="Script" uid="uid://cpjkwf5ah8yfv" path="res://scenes/game_quiz/scene.gd" id="1_qr2k3"]
 [ext_resource type="Shader" uid="uid://c4pt0ljhyev6h" path="res://ui/scroll.gdshader" id="2_cjsqv"]
@@ -11,7 +11,6 @@
 [ext_resource type="SpriteFrames" uid="uid://dushx8aen3ymk" path="res://pet/frames.tres" id="13_meh8h"]
 [ext_resource type="FontFile" uid="uid://cu56gylq7usm7" path="res://ui/fonts/Minimum.ttf" id="16_u36rc"]
 [ext_resource type="PackedScene" uid="uid://tyd6hlyrgac7" path="res://ui/results.tscn" id="17_s8nwv"]
-[ext_resource type="FontFile" uid="uid://ymu18ty2r2n8" path="res://ui/fonts/PolygonPixel5x7Standard.ttf" id="19_jm60g"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_klptx"]
 shader = ExtResource("2_cjsqv")
@@ -89,7 +88,6 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_k72ga"]
 line_spacing = -1.0
-font = ExtResource("19_jm60g")
 font_color = Color(0, 0, 0, 1)
 shadow_size = 0
 
@@ -140,7 +138,7 @@ autoplay = "study"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_b1v38")
+&"": SubResource("AnimationLibrary_b1v38")
 }
 
 [node name="Control" type="Control" parent="."]
@@ -221,6 +219,7 @@ offset_bottom = 140.0
 theme = ExtResource("8_xl5uv")
 
 [node name="RichTextLabel" type="Label" parent="Control/HelpText"]
+custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
 size_flags_vertical = 1
 text = "Answer correctly = +100$

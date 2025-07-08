@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d3ardee1a5sfh" path="res://theme/grem/scenes/home/ui/controls/icons.png" id="1_hyibd"]
 [ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="2_aeul4"]
-[ext_resource type="Resource" uid="uid://4jbi7bvix4ht" path="res://resources/unlockables/gacha.tres" id="3_t3yj7"]
+[ext_resource type="Resource" uid="uid://4jbi7bvix4ht" path="res://resources/unlockables/game_gacha.tres" id="3_wayio"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6spao"]
 atlas = ExtResource("1_hyibd")
@@ -11,5 +11,5 @@ region = Rect2(17, 119, 17, 17)
 [resource]
 script = ExtResource("2_aeul4")
 game = "gacha"
-unlock = ExtResource("3_t3yj7")
+unlock = ExtResource("3_wayio")
 icon = SubResource("AtlasTexture_6spao")

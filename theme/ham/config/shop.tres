@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cm55ffjlgedb" path="res://resources/ShopResource.gd" id="1_cn2on"]
 [ext_resource type="Resource" uid="uid://diucbp20w8rbd" path="res://theme/ham/resources/unlockables/yaoi.tres" id="1_qbagp"]
-[ext_resource type="Resource" uid="uid://cu1hik6js58br" path="res://resources/unlockables/quiz.tres" id="2_y4a1l"]
+[ext_resource type="Resource" uid="uid://cu1hik6js58br" path="res://resources/unlockables/game_quiz.tres" id="2_y4a1l"]
 [ext_resource type="Resource" uid="uid://c62ljxf7cdmao" path="res://resources/unlockables/soap.tres" id="3_pu3h7"]
-[ext_resource type="Resource" uid="uid://cnibaxqe5jqba" path="res://resources/unlockables/plinko.tres" id="4_kcs52"]
+[ext_resource type="Resource" uid="uid://cnibaxqe5jqba" path="res://resources/unlockables/game_plinko.tres" id="4_kcs52"]
 [ext_resource type="Resource" uid="uid://ylanugfo0dbw" path="res://resources/unlockables/feedpet.tres" id="5_y2lve"]
 [ext_resource type="Resource" uid="uid://3i7d8oqwx13j" path="res://resources/unlockables/overfeed.tres" id="6_d1jjo"]
 [ext_resource type="Resource" uid="uid://cec3vgn6hmlcs" path="res://resources/unlockables/resettimers.tres" id="6_gyykj"]

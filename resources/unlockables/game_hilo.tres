@@ -6,5 +6,5 @@
 script = ExtResource("1_q3c5y")
 flag = "game.hilo"
 display_name = "High-Low"
-description = "Play High-Low with Clover"
+description = "Guess the next card"
 cost = 25000

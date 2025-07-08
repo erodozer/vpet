@@ -11,6 +11,8 @@ export_presets.cfg
 # ignore krita metafiles
 *-autosave.*
 *.*~
+# do not commit raw art files to git
+*.kra
 
 # ignore build files
 bin/

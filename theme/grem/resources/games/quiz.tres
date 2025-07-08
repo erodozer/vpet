@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d3ardee1a5sfh" path="res://theme/grem/scenes/home/ui/controls/icons.png" id="1_gggcw"]
 [ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="2_4iswx"]
-[ext_resource type="Resource" uid="uid://cu1hik6js58br" path="res://resources/unlockables/quiz.tres" id="3_3w3uh"]
+[ext_resource type="Resource" uid="uid://cu1hik6js58br" path="res://resources/unlockables/game_quiz.tres" id="3_terla"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_injwe"]
 atlas = ExtResource("1_gggcw")
@@ -11,5 +11,5 @@ region = Rect2(17, 170, 17, 17)
 [resource]
 script = ExtResource("2_4iswx")
 game = "quiz"
-unlock = ExtResource("3_3w3uh")
+unlock = ExtResource("3_terla")
 icon = SubResource("AtlasTexture_injwe")

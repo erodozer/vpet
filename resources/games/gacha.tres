@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bunxtk64ph182" path="res://scenes/home/ui/controls/icons.png" id="1_7ttkb"]
 [ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="2_cyyn5"]
-[ext_resource type="Resource" uid="uid://4jbi7bvix4ht" path="res://resources/unlockables/gacha.tres" id="3_7gp6g"]
+[ext_resource type="Resource" uid="uid://4jbi7bvix4ht" path="res://resources/unlockables/game_gacha.tres" id="3_7gp6g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jpvax"]
 atlas = ExtResource("1_7ttkb")

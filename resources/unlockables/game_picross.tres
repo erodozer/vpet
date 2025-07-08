@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ShopResource" load_steps=2 format=3 uid="uid://17brybp333ta"]
+
+[ext_resource type="Script" uid="uid://cm55ffjlgedb" path="res://resources/ShopResource.gd" id="1_ojina"]
+
+[resource]
+script = ExtResource("1_ojina")
+flag = "game.picross"
+display_name = "Nonogram"
+description = "Paint by numbers"
+cost = 50000

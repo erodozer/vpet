@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="FoodResource" load_steps=13 format=3 uid="uid://hxnsymsk3w4n"]
+
+[ext_resource type="Texture2D" uid="uid://dr2xgml4mhfhg" path="res://theme/grem/resources/food/boba/boba_1.png" id="1_b1iub"]
+[ext_resource type="Texture2D" uid="uid://crrrh0agrg7uw" path="res://theme/grem/resources/food/boba/boba_2.png" id="2_np0tu"]
+[ext_resource type="Texture2D" uid="uid://dg64ct0v2ss0v" path="res://theme/grem/resources/food/boba/boba_3.png" id="3_s8k40"]
+[ext_resource type="Texture2D" uid="uid://cv72peu7s7rks" path="res://theme/grem/resources/food/boba/boba_eat_1.png" id="4_w18uv"]
+[ext_resource type="Texture2D" uid="uid://dd676ptt0jvok" path="res://theme/grem/resources/food/boba/boba_eat_2.png" id="5_5xo83"]
+[ext_resource type="Texture2D" uid="uid://b1kqsrkn5lnt6" path="res://theme/grem/resources/food/boba/boba_eat_3.png" id="6_0dmlt"]
+[ext_resource type="Texture2D" uid="uid://bgbl3s84x1m8c" path="res://theme/grem/resources/food/boba/boba_eat_4.png" id="7_asded"]
+[ext_resource type="Texture2D" uid="uid://ghmdg50rtq45" path="res://theme/grem/resources/food/boba/boba_eat_5.png" id="8_128mg"]
+[ext_resource type="Texture2D" uid="uid://dcyop72uprtuv" path="res://theme/grem/resources/food/boba/icon.png" id="9_ujxyw"]
+[ext_resource type="Script" uid="uid://7w43b6hsn11b" path="res://resources/FoodResource.gd" id="10_27req"]
+[ext_resource type="Resource" uid="uid://bpb2kbu1n36rs" path="res://theme/grem/resources/unlockables/boba.tres" id="11_oavbq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cjcap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_b1iub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_np0tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s8k40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_np0tu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_b1iub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w18uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5xo83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0dmlt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_asded")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_128mg")
+}],
+"loop": false,
+"name": &"eat",
+"speed": 3.0
+}]
+
+[resource]
+script = ExtResource("10_27req")
+hungry = 60.0
+boredom = 10.0
+cooldown = 30.0
+unlock = ExtResource("11_oavbq")
+icon = ExtResource("9_ujxyw")
+animation = SubResource("SpriteFrames_cjcap")

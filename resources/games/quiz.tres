@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="2_s8gjr"]
 [ext_resource type="Texture2D" uid="uid://bunxtk64ph182" path="res://scenes/home/ui/controls/icons.png" id="2_vnr52"]
-[ext_resource type="Resource" uid="uid://cu1hik6js58br" path="res://resources/unlockables/quiz.tres" id="3_5mn0o"]
+[ext_resource type="Resource" uid="uid://cu1hik6js58br" path="res://resources/unlockables/game_quiz.tres" id="3_5mn0o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jpvax"]
 atlas = ExtResource("2_vnr52")

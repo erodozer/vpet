@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GameResource" load_steps=5 format=3 uid="uid://bwhbnwdba8ifr"]
+
+[ext_resource type="Texture2D" uid="uid://bunxtk64ph182" path="res://scenes/home/ui/controls/icons.png" id="1_4smjs"]
+[ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="2_6txja"]
+[ext_resource type="Resource" uid="uid://17brybp333ta" path="res://resources/unlockables/game_picross.tres" id="3_4smjs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpvax"]
+atlas = ExtResource("1_4smjs")
+region = Rect2(17, 170, 17, 17)
+
+[resource]
+script = ExtResource("2_6txja")
+game = "picross"
+unlock = ExtResource("3_4smjs")
+icon = SubResource("AtlasTexture_jpvax")

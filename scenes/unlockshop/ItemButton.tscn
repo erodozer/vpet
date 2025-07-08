@@ -1,24 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpoy3vi87f7ib"]
+[gd_scene load_steps=2 format=3 uid="uid://cpoy3vi87f7ib"]
 
-[ext_resource type="FontFile" uid="uid://cu56gylq7usm7" path="res://ui/fonts/Minimum.ttf" id="1"]
 [ext_resource type="Theme" uid="uid://bfmrdx6ah36lt" path="res://ui/ui_theme.tres" id="1_h205k"]
-[ext_resource type="FontFile" uid="uid://3heiwkvujho0" path="res://ui/fonts/EarlyGameBoySTD.ttf" id="2"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_m3j2g"]
-font = ExtResource("2")
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="FontFile" id="4"]
-fallbacks = Array[Font]([ExtResource("1")])
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="Button" type="Button"]
 texture_filter = 1
@@ -50,8 +32,8 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 5
+theme_type_variation = &"BoldLabel"
 text = "Plinko"
-label_settings = SubResource("LabelSettings_m3j2g")
 vertical_alignment = 1
 justification_flags = 160
 
@@ -60,8 +42,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 size_flags_vertical = 5
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("4")
+theme_type_variation = &"NumericLabel"
 text = "40000"
 horizontal_alignment = 2
 vertical_alignment = 1

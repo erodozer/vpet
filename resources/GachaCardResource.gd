@@ -1,8 +1,8 @@
 extends Resource
 class_name GachaCardResource
 
-@export var id: String : get = _get_id
-@export var image: Texture2D : get = _get_resource_image
+var id: String : get = _get_id
+var image: Texture2D : get = _get_resource_image
 @export_range(1, 500) var price: int = 250
 
 func _get_id() -> String:

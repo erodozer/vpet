@@ -1,16 +1,10 @@
-[gd_resource type="Theme" load_steps=11 format=3 uid="uid://bfmrdx6ah36lt"]
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://bfmrdx6ah36lt"]
 
-[ext_resource type="FontFile" uid="uid://ossjr40b5ax6" path="res://ui/fonts/SymphonyoftheNightfont.ttf" id="1_r1d34"]
+[ext_resource type="FontFile" uid="uid://3heiwkvujho0" path="res://ui/fonts/EarlyGameBoySTD.ttf" id="1_cnyj1"]
 [ext_resource type="StyleBox" uid="uid://dwah4gfye68fp" path="res://ui/panel.tres" id="2_16ksv"]
-
-[sub_resource type="FontFile" id="5"]
-fallbacks = Array[Font]([ExtResource("1_r1d34")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+[ext_resource type="FontFile" uid="uid://4kfjpn6tatod" path="res://ui/fonts/HelvetiPixel.ttf" id="2_kbk24"]
+[ext_resource type="FontFile" uid="uid://ymu18ty2r2n8" path="res://ui/fonts/PolygonPixel5x7Standard.ttf" id="3_kbk24"]
+[ext_resource type="FontFile" uid="uid://cu56gylq7usm7" path="res://ui/fonts/Minimum.ttf" id="4_mbvn8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twak7"]
 content_margin_left = 4.0
@@ -78,6 +72,10 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 anti_aliasing = false
 
+[sub_resource type="FontVariation" id="FontVariation_cnyj1"]
+fallbacks = Array[Font]([ExtResource("2_kbk24")])
+base_font = ExtResource("3_kbk24")
+
 [sub_resource type="StyleBoxFlat" id="15"]
 content_margin_left = 4.0
 content_margin_right = 4.0
@@ -99,7 +97,9 @@ border_color = Color(0.92549, 0.917647, 0.921569, 1)
 [sub_resource type="StyleBoxEmpty" id="14"]
 
 [resource]
-default_font = SubResource("5")
+default_font = SubResource("FontVariation_cnyj1")
+default_font_size = 16
+BoldLabel/base_type = &"Label"
 Button/colors/font_color = Color(0.0588235, 0.0352941, 0.0352941, 1)
 Button/colors/font_color_disabled = Color(0.458405, 0.458405, 0.458405, 1)
 Button/colors/font_color_focus = Color(0.0588235, 0.0352941, 0.0352941, 1)
@@ -111,7 +111,7 @@ Button/colors/font_hover_color = Color(0.0588235, 0.0352941, 0.0352941, 1)
 Button/colors/font_hover_pressed_color = Color(0.0588235, 0.0352941, 0.0352941, 1)
 Button/colors/font_pressed_color = Color(0.0588235, 0.0352941, 0.0352941, 1)
 Button/constants/hseparation = 0
-Button/fonts/font = SubResource("5")
+Button/fonts/font = ExtResource("1_cnyj1")
 Button/styles/disabled = SubResource("StyleBoxFlat_twak7")
 Button/styles/focus = SubResource("10")
 Button/styles/hover = SubResource("StyleBoxFlat_klnci")
@@ -124,8 +124,10 @@ Label/constants/line_spacing = 0
 Label/constants/shadow_as_outline = 0
 Label/constants/shadow_offset_x = 0
 Label/constants/shadow_offset_y = 0
-Label/fonts/font = SubResource("5")
+Label/fonts/font = SubResource("FontVariation_cnyj1")
 Label/styles/normal = null
+NumericLabel/base_type = &"Label"
+NumericLabel/fonts/font = ExtResource("4_mbvn8")
 Panel/styles/panel = ExtResource("2_16ksv")
 PanelContainer/styles/panel = ExtResource("2_16ksv")
 ScrollContainer/styles/bg = null

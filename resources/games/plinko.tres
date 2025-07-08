@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="2_50uok"]
 [ext_resource type="Texture2D" uid="uid://bunxtk64ph182" path="res://scenes/home/ui/controls/icons.png" id="2_i2frl"]
-[ext_resource type="Resource" uid="uid://cnibaxqe5jqba" path="res://resources/unlockables/plinko.tres" id="4_76qgu"]
+[ext_resource type="Resource" uid="uid://cnibaxqe5jqba" path="res://resources/unlockables/game_plinko.tres" id="4_76qgu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q7aaj"]
 atlas = ExtResource("2_i2frl")

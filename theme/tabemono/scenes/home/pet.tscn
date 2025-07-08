@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://bs6wogymi7lgv"]
+
+[ext_resource type="PackedScene" uid="uid://dbq16g4ghgxw6" path="res://pet/PetBase.tscn" id="1_nent3"]
+[ext_resource type="SpriteFrames" uid="uid://dcv7ol2cnsj0w" path="res://theme/tabemono/pet/frames.tres" id="2_nent3"]
+
+[sub_resource type="Gradient" id="Gradient_37uh6"]
+offsets = PackedFloat32Array(0.246377, 1)
+colors = PackedColorArray(0.870588, 0.607843, 0.407843, 1, 0.740873, 0.470349, 0.841024, 0.494118)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0j2xq"]
+gradient = SubResource("Gradient_37uh6")
+
+[sub_resource type="Curve" id="Curve_t2k4g"]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 1.72727), 0.0, 0.0, 0, 0, Vector2(1, 0.945454), -4.29798, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_k38q4"]
+curve = SubResource("Curve_t2k4g")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_a3ofc"]
+emission_shape = 3
+emission_box_extents = Vector3(13, 1, 1)
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 3.0
+linear_accel_max = 9.35
+scale_curve = SubResource("CurveTexture_k38q4")
+color_ramp = SubResource("GradientTexture1D_0j2xq")
+
+[node name="Pet" instance=ExtResource("1_nent3")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -21)
+sprite_frames = ExtResource("2_nent3")
+frame = 3
+frame_progress = 0.315058
+
+[node name="Dirty" parent="." index="1"]
+visible = false
+position = Vector2(-1, -5)
+amount = 32
+process_material = SubResource("ParticleProcessMaterial_a3ofc")
+
+[node name="Sickness" parent="." index="3"]
+position = Vector2(-15, -20)
+frame = 8
+frame_progress = 0.970751
