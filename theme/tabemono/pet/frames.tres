@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=53 format=3 uid="uid://dcv7ol2cnsj0w"]
+[gd_resource type="SpriteFrames" load_steps=59 format=3 uid="uid://dcv7ol2cnsj0w"]
 
 [ext_resource type="Texture2D" uid="uid://bfi1m1sy5droa" path="res://theme/tabemono/pet/pet_dance_0000.png" id="1_4fylf"]
 [ext_resource type="Texture2D" uid="uid://ffmklg3dnou2" path="res://theme/tabemono/pet/pet_dance_0001.png" id="2_sgjnj"]
@@ -51,7 +51,13 @@
 [ext_resource type="Texture2D" uid="uid://7hqi6vwmb3em" path="res://theme/tabemono/pet/pet_walk_0002.png" id="50_tenyq"]
 [ext_resource type="Texture2D" uid="uid://fwyi243alr15" path="res://theme/tabemono/pet/pet_walk_0003.png" id="51_oi6n6"]
 [ext_resource type="Texture2D" uid="uid://crndileqqiryp" path="res://theme/tabemono/pet/pet_walk_0004.png" id="52_0cbro"]
+[ext_resource type="Texture2D" uid="uid://cea81qitckavx" path="res://theme/tabemono/pet/pet_yelp_0000.png" id="53_d6u16"]
 [ext_resource type="Texture2D" uid="uid://bwv7u8dbllpcy" path="res://theme/tabemono/pet/pet_walk_0005.png" id="53_xxl1f"]
+[ext_resource type="Texture2D" uid="uid://br6wcqlxc1nc5" path="res://theme/tabemono/pet/pet_yelp_0001.png" id="54_32t5i"]
+[ext_resource type="Texture2D" uid="uid://g7fx6is6rw8e" path="res://theme/tabemono/pet/pet_yelp_0002.png" id="55_5iwni"]
+[ext_resource type="Texture2D" uid="uid://b73u4agnkncxq" path="res://theme/tabemono/pet/pet_yelp_0003.png" id="56_dwp3f"]
+[ext_resource type="Texture2D" uid="uid://wahost8y8rfy" path="res://theme/tabemono/pet/pet_yelp_0004.png" id="57_lu3o4"]
+[ext_resource type="Texture2D" uid="uid://bccysr3qcjl0d" path="res://theme/tabemono/pet/pet_yelp_0005.png" id="58_rnmqm"]
 
 [resource]
 animations = [{
@@ -304,28 +310,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_rnmqm")
+"texture": ExtResource("53_d6u16")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_jf3c0")
+"texture": ExtResource("54_32t5i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_kp8bk")
+"texture": ExtResource("55_5iwni")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_3vgrr")
+"texture": ExtResource("56_dwp3f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_jxj1p")
+"texture": ExtResource("57_lu3o4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_cfd3h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_v1788")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_rnmqm")
+"texture": ExtResource("58_rnmqm")
 }],
 "loop": false,
 "name": &"yelp",

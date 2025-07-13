@@ -13,8 +13,7 @@
 
 [sub_resource type="ShaderMaterial" id="5"]
 shader = ExtResource("3")
-shader_parameter/speed_x = 0.0
-shader_parameter/speed_y = -0.3
+shader_parameter/speed = Vector2(0, -0.3)
 
 [sub_resource type="FontFile" id="6"]
 fallbacks = Array[Font]([ExtResource("2")])
@@ -143,7 +142,6 @@ size_flags_horizontal = 3
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 5
-text = "Sometimes the Fox will want to play Plinko with you"
 label_settings = SubResource("LabelSettings_82sba")
 autowrap_mode = 2
 clip_text = true

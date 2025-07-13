@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Pet The Fox"
+config/name.pet_ham="Hamagotchi"
+config/name.pet_grem="Gremgotchi"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.4")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 config/icon="uid://nlbm2udw5sv6"
-config/name.pet_ham="Hamagotchi"
-config/theme.pet_ham="ham"
 gameplay/pet_weight_minimum=5.0
 gameplay/pet_weight_maximum=25.0
 gameplay/pet_name="Clover"
@@ -26,16 +26,21 @@ gameplay/pet_weight_unit="lbs"
 gameplay/pet_weight_maximum.pet_ham=60.0
 gameplay/pet_weight_minimum.pet_ham=20.0
 gameplay/pet_weight_unit.pet_ham="g"
-config/icon.pet_ham="res://theme/ham/icon.png"
-config/windows_native_icon.pet_ham="res://theme/ham/icon.ico"
-config/theme="fox"
 tmi/log_level="info"
 config/name.pet_grem="Gremgotchi"
 config/theme.pet_grem="grem"
+config/theme.pet_clover="fox"
+config/theme.pet_tabemono="tabemono"
+gameplay/pet_name.pet_clover="Clover"
+gameplay/pet_name.pet_ham="Ham"
 gameplay/pet_name.pet_grem="Grem"
-config/theme.pet_fox="fox"
+gameplay/pet_name.pet_tabemono="Tabemono"
+config/icon.pet_ham="res://theme/ham/icon.png"
 config/icon.pet_grem="res://theme/grem/icon.png"
+config/windows_native_icon.pet_ham="res://theme/ham/icon.ico"
 config/windows_native_icon.pet_grem="res://theme/grem/gigi.ico"
+config/bg_scroll=Vector2(1, 0)
+config/bg_scroll.pet_tabemono=Vector2(-0.7, -0.7)
 
 [autoload]
 

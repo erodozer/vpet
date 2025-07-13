@@ -1,10 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://buu2wbhdyk8kn"]
+[gd_scene load_steps=19 format=3 uid="uid://buu2wbhdyk8kn"]
 
 [ext_resource type="PackedScene" uid="uid://b2wsuygqtasn6" path="res://ui/pointer/pointer.tscn" id="1_aik24"]
-[ext_resource type="Shader" uid="uid://c4pt0ljhyev6h" path="res://ui/scroll.gdshader" id="1_elpb3"]
 [ext_resource type="Script" uid="uid://br7hyhwy2l5v8" path="res://scenes/game_gacha/scene.gd" id="1_oewvr"]
-[ext_resource type="Texture2D" uid="uid://st2lqyxx0u6x" path="res://ui/background.png" id="2_qmini"]
 [ext_resource type="SpriteFrames" uid="uid://dushx8aen3ymk" path="res://pet/frames.tres" id="3_85fpq"]
+[ext_resource type="PackedScene" uid="uid://lkt0umh2vcyf" path="res://ui/game_background.tscn" id="3_sjtpt"]
 [ext_resource type="Theme" uid="uid://bfmrdx6ah36lt" path="res://ui/ui_theme.tres" id="4_ahtvm"]
 [ext_resource type="LabelSettings" uid="uid://cgpbl3g12jyp5" path="res://ui/fonts/bold.tres" id="5_1g2ms"]
 [ext_resource type="Texture2D" uid="uid://3dn1f8ym544e" path="res://scenes/game_gacha/card_back.png" id="6_mkyku"]
@@ -14,11 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://c2q4hdkscev71" path="res://scenes/home/ui/stats/currency.png" id="10_mnm25"]
 [ext_resource type="FontFile" uid="uid://ossjr40b5ax6" path="res://ui/fonts/SymphonyoftheNightfont.ttf" id="12_lalol"]
 [ext_resource type="AudioStream" uid="uid://g8t7u8if4o0j" path="res://scenes/game_gacha/open.wav" id="14_xcw7r"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_twl4i"]
-shader = ExtResource("1_elpb3")
-shader_parameter/speed_x = 1.0
-shader_parameter/speed_y = 0.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_uril4"]
 font = ExtResource("12_lalol")
@@ -359,14 +353,7 @@ script = ExtResource("1_oewvr")
 [node name="Results" parent="." instance=ExtResource("8_q31ew")]
 unique_name_in_owner = true
 
-[node name="Background" type="TextureRect" parent="."]
-material = SubResource("ShaderMaterial_twl4i")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource("2_qmini")
-expand_mode = 1
-stretch_mode = 1
+[node name="Background" parent="." instance=ExtResource("3_sjtpt")]
 
 [node name="Pet" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
@@ -519,7 +506,7 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -80.0
 offset_right = 80.0
-offset_bottom = 33.0
+offset_bottom = 34.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "0.00 GG"
@@ -531,5 +518,5 @@ follow_focus = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_iwt84")
+&"": SubResource("AnimationLibrary_iwt84")
 }

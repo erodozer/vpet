@@ -22,8 +22,7 @@ expand_margin_bottom = 2.0
 
 [sub_resource type="ShaderMaterial" id="3"]
 shader = ExtResource("3_ogr13")
-shader_parameter/speed_x = 0.0
-shader_parameter/speed_y = -0.3
+shader_parameter/speed = Vector2(0, -0.3)
 
 [sub_resource type="FontFile" id="4"]
 fallbacks = Array[Font]([ExtResource("8_wlrfu")])

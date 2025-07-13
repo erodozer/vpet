@@ -1,19 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://c2r2pswey1lpw"]
+[gd_scene load_steps=11 format=3 uid="uid://c2r2pswey1lpw"]
 
 [ext_resource type="FontFile" uid="uid://3heiwkvujho0" path="res://ui/fonts/EarlyGameBoySTD.ttf" id="1"]
-[ext_resource type="Shader" uid="uid://c4pt0ljhyev6h" path="res://ui/scroll.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://lkt0umh2vcyf" path="res://ui/game_background.tscn" id="2_mdbs1"]
 [ext_resource type="Script" uid="uid://byk7nokondpjb" path="res://scenes/game_hilo/game.gd" id="3"]
-[ext_resource type="Texture2D" uid="uid://st2lqyxx0u6x" path="res://ui/background.png" id="4"]
 [ext_resource type="PackedScene" uid="uid://b3ng0b53lovo5" path="res://scenes/game_hilo/cards/Card.tscn" id="5"]
 [ext_resource type="SpriteFrames" uid="uid://dushx8aen3ymk" path="res://pet/frames.tres" id="6"]
 [ext_resource type="Theme" uid="uid://bfmrdx6ah36lt" path="res://ui/ui_theme.tres" id="7"]
 [ext_resource type="FontFile" uid="uid://ymu18ty2r2n8" path="res://ui/fonts/PolygonPixel5x7Standard.ttf" id="7_gc4y3"]
 [ext_resource type="PackedScene" uid="uid://tyd6hlyrgac7" path="res://ui/results.tscn" id="8_2opkf"]
-
-[sub_resource type="ShaderMaterial" id="1"]
-shader = ExtResource("2")
-shader_parameter/speed_x = 1.0
-shader_parameter/speed_y = 0.0
 
 [sub_resource type="FontFile" id="2"]
 fallbacks = Array[Font]([ExtResource("1")])
@@ -38,14 +32,7 @@ Label/styles/normal = null
 [node name="HiLo" type="Node" groups=["scene"]]
 script = ExtResource("3")
 
-[node name="Background" type="TextureRect" parent="."]
-material = SubResource("1")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource("4")
-expand_mode = 1
-stretch_mode = 1
+[node name="Background" parent="." instance=ExtResource("2_mdbs1")]
 
 [node name="Cards" type="Control" parent="."]
 unique_name_in_owner = true

@@ -1,19 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://dpqj4v03iq3ed"]
+[gd_scene load_steps=11 format=3 uid="uid://dpqj4v03iq3ed"]
 
 [ext_resource type="Script" uid="uid://dhawxuga5bv7q" path="res://scenes/game_match/game.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dd78sx7uk8fsq" path="res://scenes/game_match/cards/Card.tscn" id="2"]
-[ext_resource type="Texture2D" uid="uid://st2lqyxx0u6x" path="res://ui/background.png" id="3"]
+[ext_resource type="PackedScene" uid="uid://lkt0umh2vcyf" path="res://ui/game_background.tscn" id="2_ndig2"]
 [ext_resource type="SpriteFrames" uid="uid://dushx8aen3ymk" path="res://pet/frames.tres" id="4"]
 [ext_resource type="LabelSettings" uid="uid://cgpbl3g12jyp5" path="res://ui/fonts/bold.tres" id="5_abqja"]
-[ext_resource type="Shader" uid="uid://c4pt0ljhyev6h" path="res://ui/scroll.gdshader" id="6"]
 [ext_resource type="FontFile" uid="uid://3heiwkvujho0" path="res://ui/fonts/EarlyGameBoySTD.ttf" id="7"]
 [ext_resource type="PackedScene" uid="uid://tyd6hlyrgac7" path="res://ui/results.tscn" id="7_00jjb"]
 [ext_resource type="PackedScene" uid="uid://b2wsuygqtasn6" path="res://ui/pointer/pointer.tscn" id="8_tguy3"]
-
-[sub_resource type="ShaderMaterial" id="1"]
-shader = ExtResource("6")
-shader_parameter/speed_x = 1.0
-shader_parameter/speed_y = 0.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_3gk0t"]
 font = ExtResource("7")
@@ -29,14 +23,7 @@ shadow_color = Color(0, 0, 0, 1)
 [node name="MatchGame" type="Node" groups=["scene"]]
 script = ExtResource("1")
 
-[node name="Background" type="TextureRect" parent="."]
-material = SubResource("1")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource("3")
-expand_mode = 1
-stretch_mode = 1
+[node name="Background" parent="." instance=ExtResource("2_ndig2")]
 
 [node name="Cards" type="Control" parent="."]
 unique_name_in_owner = true

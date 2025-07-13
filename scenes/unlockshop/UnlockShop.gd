@@ -40,6 +40,12 @@ func select_item(item):
 	get_node("%ItemDescription").text = item.description
 	get_node("%BuyButton").disabled = item.cost > GameState.stats.honey or GameState.unlocks.get(item.flag, false)
 	selected = item
+	create_tween().tween_property(
+		get_node("%ItemDescription"),
+		"visible_ratio",
+		1.0,
+		0.25
+	).from(0.0)
 
 func _on_BuyButton_pressed():
 	var item = selected

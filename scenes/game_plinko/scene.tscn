@@ -1,19 +1,13 @@
-[gd_scene load_steps=22 format=3 uid="uid://ddmydicggypot"]
+[gd_scene load_steps=20 format=3 uid="uid://ddmydicggypot"]
 
-[ext_resource type="Shader" uid="uid://c4pt0ljhyev6h" path="res://ui/scroll.gdshader" id="1"]
 [ext_resource type="FontFile" uid="uid://3heiwkvujho0" path="res://ui/fonts/EarlyGameBoySTD.ttf" id="2"]
-[ext_resource type="Texture2D" uid="uid://st2lqyxx0u6x" path="res://ui/background.png" id="3"]
+[ext_resource type="PackedScene" uid="uid://lkt0umh2vcyf" path="res://ui/game_background.tscn" id="2_8msds"]
 [ext_resource type="Texture2D" uid="uid://df8hw8q5hoxpk" path="res://ui/panel.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://c1r6hwy43w8pn" path="res://scenes/game_plinko/ball.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://tdhk2gooh12p" path="res://scenes/game_plinko/peg.png" id="6"]
 [ext_resource type="PackedScene" uid="uid://d14rf1d0alf80" path="res://scenes/game_plinko/player.tscn" id="7_rjre5"]
 [ext_resource type="PackedScene" uid="uid://tyd6hlyrgac7" path="res://ui/results.tscn" id="9_2wcx0"]
 [ext_resource type="Script" uid="uid://cxgo72mlvh543" path="res://scenes/game_plinko/game.gd" id="10"]
-
-[sub_resource type="ShaderMaterial" id="20"]
-shader = ExtResource("1")
-shader_parameter/speed_x = 1.0
-shader_parameter/speed_y = 0.0
 
 [sub_resource type="PhysicsMaterial" id="31"]
 friction = 0.5
@@ -78,14 +72,7 @@ PanelContainer/styles/panel = SubResource("19")
 [node name="Plinko" type="Node" groups=["scene"]]
 script = ExtResource("10")
 
-[node name="Background" type="TextureRect" parent="."]
-material = SubResource("20")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource("3")
-expand_mode = 1
-stretch_mode = 1
+[node name="Background" parent="." instance=ExtResource("2_8msds")]
 
 [node name="Ball" type="RigidBody2D" parent="."]
 unique_name_in_owner = true
