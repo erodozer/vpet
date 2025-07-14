@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="ResourceMenu" load_steps=20 format=3 uid="uid://dqs4kgu773wy3"]
+
+[ext_resource type="Script" uid="uid://7w43b6hsn11b" path="res://resources/FoodResource.gd" id="1_4wco4"]
+[ext_resource type="Resource" uid="uid://va3774412x40" path="res://theme/grem/resources/food/apple.tres" id="2_8oqii"]
+[ext_resource type="Resource" uid="uid://xlvbk12xc3r3" path="res://theme/grem/resources/food/boba.tres" id="3_oqd1e"]
+[ext_resource type="Resource" uid="uid://d3qx3r7b8x30u" path="res://theme/grem/resources/food/fries.tres" id="4_4wco4"]
+[ext_resource type="Resource" uid="uid://b5d6gr2dbc3w2" path="res://theme/grem/resources/games/hilo.tres" id="6_evypc"]
+[ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="6_hbnhj"]
+[ext_resource type="Resource" uid="uid://dmouoxpcpaedm" path="res://theme/grem/resources/games/quiz.tres" id="7_787nj"]
+[ext_resource type="Resource" uid="uid://db1jkwdb4dqfk" path="res://theme/grem/resources/games/gacha.tres" id="8_fffk2"]
+[ext_resource type="Script" uid="uid://b7d3r20npjor2" path="res://resources/Menu.gd" id="10_l4sfm"]
+[ext_resource type="Script" uid="uid://cm55ffjlgedb" path="res://resources/ShopResource.gd" id="11_7krfw"]
+[ext_resource type="Resource" uid="uid://bpb2kbu1n36rs" path="res://theme/grem/resources/unlockables/boba.tres" id="11_c4qdn"]
+[ext_resource type="Resource" uid="uid://umasdboj3i8h" path="res://theme/grem/resources/unlockables/fries.tres" id="12_hbnhj"]
+[ext_resource type="Resource" uid="uid://cu1hik6js58br" path="res://resources/unlockables/game_quiz.tres" id="13_o5nxx"]
+[ext_resource type="Resource" uid="uid://dvcaqafbm86ao" path="res://theme/grem/resources/unlockables/soap.tres" id="15_sw1jo"]
+[ext_resource type="Resource" uid="uid://4jbi7bvix4ht" path="res://resources/unlockables/game_gacha.tres" id="16_cbigf"]
+[ext_resource type="Resource" uid="uid://ylanugfo0dbw" path="res://resources/unlockables/feedpet.tres" id="18_ewldv"]
+[ext_resource type="Resource" uid="uid://3i7d8oqwx13j" path="res://resources/unlockables/overfeed.tres" id="19_xh8b8"]
+[ext_resource type="Resource" uid="uid://cec3vgn6hmlcs" path="res://resources/unlockables/resettimers.tres" id="20_eo7co"]
+[ext_resource type="Resource" uid="uid://bm23jlwt4gmsk" path="res://resources/unlockables/resetgame.tres" id="21_lqoue"]
+
+[resource]
+script = ExtResource("10_l4sfm")
+food = Array[ExtResource("1_4wco4")]([ExtResource("2_8oqii"), ExtResource("3_oqd1e"), ExtResource("4_4wco4")])
+games = Array[ExtResource("6_hbnhj")]([ExtResource("6_evypc"), ExtResource("7_787nj"), ExtResource("8_fffk2")])
+shop = Array[ExtResource("11_7krfw")]([ExtResource("11_c4qdn"), ExtResource("12_hbnhj"), ExtResource("13_o5nxx"), ExtResource("16_cbigf"), ExtResource("15_sw1jo"), ExtResource("18_ewldv"), ExtResource("19_xh8b8"), ExtResource("20_eo7co"), ExtResource("21_lqoue")])

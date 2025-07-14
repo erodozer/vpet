@@ -37,11 +37,11 @@ func _update_stats(stats):
 
 	get_node("%Weight").text = "%.1f %s" % [
 		lerp(
-			ProjectSettings.get_setting_with_override("application/gameplay/pet_weight_minimum"),
-			ProjectSettings.get_setting_with_override("application/gameplay/pet_weight_maximum"),
+			ProjectSettings.get_setting_with_override("application/vpet/weight_minimum"),
+			ProjectSettings.get_setting_with_override("application/vpet/weight_maximum"),
 			clamp(stats.weight / 100.0, 0.0, 1.0)
 		),
-		ProjectSettings.get_setting_with_override("application/gameplay/pet_weight_unit"),
+		ProjectSettings.get_setting_with_override("application/vpet/weight_unit"),
 	]
 		
 	get_node("%LifeMeter").value = inverse_lerp(0.0, 100.0, stats.hungry) * 5.0

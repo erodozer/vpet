@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://bfmrdx6ah36lt" path="res://ui/ui_theme.tres" id="1"]
 [ext_resource type="FontFile" uid="uid://cu56gylq7usm7" path="res://ui/fonts/Minimum.ttf" id="2"]
 [ext_resource type="Shader" uid="uid://c4pt0ljhyev6h" path="res://ui/scroll.gdshader" id="3"]
-[ext_resource type="Resource" uid="uid://b3rqh3dqowews" path="res://config/shop.tres" id="3_k86xm"]
+[ext_resource type="Resource" uid="uid://cmpo574c33e4r" path="res://config/menu.tres" id="3_s6bll"]
 [ext_resource type="Texture2D" uid="uid://c2q4hdkscev71" path="res://scenes/home/ui/stats/currency.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://dsdtq1sgpro7c" path="res://ui/tiled_hud.png" id="5"]
 [ext_resource type="Script" uid="uid://c6khqjoyb02oj" path="res://scenes/unlockshop/UnlockShop.gd" id="7"]
@@ -44,7 +44,7 @@ grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("1")
 script = ExtResource("7")
-UNLOCKS = ExtResource("3_k86xm")
+menu = ExtResource("3_s6bll")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 show_behind_parent = true

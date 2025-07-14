@@ -1,70 +1,68 @@
-[gd_resource type="Resource" script_class="FoodResource" load_steps=17 format=3 uid="uid://dnuhofb4ga3qa"]
+[gd_resource type="Resource" script_class="FoodResource" load_steps=18 format=3 uid="uid://dw2ux6l0mjv08"]
 
-[ext_resource type="Texture2D" uid="uid://ddrhp2boi2b2o" path="res://theme/grem/resources/food/apple/apple_1.png" id="1_muu3u"]
-[ext_resource type="Texture2D" uid="uid://r3a37rm2yv3s" path="res://theme/grem/resources/food/apple/apple_2.png" id="2_tr6b3"]
-[ext_resource type="Texture2D" uid="uid://cq242lrnfel34" path="res://theme/grem/resources/food/apple/apple_3.png" id="3_d7q3e"]
-[ext_resource type="Texture2D" uid="uid://ccnmr3nauvmle" path="res://theme/grem/resources/food/apple/apple_4.png" id="4_8h0ih"]
-[ext_resource type="Texture2D" uid="uid://c4fybqr81vta6" path="res://theme/grem/resources/food/apple/apple_5.png" id="5_h0iqn"]
-[ext_resource type="Texture2D" uid="uid://cymwek1rbenqg" path="res://theme/grem/resources/food/apple/apple_6.png" id="6_fmvse"]
-[ext_resource type="Texture2D" uid="uid://bnkf0fjhblvsr" path="res://theme/grem/resources/food/apple/apple_7.png" id="7_3vkn8"]
-[ext_resource type="Texture2D" uid="uid://cj25bnnonbfyr" path="res://theme/grem/resources/food/apple/apple_eat_1.png" id="8_m8iv0"]
-[ext_resource type="Texture2D" uid="uid://c0wubs431rmln" path="res://theme/grem/resources/food/apple/apple_eat_2.png" id="9_f5uix"]
-[ext_resource type="Texture2D" uid="uid://c71m2cv6d8r7n" path="res://theme/grem/resources/food/apple/apple_eat_3.png" id="10_a0wu6"]
-[ext_resource type="Texture2D" uid="uid://by1h21qivtgf4" path="res://theme/grem/resources/food/apple/apple_eat_4.png" id="11_b5e80"]
-[ext_resource type="Texture2D" uid="uid://b8rju4xuony6v" path="res://theme/grem/resources/food/apple/apple_eat_5.png" id="12_qkyjd"]
-[ext_resource type="Texture2D" uid="uid://dk20ply5xn0hj" path="res://theme/grem/resources/food/apple/apple_eat_6.png" id="13_yib6e"]
-[ext_resource type="Texture2D" uid="uid://c18xnuj3jcyqr" path="res://theme/grem/resources/food/apple/icon.png" id="14_rbj0d"]
-[ext_resource type="Script" uid="uid://7w43b6hsn11b" path="res://resources/FoodResource.gd" id="15_wopau"]
+[ext_resource type="Texture2D" uid="uid://b25qswvxkomfh" path="res://theme/grem/resources/food/fries/fries_0.png" id="1_36eo8"]
+[ext_resource type="Texture2D" uid="uid://bc3je8xjgl62j" path="res://theme/grem/resources/food/fries/fries_1.png" id="2_hldmb"]
+[ext_resource type="Texture2D" uid="uid://b1imbxcrttu61" path="res://theme/grem/resources/food/fries/fries_2.png" id="3_neorw"]
+[ext_resource type="Texture2D" uid="uid://bi2qfvx0nctoe" path="res://theme/grem/resources/food/fries/fries_3.png" id="4_36dt1"]
+[ext_resource type="Texture2D" uid="uid://0aye7wbynruh" path="res://theme/grem/resources/food/fries/fries_4.png" id="5_ojbia"]
+[ext_resource type="Texture2D" uid="uid://cv8bxd6hkqfqo" path="res://theme/grem/resources/food/fries/fries_5.png" id="6_8mast"]
+[ext_resource type="Texture2D" uid="uid://bck4r4krw3mb3" path="res://theme/grem/resources/food/fries/fries_6.png" id="7_7326o"]
+[ext_resource type="Texture2D" uid="uid://cejl735us1w1h" path="res://theme/grem/resources/food/fries/fries_7.png" id="8_xerae"]
+[ext_resource type="Texture2D" uid="uid://c3jrvyupprh5g" path="res://theme/grem/resources/food/fries/fries_eat_1.png" id="9_g8c85"]
+[ext_resource type="Texture2D" uid="uid://b0ctoc15210fw" path="res://theme/grem/resources/food/fries/fries_eat_2.png" id="10_rjh8v"]
+[ext_resource type="Texture2D" uid="uid://dtnebm8ewla7v" path="res://theme/grem/resources/food/fries/fries_eat_3.png" id="11_wrhkb"]
+[ext_resource type="Texture2D" uid="uid://du4t8fsgrbor1" path="res://theme/grem/resources/food/fries/fries_eat_4.png" id="12_rttti"]
+[ext_resource type="Texture2D" uid="uid://dsaj0wvxm5rnw" path="res://theme/grem/resources/food/fries/fries_eat_5.png" id="13_cl85u"]
+[ext_resource type="Texture2D" uid="uid://dbjxpo0bhux1v" path="res://theme/grem/resources/food/fries/icon.png" id="14_xl8xi"]
+[ext_resource type="Script" uid="uid://7w43b6hsn11b" path="res://resources/FoodResource.gd" id="15_way3q"]
+[ext_resource type="Resource" uid="uid://umasdboj3i8h" path="res://theme/grem/resources/unlockables/fries.tres" id="16_813k6"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_xeqxa"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_yyixg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_muu3u")
+"texture": ExtResource("1_36eo8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_tr6b3")
+"texture": ExtResource("2_hldmb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_d7q3e")
+"texture": ExtResource("3_neorw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_8h0ih")
+"texture": ExtResource("4_36dt1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_h0iqn")
+"texture": ExtResource("5_ojbia")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_fmvse")
+"texture": ExtResource("6_8mast")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_3vkn8")
+"texture": ExtResource("7_7326o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xerae")
 }],
 "loop": true,
 "name": &"default",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_muu3u")
+"texture": ExtResource("9_g8c85")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_m8iv0")
+"texture": ExtResource("10_rjh8v")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_f5uix")
+"texture": ExtResource("11_wrhkb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_a0wu6")
+"texture": ExtResource("12_rttti")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_b5e80")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_qkyjd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_yib6e")
+"texture": ExtResource("13_cl85u")
 }],
 "loop": false,
 "name": &"eat",
@@ -72,9 +70,10 @@ animations = [{
 }]
 
 [resource]
-script = ExtResource("15_wopau")
-hungry = 80.0
+script = ExtResource("15_way3q")
+hungry = 150.0
 boredom = 0.0
-cooldown = 20.0
-icon = ExtResource("14_rbj0d")
-animation = SubResource("SpriteFrames_xeqxa")
+cooldown = 40.0
+unlock = ExtResource("16_813k6")
+icon = ExtResource("14_xl8xi")
+animation = SubResource("SpriteFrames_yyixg")

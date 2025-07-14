@@ -40,7 +40,7 @@ func _ready():
 	apply()
 
 ## overlays active theme contents onto the game's resources
-func apply(theme = ProjectSettings.get_setting_with_override("application/config/theme")):
+func apply(theme = ProjectSettings.get_setting_with_override("application/vpet/theme")):
 	_loading = true
 	
 	print("Detecting theme: ", theme)

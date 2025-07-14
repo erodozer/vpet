@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ResourceMenu" load_steps=5 format=3 uid="uid://cih6xl1pdj7mi"]
+
+[ext_resource type="Script" uid="uid://7w43b6hsn11b" path="res://resources/FoodResource.gd" id="1_ox8l2"]
+[ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="2_aikes"]
+[ext_resource type="Script" uid="uid://b7d3r20npjor2" path="res://resources/Menu.gd" id="3_mjy2w"]
+[ext_resource type="Script" uid="uid://cm55ffjlgedb" path="res://resources/ShopResource.gd" id="4_8yg1r"]
+
+[resource]
+script = ExtResource("3_mjy2w")
+food = Array[ExtResource("1_ox8l2")]([])
+games = Array[ExtResource("2_aikes")]([])
+shop = Array[ExtResource("4_8yg1r")]([])

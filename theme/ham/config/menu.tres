@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="ResourceMenu" load_steps=18 format=3 uid="uid://dep8c3fnu1ik1"]
+
+[ext_resource type="Script" uid="uid://7w43b6hsn11b" path="res://resources/FoodResource.gd" id="1_aqq13"]
+[ext_resource type="Resource" uid="uid://cr3edaouje7ce" path="res://theme/ham/resources/food/seed.tres" id="2_433fo"]
+[ext_resource type="Resource" uid="uid://c2ede81dygvky" path="res://theme/ham/resources/food/yaoi.tres" id="3_ogpk4"]
+[ext_resource type="Resource" uid="uid://b6u5mo24eugkg" path="res://resources/games/match.tres" id="5_aqq13"]
+[ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="5_xwiww"]
+[ext_resource type="Resource" uid="uid://b5d6gr2dbc3w2" path="res://theme/grem/resources/games/hilo.tres" id="6_vco7t"]
+[ext_resource type="Resource" uid="uid://db1jkwdb4dqfk" path="res://theme/grem/resources/games/gacha.tres" id="8_as5w3"]
+[ext_resource type="Script" uid="uid://b7d3r20npjor2" path="res://resources/Menu.gd" id="9_a2jhr"]
+[ext_resource type="Script" uid="uid://cm55ffjlgedb" path="res://resources/ShopResource.gd" id="10_tskfw"]
+[ext_resource type="Resource" uid="uid://diucbp20w8rbd" path="res://theme/ham/resources/unlockables/yaoi.tres" id="11_txem8"]
+[ext_resource type="Resource" uid="uid://crmqj1g0wo1he" path="res://resources/unlockables/game_hilo.tres" id="12_rmb62"]
+[ext_resource type="Resource" uid="uid://cu1hik6js58br" path="res://resources/unlockables/game_quiz.tres" id="13_1lu78"]
+[ext_resource type="Resource" uid="uid://dvcaqafbm86ao" path="res://theme/grem/resources/unlockables/soap.tres" id="15_vw622"]
+[ext_resource type="Resource" uid="uid://ylanugfo0dbw" path="res://resources/unlockables/feedpet.tres" id="16_oqnp4"]
+[ext_resource type="Resource" uid="uid://3i7d8oqwx13j" path="res://resources/unlockables/overfeed.tres" id="17_xgvyq"]
+[ext_resource type="Resource" uid="uid://cec3vgn6hmlcs" path="res://resources/unlockables/resettimers.tres" id="18_oho5h"]
+[ext_resource type="Resource" uid="uid://bm23jlwt4gmsk" path="res://resources/unlockables/resetgame.tres" id="19_kqwoh"]
+
+[resource]
+script = ExtResource("9_a2jhr")
+food = Array[ExtResource("1_aqq13")]([ExtResource("2_433fo"), ExtResource("3_ogpk4")])
+games = Array[ExtResource("5_xwiww")]([ExtResource("5_aqq13"), ExtResource("6_vco7t"), ExtResource("8_as5w3")])
+shop = Array[ExtResource("10_tskfw")]([ExtResource("15_vw622"), ExtResource("11_txem8"), ExtResource("12_rmb62"), ExtResource("13_1lu78"), ExtResource("16_oqnp4"), ExtResource("17_xgvyq"), ExtResource("18_oho5h"), ExtResource("19_kqwoh")])

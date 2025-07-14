@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpoy3vi87f7ib"]
-
-[ext_resource type="Theme" uid="uid://bfmrdx6ah36lt" path="res://ui/ui_theme.tres" id="1_h205k"]
+[gd_scene format=3 uid="uid://cpoy3vi87f7ib"]
 
 [node name="Button" type="Button"]
 texture_filter = 1
@@ -8,7 +6,6 @@ custom_minimum_size = Vector2(130, 20)
 offset_right = 152.0
 offset_bottom = 20.0
 mouse_default_cursor_shape = 2
-theme = ExtResource("1_h205k")
 shortcut_in_tooltip = false
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

@@ -1,31 +1,51 @@
-[gd_resource type="Resource" script_class="FoodResource" load_steps=13 format=3 uid="uid://bkdhbswxet1xn"]
+[gd_resource type="Resource" script_class="FoodResource" load_steps=21 format=3 uid="uid://bkdhbswxet1xn"]
 
-[ext_resource type="Texture2D" uid="uid://dr2xgml4mhfhg" path="res://theme/grem/resources/food/boba/boba_1.png" id="1_yskbj"]
-[ext_resource type="Texture2D" uid="uid://crrrh0agrg7uw" path="res://theme/grem/resources/food/boba/boba_2.png" id="2_rfsot"]
-[ext_resource type="Texture2D" uid="uid://dg64ct0v2ss0v" path="res://theme/grem/resources/food/boba/boba_3.png" id="3_tf8l1"]
-[ext_resource type="Texture2D" uid="uid://cv72peu7s7rks" path="res://theme/grem/resources/food/boba/boba_eat_1.png" id="4_1t6xw"]
-[ext_resource type="Texture2D" uid="uid://dd676ptt0jvok" path="res://theme/grem/resources/food/boba/boba_eat_2.png" id="5_sta0b"]
-[ext_resource type="Texture2D" uid="uid://b1kqsrkn5lnt6" path="res://theme/grem/resources/food/boba/boba_eat_3.png" id="6_83wpf"]
-[ext_resource type="Texture2D" uid="uid://bgbl3s84x1m8c" path="res://theme/grem/resources/food/boba/boba_eat_4.png" id="7_stj84"]
-[ext_resource type="Texture2D" uid="uid://ghmdg50rtq45" path="res://theme/grem/resources/food/boba/boba_eat_5.png" id="8_pdwnu"]
-[ext_resource type="Texture2D" uid="uid://dcyop72uprtuv" path="res://theme/grem/resources/food/boba/icon.png" id="9_gm82j"]
+[ext_resource type="Texture2D" uid="uid://cfssi5ftx2gnc" path="res://theme/tabemono/resources/food/beer/frame0000.png" id="1_qt5jy"]
+[ext_resource type="Texture2D" uid="uid://bt6qm7mspmvy7" path="res://theme/tabemono/resources/food/beer/frame0001.png" id="2_x4rlg"]
+[ext_resource type="Texture2D" uid="uid://cx1dpwv5u7yes" path="res://theme/tabemono/resources/food/beer/frame0002.png" id="3_6syuu"]
+[ext_resource type="Texture2D" uid="uid://dvmydj1d43rfi" path="res://theme/tabemono/resources/food/beer/frame0003.png" id="4_dp5in"]
+[ext_resource type="Texture2D" uid="uid://dgbhcutekxn74" path="res://theme/tabemono/resources/food/beer/frame0004.png" id="5_yv2oh"]
+[ext_resource type="Texture2D" uid="uid://dqu4qjlrbl62y" path="res://theme/tabemono/resources/food/beer/frame0005.png" id="6_hmkuc"]
+[ext_resource type="Texture2D" uid="uid://bdccma0lrb4vg" path="res://theme/tabemono/resources/food/beer/frame0006.png" id="7_xq27d"]
+[ext_resource type="Texture2D" uid="uid://diqhe5g6dhqyq" path="res://theme/tabemono/resources/food/beer/frame0007.png" id="8_s4l5t"]
+[ext_resource type="Texture2D" uid="uid://wyntx8ub6n5q" path="res://theme/tabemono/resources/food/beer/eat0000.png" id="9_qois3"]
 [ext_resource type="Script" uid="uid://7w43b6hsn11b" path="res://resources/FoodResource.gd" id="10_3a3gt"]
-[ext_resource type="Resource" uid="uid://bpb2kbu1n36rs" path="res://theme/grem/resources/unlockables/boba.tres" id="11_6yvtd"]
+[ext_resource type="Texture2D" uid="uid://c13vgd1lh020v" path="res://theme/tabemono/resources/food/beer/eat0001.png" id="10_llraj"]
+[ext_resource type="Texture2D" uid="uid://dhw2dmww6p7cf" path="res://theme/tabemono/resources/food/beer/eat0002.png" id="11_l8jiy"]
+[ext_resource type="Texture2D" uid="uid://dgugskfx78m7y" path="res://theme/tabemono/resources/food/beer/eat0003.png" id="12_dxpvg"]
+[ext_resource type="Texture2D" uid="uid://davwnrfg8debp" path="res://theme/tabemono/resources/food/beer/eat0004.png" id="13_otlo1"]
+[ext_resource type="Texture2D" uid="uid://q6n5gw2edsl1" path="res://theme/tabemono/resources/food/beer/eat0005.png" id="14_mhnvj"]
+[ext_resource type="Texture2D" uid="uid://u0kg6ic7si8q" path="res://theme/tabemono/resources/food/beer/eat0006.png" id="15_p5mn6"]
+[ext_resource type="Texture2D" uid="uid://cpl6dhv7onx6s" path="res://theme/tabemono/resources/food/beer/eat0007.png" id="16_utgag"]
+[ext_resource type="Texture2D" uid="uid://c3w0poutwwpx2" path="res://theme/tabemono/resources/food/beer/eat0008.png" id="17_o1u3t"]
+[ext_resource type="Texture2D" uid="uid://d36vmynrt4w7m" path="res://theme/tabemono/resources/food/beer/icon.png" id="18_yjeo0"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_cjcap"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_gt8ev"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_yskbj")
+"texture": ExtResource("1_qt5jy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_rfsot")
+"texture": ExtResource("2_x4rlg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_tf8l1")
+"texture": ExtResource("3_6syuu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_rfsot")
+"texture": ExtResource("4_dp5in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yv2oh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hmkuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xq27d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_s4l5t")
 }],
 "loop": true,
 "name": &"default",
@@ -33,22 +53,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_yskbj")
+"texture": ExtResource("9_qois3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_1t6xw")
+"texture": ExtResource("10_llraj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_sta0b")
+"texture": ExtResource("11_l8jiy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_83wpf")
+"texture": ExtResource("12_dxpvg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_stj84")
+"texture": ExtResource("13_otlo1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_pdwnu")
+"texture": ExtResource("14_mhnvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_p5mn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_utgag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_o1u3t")
 }],
 "loop": false,
 "name": &"eat",
@@ -60,6 +89,5 @@ script = ExtResource("10_3a3gt")
 hungry = 100.0
 boredom = 30.0
 cooldown = 30.0
-unlock = ExtResource("11_6yvtd")
-icon = ExtResource("9_gm82j")
-animation = SubResource("SpriteFrames_cjcap")
+icon = ExtResource("18_yjeo0")
+animation = SubResource("SpriteFrames_gt8ev")

@@ -1,9 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://dkaal7dxlbvqy"]
+[gd_scene load_steps=13 format=3 uid="uid://dkaal7dxlbvqy"]
 
 [ext_resource type="Script" uid="uid://dndkaqg82y36j" path="res://scenes/home/scene.gd" id="1_oq1jp"]
 [ext_resource type="PackedScene" uid="uid://lhxe71vragto" path="res://scenes/home/ui/controls/UiControls.tscn" id="2_all1x"]
 [ext_resource type="PackedScene" uid="uid://cvkideptcxtuk" path="res://scenes/home/ui/stats/StatusPanel.tscn" id="3_mh4k8"]
-[ext_resource type="SpriteFrames" uid="uid://cxt5213k5mxo3" path="res://scenes/home/environment.tres" id="4_4si2r"]
+[ext_resource type="PackedScene" uid="uid://dgqqe22sptt5s" path="res://scenes/home/environment.tscn" id="4_8dksl"]
 [ext_resource type="PackedScene" uid="uid://bvtoltqxhmabq" path="res://scenes/home/pet.tscn" id="5_kljsm"]
 [ext_resource type="Shader" uid="uid://lgyt71md3vdg" path="res://ui/outline2D.gdshader" id="6_uvsj3"]
 [ext_resource type="Script" uid="uid://bf2tsixyjo2sk" path="res://scenes/home/FoodDrop.gd" id="8_vpc07"]
@@ -21,48 +21,12 @@ shader_parameter/add_margins = true
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m0315"]
 
-[sub_resource type="SpriteFrames" id="2"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}],
-"loop": false,
-"name": &"lights_off",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}],
-"loop": false,
-"name": &"lights_on",
-"speed": 8.0
-}]
-
-[node name="ShopScene" type="Node2D" groups=["scene"]]
+[node name="HomeScene" type="Node2D" groups=["scene"]]
 script = ExtResource("1_oq1jp")
 
 [node name="UIControls" parent="." instance=ExtResource("2_all1x")]
 unique_name_in_owner = true
+layer = 3
 
 [node name="StatusPanel" parent="UIControls" instance=ExtResource("3_mh4k8")]
 unique_name_in_owner = true
@@ -77,11 +41,7 @@ offset_bottom = 141.0
 [node name="ShopView" type="Node2D" parent="."]
 unique_name_in_owner = true
 
-[node name="Background" type="AnimatedSprite2D" parent="ShopView"]
-process_mode = 3
-sprite_frames = ExtResource("4_4si2r")
-animation = &"lights_off"
-centered = false
+[node name="Environment" parent="ShopView" instance=ExtResource("4_8dksl")]
 
 [node name="Pet" parent="ShopView" instance=ExtResource("5_kljsm")]
 
@@ -99,13 +59,6 @@ material = SubResource("15")
 position = Vector2(105, -39)
 sprite_frames = SubResource("SpriteFrames_m0315")
 script = ExtResource("8_vpc07")
-
-[node name="Foreground" type="AnimatedSprite2D" parent="ShopView"]
-process_mode = 3
-sprite_frames = SubResource("2")
-animation = &"lights_on"
-frame = 3
-centered = false
 
 [node name="WashScene" type="Node2D" parent="."]
 unique_name_in_owner = true

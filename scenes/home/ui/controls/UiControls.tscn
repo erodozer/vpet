@@ -1,9 +1,8 @@
-[gd_scene load_steps=34 format=3 uid="uid://lhxe71vragto"]
+[gd_scene load_steps=33 format=3 uid="uid://lhxe71vragto"]
 
 [ext_resource type="Script" uid="uid://c85n7t43sh1d4" path="res://scenes/home/ui/controls/UiControls.gd" id="1_45cbp"]
 [ext_resource type="Theme" uid="uid://bfmrdx6ah36lt" path="res://ui/ui_theme.tres" id="2_fferf"]
-[ext_resource type="Resource" uid="uid://cmpo574c33e4r" path="res://config/food.tres" id="2_vkbdu"]
-[ext_resource type="Resource" uid="uid://b3yej05h7jmeh" path="res://config/games.tres" id="3_dyl7m"]
+[ext_resource type="Resource" uid="uid://cmpo574c33e4r" path="res://config/menu.tres" id="2_vkbdu"]
 [ext_resource type="Shader" uid="uid://c4pt0ljhyev6h" path="res://ui/scroll.gdshader" id="3_ogr13"]
 [ext_resource type="Texture2D" uid="uid://dsdtq1sgpro7c" path="res://ui/tiled_hud.png" id="4_publw"]
 [ext_resource type="PackedScene" uid="uid://r0g0xsty3gr7" path="res://scenes/home/ui/clock/Clock.tscn" id="5_i8es8"]
@@ -113,8 +112,7 @@ region = Rect2(0, 68, 17, 17)
 
 [node name="UIControls" type="CanvasLayer" groups=["ui:controls"]]
 script = ExtResource("1_45cbp")
-foods = ExtResource("2_vkbdu")
-games = ExtResource("3_dyl7m")
+menu = ExtResource("2_vkbdu")
 
 [node name="TopPanel" type="Panel" parent="."]
 texture_filter = 1

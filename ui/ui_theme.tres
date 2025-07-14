@@ -1,10 +1,15 @@
-[gd_resource type="Theme" load_steps=14 format=3 uid="uid://bfmrdx6ah36lt"]
+[gd_resource type="Theme" load_steps=16 format=3 uid="uid://bfmrdx6ah36lt"]
 
 [ext_resource type="FontFile" uid="uid://3heiwkvujho0" path="res://ui/fonts/EarlyGameBoySTD.ttf" id="1_cnyj1"]
 [ext_resource type="StyleBox" uid="uid://dwah4gfye68fp" path="res://ui/panel.tres" id="2_16ksv"]
 [ext_resource type="FontFile" uid="uid://4kfjpn6tatod" path="res://ui/fonts/HelvetiPixel.ttf" id="2_kbk24"]
+[ext_resource type="FontFile" uid="uid://ossjr40b5ax6" path="res://ui/fonts/SymphonyoftheNightfont.ttf" id="2_mbvn8"]
 [ext_resource type="FontFile" uid="uid://ymu18ty2r2n8" path="res://ui/fonts/PolygonPixel5x7Standard.ttf" id="3_kbk24"]
 [ext_resource type="FontFile" uid="uid://cu56gylq7usm7" path="res://ui/fonts/Minimum.ttf" id="4_mbvn8"]
+
+[sub_resource type="FontVariation" id="FontVariation_o52aa"]
+fallbacks = Array[Font]([ExtResource("2_mbvn8")])
+base_font = ExtResource("1_cnyj1")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twak7"]
 content_margin_left = 4.0
@@ -100,6 +105,7 @@ border_color = Color(0.92549, 0.917647, 0.921569, 1)
 default_font = SubResource("FontVariation_cnyj1")
 default_font_size = 16
 BoldLabel/base_type = &"Label"
+BoldLabel/fonts/font = SubResource("FontVariation_o52aa")
 Button/colors/font_color = Color(0.0588235, 0.0352941, 0.0352941, 1)
 Button/colors/font_color_disabled = Color(0.458405, 0.458405, 0.458405, 1)
 Button/colors/font_color_focus = Color(0.0588235, 0.0352941, 0.0352941, 1)

@@ -1,0 +1,102 @@
+[gd_resource type="Resource" script_class="FoodResource" load_steps=21 format=3 uid="uid://dnuhofb4ga3qa"]
+
+[ext_resource type="Texture2D" uid="uid://b2mpmxngg7iib" path="res://theme/tabemono/resources/food/water/frame0000.png" id="1_ujxyw"]
+[ext_resource type="Texture2D" uid="uid://1nn5qodxx46x" path="res://theme/tabemono/resources/food/water/frame0001.png" id="2_27req"]
+[ext_resource type="Texture2D" uid="uid://cw1a2l4tikul2" path="res://theme/tabemono/resources/food/water/frame0002.png" id="3_oavbq"]
+[ext_resource type="Texture2D" uid="uid://c6ngnsp7muobi" path="res://theme/tabemono/resources/food/water/frame0003.png" id="4_ncxlm"]
+[ext_resource type="Texture2D" uid="uid://rhvbn5vtpt7a" path="res://theme/tabemono/resources/food/water/eat0000.png" id="5_asmre"]
+[ext_resource type="Texture2D" uid="uid://mba3qkt3q76l" path="res://theme/tabemono/resources/food/water/eat0001.png" id="6_2jsw0"]
+[ext_resource type="Texture2D" uid="uid://djs3rgxi00b2g" path="res://theme/tabemono/resources/food/water/eat0002.png" id="7_0h5hn"]
+[ext_resource type="Texture2D" uid="uid://cl2hlxphmwlta" path="res://theme/tabemono/resources/food/water/eat0003.png" id="8_hmhjc"]
+[ext_resource type="Texture2D" uid="uid://bbu2hqylxe0r3" path="res://theme/tabemono/resources/food/water/eat0004.png" id="9_0l53v"]
+[ext_resource type="Texture2D" uid="uid://nphxuto67lpc" path="res://theme/tabemono/resources/food/water/eat0005.png" id="10_oda24"]
+[ext_resource type="Texture2D" uid="uid://mm1kgarwcg0t" path="res://theme/tabemono/resources/food/water/eat0006.png" id="11_05al1"]
+[ext_resource type="Texture2D" uid="uid://crt8tht2gered" path="res://theme/tabemono/resources/food/water/eat0007.png" id="12_da363"]
+[ext_resource type="Texture2D" uid="uid://knswpetdctgr" path="res://theme/tabemono/resources/food/water/eat0008.png" id="13_myysx"]
+[ext_resource type="Texture2D" uid="uid://dw3p6uht5s1wf" path="res://theme/tabemono/resources/food/water/eat0009.png" id="14_gc64j"]
+[ext_resource type="Texture2D" uid="uid://b5oi0yedixtmd" path="res://theme/tabemono/resources/food/water/eat0010.png" id="15_auius"]
+[ext_resource type="Texture2D" uid="uid://b1v64i0wa33ut" path="res://theme/tabemono/resources/food/water/eat0011.png" id="16_7q2rd"]
+[ext_resource type="Texture2D" uid="uid://cm7rx48jafan8" path="res://theme/tabemono/resources/food/water/eat0012.png" id="17_ujxyw"]
+[ext_resource type="Texture2D" uid="uid://bj1q01uc0ob2m" path="res://theme/tabemono/resources/food/water/icon.png" id="18_ujxyw"]
+[ext_resource type="Script" uid="uid://7w43b6hsn11b" path="res://resources/FoodResource.gd" id="19_e4qsb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_om2cr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ujxyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_27req")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oavbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ncxlm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_asmre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2jsw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0h5hn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hmhjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0l53v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oda24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_05al1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_da363")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_myysx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_gc64j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_auius")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7q2rd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7q2rd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ujxyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7q2rd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ujxyw")
+}],
+"loop": false,
+"name": &"eat",
+"speed": 6.0
+}]
+
+[resource]
+script = ExtResource("19_e4qsb")
+hungry = 80.0
+boredom = 0.0
+cooldown = 20.0
+icon = ExtResource("18_ujxyw")
+animation = SubResource("SpriteFrames_om2cr")

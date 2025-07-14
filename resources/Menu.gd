@@ -1,18 +1,16 @@
 extends Resource
 class_name ResourceMenu
 
-var default: get = get_default
-var unlocked: get = get_unlocked
+@export var food: Array[FoodResource] = []
+@export var games: Array[GameResource] = []
+@export var shop: Array[ShopResource] = []
 
-func get_items():
-	return []
-
-func get_default():
-	return get_items()[0]
+func get_default(items: Array):
+	return items[0]
 	
-func get_unlocked():
+func get_unlocked(items: Array):
 	var u = []
-	for i in get_items():
+	for i in items:
 		if i.unlock == null or GameState.unlocks.get(i.unlock.flag, false):
 			u.append(i)
 	return u

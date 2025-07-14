@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_ok3s8")
 flag = "food.boba"
-display_name = "Bubble T."
+display_name = "Bubble Tea"
 description = "Sweet treat that improves mood"
 cost = 30000

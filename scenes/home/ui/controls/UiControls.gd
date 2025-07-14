@@ -4,8 +4,7 @@ const gdsh = preload("res://addons/godash/godash.gd")
 
 signal action_pressed(action_type, is_pressed, item)
 
-@export var foods: ResourceMenu = null
-@export var games: ResourceMenu = null
+@export var menu: ResourceMenu = null
 @onready var clock = get_node("%Clock")
 @onready var label = get_node("%PetName")
 @onready var clock_label = get_node("%CurrentTime")
@@ -14,7 +13,7 @@ signal action_pressed(action_type, is_pressed, item)
 func _ready():
 	
 	# add food options dynamically
-	for food in foods.items:
+	for food in menu.food:
 		var button = preload("../button/SimpleButton.tscn").instantiate()
 		button.get_node("icon_on").texture = food.icon
 		button.submenu = "food"
@@ -24,7 +23,7 @@ func _ready():
 		get_node("%Controls").add_child(button)
 		
 	# add game options dynamically
-	for game in games.items:
+	for game in menu.games:
 		if game == null:
 			continue
 		var button = preload("../button/SimpleButton.tscn").instantiate()
@@ -74,8 +73,8 @@ func _on_clock_toggled():
 	
 func set_hint_text(text):
 	if not text:
-		print(ProjectSettings.get_setting_with_override("application/gameplay/pet_name"))
-		label.text = ProjectSettings.get_setting_with_override("application/gameplay/pet_name")
+		print(ProjectSettings.get_setting_with_override("application/vpet/name"))
+		label.text = ProjectSettings.get_setting_with_override("application/vpet/name")
 	else:
 		label.text = text
 

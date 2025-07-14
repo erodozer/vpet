@@ -3,9 +3,9 @@ extends Node2D
 const BATH_COOLDOWN = 120.0  # 2 minutes
 const CURE_COOLDOWN = 1800.0 # 30 minute
 
-@onready var fox = get_node("%ShopView/Pet")
+@onready var pet = get_node("%ShopView/Pet")
 @onready var food = get_node("%FoodDrop")
-@onready var menu = get_node("%UIControls")
+@onready var controls = get_node("%UIControls")
 
 # barriers around twitch chat to prevent
 # processing too many commands or simultaneous commands
@@ -21,7 +21,7 @@ func _on_TwitchIntegration_chat_command(action):
 		"lights on":
 			_toggle_lights(true)
 		"food", "give food":
-			var choice = (menu.foods.unlocked as Array).pick_random()
+			var choice = (controls.menu.get_unlocked(controls.menu.food) as Array).pick_random()
 			_drop_food(choice)
 		"bath", "bathe", "wash":
 			_bathe()
@@ -51,8 +51,8 @@ func _on_UIControls_action_pressed(action_type, is_pressed, meta = null):
 func _ready():
 	var left = get_node("%LeftBound").position.x
 	var right = get_node("%RightBound").position.x
-	fox.left_bound = left
-	fox.right_bound = right
+	pet.left_bound = left
+	pet.right_bound = right
 	food.left_bound = left
 	food.right_bound = right
 	
@@ -67,7 +67,7 @@ func _ready():
 	NoClick.hide()
 	
 func _setup(_params):
-	fox.pause = false
+	pet.pause = false
 	if not GameState.lights_on:
 		_toggle_lights(GameState.lights_on)
 	
@@ -77,7 +77,7 @@ func _show_stats():
 	NoClick.visible = true
 
 	var ui = get_node("UIControls")
-	var camera = fox.get_node("FollowCamera") as Camera2D
+	var camera = pet.get_node("FollowCamera") as Camera2D
 	
 	ui.show_submenu("stats")
 	var panel = get_node("%StatusPanel")
@@ -114,14 +114,13 @@ func _toggle_lights(lights_on):
 	accepting_actions = false
 	# pause processing while bathing
 	NoClick.visible = true
-	if lights_on:
-		get_node("%ShopView/Foreground").play("lights_on")
-		get_node("%ShopView/Background").play("lights_on")
-	else:
-		get_node("%ShopView/Foreground").play("lights_off")
-		get_node("%ShopView/Background").play("lights_off")
 	
-	await get_tree().create_timer(1.5).timeout
+	if lights_on:
+		get_node("%ShopView/Environment/AnimationPlayer").play("lights_on")
+	else:
+		get_node("%ShopView/Environment/AnimationPlayer").play("lights_off")
+	
+	await get_node("%ShopView/Environment/AnimationPlayer").animation_finished
 	# pause processing while bathing
 	NoClick.visible = false
 
@@ -135,18 +134,18 @@ func _game(game):
 	accepting_actions = false
 	
 	if not game:
-		game = menu.games.default
-		if len(menu.games.unlocked) > 1:
-			menu.show_submenu("game")
-			var result = await menu.action_pressed
+		game = controls.menu.get_default(controls.menu.games)
+		if len(controls.menu.get_unlocked(controls.menu.games)) > 1:
+			controls.show_submenu("game")
+			var result = await controls.action_pressed
 			var action = result[2]
 			
 			if action == null:
-				menu.show_menu()
+				controls.show_menu()
 				accepting_actions = true
 				return
 			game = action
-			menu.show_menu("Game")
+			controls.show_menu("Game")
 			
 	# pause processing while lookin for food
 	NoClick.visible = true
@@ -164,7 +163,7 @@ func _bathe():
 	# pause processing while bathing
 	NoClick.visible = true
 	
-	fox.pause = true
+	pet.pause = true
 	
 	var wash = get_node("WashScene")
 	var wash_bg = wash.get_node("Background") as AnimatedSprite2D
@@ -198,7 +197,7 @@ func _bathe():
 	
 	# pause processing while lookin for food
 	NoClick.visible = false
-	fox.pause = false
+	pet.pause = false
 	accepting_actions = true
 	
 func _give_medicine():
@@ -223,29 +222,29 @@ func _drop_food(food_type = null):
 	accepting_actions = false
 	
 	if not food_type:
-		food_type = menu.foods.default
-		if len(menu.foods.unlocked) > 1:
-			menu.show_submenu("food")
-			var result = await menu.action_pressed
+		food_type = controls.menu.get_default(controls.menu.food)
+		if len(controls.menu.get_unlocked(controls.menu.food)) > 1:
+			controls.show_submenu("food")
+			var result = await controls.action_pressed
 			var action = result[2]
 			
 			if action == null:
-				menu.show_menu("Food")
+				controls.show_menu("Food")
 				accepting_actions = true
 				return
 			food_type = action
-			menu.show_menu("Food")
+			controls.show_menu("Food")
 			
 	# pause processing while lookin for food
 	NoClick.visible = true
 	
-	fox.pause = true
+	pet.pause = true
 	var can_drop = await food.drop(food_type)
 	if can_drop:
-		await fox.move_to(food.position, 30.0)
-		fox.eat()
+		await pet.move_to(food.position, 30.0)
+		pet.eat()
 		await food.eat()
-	fox.pause = false
+	pet.pause = false
 	
 	NoClick.visible = false
 	accepting_actions = true

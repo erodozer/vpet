@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ShopResource" load_steps=2 format=3 uid="uid://d2w2id214hpeu"]
+
+[ext_resource type="Script" uid="uid://cm55ffjlgedb" path="res://resources/ShopResource.gd" id="1_ds8cr"]
+
+[resource]
+script = ExtResource("1_ds8cr")
+flag = "food.beer"
+display_name = "Monodelo"
+description = "Mmm beer.  Improves mood significantly"
+cost = 30000

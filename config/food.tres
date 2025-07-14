@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="FoodMenu" load_steps=3 format=3 uid="uid://cmpo574c33e4r"]
-
-[ext_resource type="Script" uid="uid://7w43b6hsn11b" path="res://resources/FoodResource.gd" id="1_66vve"]
-[ext_resource type="Script" uid="uid://crqes43mfags" path="res://resources/FoodMenu.gd" id="1_lypxq"]
-
-[resource]
-script = ExtResource("1_lypxq")
-items = Array[ExtResource("1_66vve")]([])

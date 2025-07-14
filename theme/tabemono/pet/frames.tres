@@ -1,11 +1,17 @@
-[gd_resource type="SpriteFrames" load_steps=59 format=3 uid="uid://dcv7ol2cnsj0w"]
+[gd_resource type="SpriteFrames" load_steps=65 format=3 uid="uid://dcv7ol2cnsj0w"]
 
 [ext_resource type="Texture2D" uid="uid://bfi1m1sy5droa" path="res://theme/tabemono/pet/pet_dance_0000.png" id="1_4fylf"]
+[ext_resource type="Texture2D" uid="uid://brfhn02ixfpym" path="res://theme/tabemono/pet/pet_bath_0000.png" id="1_jf3c0"]
+[ext_resource type="Texture2D" uid="uid://d1xj6dwkgupf2" path="res://theme/tabemono/pet/pet_bath_0001.png" id="2_kp8bk"]
 [ext_resource type="Texture2D" uid="uid://ffmklg3dnou2" path="res://theme/tabemono/pet/pet_dance_0001.png" id="2_sgjnj"]
+[ext_resource type="Texture2D" uid="uid://cr58djeo6c2ue" path="res://theme/tabemono/pet/pet_bath_0002.png" id="3_3vgrr"]
 [ext_resource type="Texture2D" uid="uid://sjwbem02imko" path="res://theme/tabemono/pet/pet_dance_0002.png" id="3_fm8kj"]
 [ext_resource type="Texture2D" uid="uid://b8s06oid50edf" path="res://theme/tabemono/pet/pet_dance_0003.png" id="4_2qm0e"]
+[ext_resource type="Texture2D" uid="uid://s3yd7i7ltmpv" path="res://theme/tabemono/pet/pet_bath_0003.png" id="4_jxj1p"]
+[ext_resource type="Texture2D" uid="uid://4ykrg01lske4" path="res://theme/tabemono/pet/pet_bath_0004.png" id="5_cfd3h"]
 [ext_resource type="Texture2D" uid="uid://r3osufbmlg3x" path="res://theme/tabemono/pet/pet_dance_0004.png" id="5_qvbn6"]
 [ext_resource type="Texture2D" uid="uid://u2ltewv57ovr" path="res://theme/tabemono/pet/pet_dance_0005.png" id="6_d6u16"]
+[ext_resource type="Texture2D" uid="uid://u0axthwpfcq3" path="res://theme/tabemono/pet/pet_bath_0005.png" id="6_v1788"]
 [ext_resource type="Texture2D" uid="uid://drd0rcpf3h3po" path="res://theme/tabemono/pet/pet_dance_0006.png" id="7_32t5i"]
 [ext_resource type="Texture2D" uid="uid://do15m5qx4uvcx" path="res://theme/tabemono/pet/pet_dance_0007.png" id="8_5iwni"]
 [ext_resource type="Texture2D" uid="uid://13mrv2isvgph" path="res://theme/tabemono/pet/pet_dance_0008.png" id="9_dwp3f"]
@@ -61,10 +67,28 @@
 
 [resource]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jf3c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kp8bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3vgrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jxj1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cfd3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v1788")
+}],
 "loop": true,
 "name": &"bath",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,

@@ -1,12 +1,37 @@
-[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://dhwfauryxwctl"]
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://dhwfauryxwctl"]
 
-[ext_resource type="Texture2D" uid="uid://2i5jcm2r6mls" path="res://theme/tabemono/scenes/home/environment/background_01.png" id="1_0iorr"]
+[ext_resource type="Texture2D" uid="uid://dafnite431l64" path="res://theme/tabemono/scenes/home/environment/rooftop_0000.png" id="1_kuoib"]
+[ext_resource type="Texture2D" uid="uid://bs7oigra42d20" path="res://theme/tabemono/scenes/home/environment/rooftop_0001.png" id="2_sr7fn"]
+[ext_resource type="Texture2D" uid="uid://bvv1lu8rby00t" path="res://theme/tabemono/scenes/home/environment/rooftop_0002.png" id="3_ns4wl"]
+[ext_resource type="Texture2D" uid="uid://cvou652ucxn1g" path="res://theme/tabemono/scenes/home/environment/rooftop_0003.png" id="4_r31ce"]
+[ext_resource type="Texture2D" uid="uid://blrpnmxewjg3e" path="res://theme/tabemono/scenes/home/environment/rooftop_0004.png" id="5_ugsai"]
+[ext_resource type="Texture2D" uid="uid://c25x5a2b25hss" path="res://theme/tabemono/scenes/home/environment/rooftop_0005.png" id="6_a1d63"]
+[ext_resource type="Texture2D" uid="uid://di61xbee5w7r2" path="res://theme/tabemono/scenes/home/environment/rooftop_0006.png" id="7_a37gk"]
+[ext_resource type="Texture2D" uid="uid://bj7tnh35nf0xv" path="res://theme/tabemono/scenes/home/environment/rooftop_0007.png" id="8_8b04b"]
+[ext_resource type="Texture2D" uid="uid://cx3j8v4xfuyfp" path="res://theme/tabemono/scenes/home/environment/rooftop_0008.png" id="9_vqpvc"]
+[ext_resource type="Texture2D" uid="uid://bej0e4qo15ra" path="res://theme/tabemono/scenes/home/environment/rooftop_0009.png" id="10_jeo4i"]
+[ext_resource type="Texture2D" uid="uid://c2llftemdcl2t" path="res://theme/tabemono/scenes/home/environment/rooftop_0010.png" id="11_hddgh"]
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_0iorr")
+"texture": ExtResource("1_kuoib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sr7fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ns4wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r31ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ugsai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a1d63")
 }],
 "loop": false,
 "name": &"lights_off",
@@ -14,7 +39,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_0iorr")
+"texture": ExtResource("6_a1d63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a37gk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8b04b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vqpvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jeo4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hddgh")
 }],
 "loop": false,
 "name": &"lights_on",

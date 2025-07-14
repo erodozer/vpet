@@ -1,31 +1,31 @@
 [gd_resource type="Resource" script_class="FoodResource" load_steps=13 format=3 uid="uid://hxnsymsk3w4n"]
 
-[ext_resource type="Texture2D" uid="uid://dr2xgml4mhfhg" path="res://theme/grem/resources/food/boba/boba_1.png" id="1_b1iub"]
-[ext_resource type="Texture2D" uid="uid://crrrh0agrg7uw" path="res://theme/grem/resources/food/boba/boba_2.png" id="2_np0tu"]
-[ext_resource type="Texture2D" uid="uid://dg64ct0v2ss0v" path="res://theme/grem/resources/food/boba/boba_3.png" id="3_s8k40"]
-[ext_resource type="Texture2D" uid="uid://cv72peu7s7rks" path="res://theme/grem/resources/food/boba/boba_eat_1.png" id="4_w18uv"]
-[ext_resource type="Texture2D" uid="uid://dd676ptt0jvok" path="res://theme/grem/resources/food/boba/boba_eat_2.png" id="5_5xo83"]
-[ext_resource type="Texture2D" uid="uid://b1kqsrkn5lnt6" path="res://theme/grem/resources/food/boba/boba_eat_3.png" id="6_0dmlt"]
-[ext_resource type="Texture2D" uid="uid://bgbl3s84x1m8c" path="res://theme/grem/resources/food/boba/boba_eat_4.png" id="7_asded"]
-[ext_resource type="Texture2D" uid="uid://ghmdg50rtq45" path="res://theme/grem/resources/food/boba/boba_eat_5.png" id="8_128mg"]
-[ext_resource type="Texture2D" uid="uid://dcyop72uprtuv" path="res://theme/grem/resources/food/boba/icon.png" id="9_ujxyw"]
+[ext_resource type="Texture2D" uid="uid://dshxo7pky6na3" path="res://theme/tabemono/resources/food/lettuce/frame0000.png" id="1_yyr8u"]
+[ext_resource type="Texture2D" uid="uid://c2bgsrujuowwr" path="res://theme/tabemono/resources/food/lettuce/frame0001.png" id="2_pm7rl"]
+[ext_resource type="Texture2D" uid="uid://cfl2j1mtbvk4x" path="res://theme/tabemono/resources/food/lettuce/frame0002.png" id="3_fespx"]
+[ext_resource type="Texture2D" uid="uid://chccugg4sigql" path="res://theme/tabemono/resources/food/lettuce/frame0003.png" id="4_jmmce"]
+[ext_resource type="Texture2D" uid="uid://cb3tco6hnww7q" path="res://theme/tabemono/resources/food/lettuce/eat0000.png" id="5_fohi8"]
+[ext_resource type="Texture2D" uid="uid://c0kwst26c8l65" path="res://theme/tabemono/resources/food/lettuce/eat0001.png" id="6_tuqmv"]
+[ext_resource type="Texture2D" uid="uid://0fuo0qe1lfp1" path="res://theme/tabemono/resources/food/lettuce/eat0002.png" id="7_00ppc"]
+[ext_resource type="Texture2D" uid="uid://br2cg4d8cd1x4" path="res://theme/tabemono/resources/food/lettuce/eat0003.png" id="8_tc0p5"]
+[ext_resource type="Texture2D" uid="uid://dxjg53101i4l7" path="res://theme/tabemono/resources/food/lettuce/eat0004.png" id="9_ug53d"]
 [ext_resource type="Script" uid="uid://7w43b6hsn11b" path="res://resources/FoodResource.gd" id="10_27req"]
-[ext_resource type="Resource" uid="uid://bpb2kbu1n36rs" path="res://theme/grem/resources/unlockables/boba.tres" id="11_oavbq"]
+[ext_resource type="Texture2D" uid="uid://c1rqxk2b326lg" path="res://theme/tabemono/resources/food/lettuce/icon.png" id="10_327j5"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_cjcap"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_6xh2f"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_b1iub")
+"texture": ExtResource("1_yyr8u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_np0tu")
+"texture": ExtResource("2_pm7rl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_s8k40")
+"texture": ExtResource("3_fespx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_np0tu")
+"texture": ExtResource("4_jmmce")
 }],
 "loop": true,
 "name": &"default",
@@ -33,22 +33,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_b1iub")
+"texture": ExtResource("5_fohi8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_w18uv")
+"texture": ExtResource("6_tuqmv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_5xo83")
+"texture": ExtResource("7_00ppc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_0dmlt")
+"texture": ExtResource("8_tc0p5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_asded")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_128mg")
+"texture": ExtResource("9_ug53d")
 }],
 "loop": false,
 "name": &"eat",
@@ -60,6 +57,5 @@ script = ExtResource("10_27req")
 hungry = 60.0
 boredom = 10.0
 cooldown = 30.0
-unlock = ExtResource("11_oavbq")
-icon = ExtResource("9_ujxyw")
-animation = SubResource("SpriteFrames_cjcap")
+icon = ExtResource("10_327j5")
+animation = SubResource("SpriteFrames_6xh2f")

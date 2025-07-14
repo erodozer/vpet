@@ -1,15 +1,11 @@
 extends Control
 
-# normally I like to make this kind of stuff
-# a dynamic set of resources, but because of
-# how small and simple this app is, might
-# as well keep it hard coded as a dictionary
-@export var UNLOCKS: ShopMenu
+@export var menu: ResourceMenu
 
 var selected
 
 func _ready():
-	for i in UNLOCKS.items:
+	for i in menu.shop:
 		var btn = preload("./ItemButton.tscn").instantiate()
 		btn.set_meta("item", i)
 		btn.focus_entered.connect(select_item.bind(i))
