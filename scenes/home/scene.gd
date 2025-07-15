@@ -81,6 +81,7 @@ func _show_stats():
 	
 	ui.show_submenu("stats")
 	var panel = get_node("%StatusPanel")
+	panel.current_tab = 0
 	var tween = create_tween()
 	tween.parallel().tween_property(panel, "position:x", 64.0, 0.3)
 	tween.parallel().tween_property(camera, "offset:x", 48.0, 0.3)
@@ -95,6 +96,8 @@ func _show_stats():
 			break
 		elif action[0] == "details":
 			panel.toggle_details()
+		elif action[0] == "counters":
+			panel.toggle_counters()
 	
 	# pause processing while bathing
 	NoClick.visible = true
@@ -108,7 +111,6 @@ func _show_stats():
 	NoClick.visible = false
 	ui.show_menu()
 	accepting_actions = true
-	panel.toggle_details(false)
 	
 func _toggle_lights(lights_on):
 	accepting_actions = false

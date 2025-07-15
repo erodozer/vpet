@@ -137,6 +137,7 @@ NumericLabel/fonts/font = ExtResource("4_mbvn8")
 Panel/styles/panel = ExtResource("2_16ksv")
 PanelContainer/styles/panel = ExtResource("2_16ksv")
 ScrollContainer/styles/bg = null
+TabContainer/styles/panel = ExtResource("2_16ksv")
 VScrollBar/icons/decrement = null
 VScrollBar/icons/decrement_highlight = null
 VScrollBar/icons/decrement_pressed = null

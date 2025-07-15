@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://lhxe71vragto"]
+[gd_scene load_steps=34 format=3 uid="uid://lhxe71vragto"]
 
 [ext_resource type="Script" uid="uid://c85n7t43sh1d4" path="res://scenes/home/ui/controls/UiControls.gd" id="1_45cbp"]
 [ext_resource type="Theme" uid="uid://bfmrdx6ah36lt" path="res://ui/ui_theme.tres" id="2_fferf"]
@@ -53,6 +53,10 @@ region = Rect2(0, 0, 17, 17)
 [sub_resource type="AtlasTexture" id="AtlasTexture_fpuxr"]
 atlas = ExtResource("10_8nnr7")
 region = Rect2(17, 85, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ply7n"]
+atlas = ExtResource("10_8nnr7")
+region = Rect2(0, 119, 17, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ylq6"]
 atlas = ExtResource("10_8nnr7")
@@ -219,7 +223,7 @@ theme_override_constants/separation = 1
 
 [node name="Back" parent="BottomPanel/Controls" instance=ExtResource("9_of6ik")]
 visible = false
-custom_minimum_size = Vector2(32, 15)
+custom_minimum_size = Vector2(20, 15)
 layout_mode = 2
 toggle_mode = false
 
@@ -238,6 +242,16 @@ submenu = "stats"
 
 [node name="icon_on" parent="BottomPanel/Controls/Details" index="1"]
 texture = SubResource("AtlasTexture_fpuxr")
+
+[node name="Counters" parent="BottomPanel/Controls" instance=ExtResource("9_of6ik")]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+toggle_mode = false
+submenu = "stats"
+
+[node name="icon_on" parent="BottomPanel/Controls/Counters" index="1"]
+texture = SubResource("AtlasTexture_ply7n")
 
 [node name="Food" parent="BottomPanel/Controls" instance=ExtResource("9_of6ik")]
 layout_mode = 2
@@ -340,6 +354,7 @@ show_behind_parent = false
 
 [editable path="BottomPanel/Controls/Back"]
 [editable path="BottomPanel/Controls/Details"]
+[editable path="BottomPanel/Controls/Counters"]
 [editable path="BottomPanel/Controls/Food"]
 [editable path="BottomPanel/Controls/Light"]
 [editable path="BottomPanel/Controls/Game"]

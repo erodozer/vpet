@@ -75,4 +75,4 @@ func _exit_tree():
 	_theme_files = []
 	
 func enumerate_dir(path: String, ext = "tres") -> Array:
-	return gdsh.enumerate_dir("res://theme/%s/%s" % [_theme, path.substr(len("res://"))], ext)
+	return gdsh.enumerate_dir("res://theme/%s/%s" % [_theme, path.substr(len("res://"))], [ext])

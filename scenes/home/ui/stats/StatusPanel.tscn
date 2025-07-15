@@ -5,10 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://b2l8td6ax26uf" path="res://scenes/home/ui/stats/fun.png" id="4"]
 [ext_resource type="Script" uid="uid://cxl15g5432h25" path="res://scenes/home/ui/stats/StatusPanel.gd" id="5"]
 
-[node name="PanelContainer" type="PanelContainer"]
+[node name="PanelContainer" type="TabContainer"]
 offset_right = 97.0
 offset_bottom = 115.0
 theme = ExtResource("1_08kce")
+current_tab = 0
+clip_tabs = false
+tabs_visible = false
 script = ExtResource("5")
 
 [node name="BasicDisplay" type="GridContainer" parent="."]
@@ -17,6 +20,7 @@ layout_mode = 2
 theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 1
 columns = 2
+metadata/_tab_index = 0
 
 [node name="Label" type="Label" parent="BasicDisplay"]
 modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
@@ -103,6 +107,7 @@ layout_mode = 2
 theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 1
 columns = 2
+metadata/_tab_index = 1
 
 [node name="Label" type="Label" parent="DetailedDisplay"]
 modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
@@ -172,6 +177,30 @@ layout_mode = 2
 
 [node name="SickValue" type="Label" parent="DetailedDisplay/PanelContainer5"]
 unique_name_in_owner = true
+modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
+layout_mode = 2
+text = "0.0"
+
+[node name="CounterDisplay" type="GridContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 1
+columns = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="CounterDisplay"]
+modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hunger"
+
+[node name="PanelContainer" type="PanelContainer" parent="CounterDisplay"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HungryValue" type="Label" parent="CounterDisplay/PanelContainer"]
 modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
 text = "0.0"

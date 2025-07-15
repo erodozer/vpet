@@ -20,16 +20,12 @@ tmi/log_level="info"
 config/icon.pet_ham="res://theme/ham/icon.png"
 config/icon.pet_grem="res://theme/grem/icon.png"
 config/windows_native_icon.pet_ham="res://theme/ham/icon.ico"
-vpet/windows_native_icon.pet_grem="res://theme/grem/gigi.ico"
+config/windows_native_icon.pet_grem="res://theme/grem/gigi.ico"
 config/name.pet_grem="Gremgotchi"
 config/name.pet_ham="Hamagotchi"
 config/name.pet_clover="Pet the Fox"
 vpet/theme="tabemono"
-vpet/weight_minimum=5.0
-vpet/weight_maximum=25.0
 vpet/weight_unit="lbs"
-vpet/weight_maximum.pet_ham=60.0
-vpet/weight_minimum.pet_ham=20.0
 vpet/weight_unit.pet_ham="g"
 vpet/theme.pet_clover="fox"
 vpet/theme.pet_ham="ham"
@@ -42,6 +38,9 @@ vpet/name.pet_tabemono="Tabemono"
 vpet/style_bg_scroll=Vector2(1, 0)
 vpet/style_bg_scroll.pet_tabemono=Vector2(-0.7, -0.7)
 vpet/name="Pet"
+vpet/weight_range=Vector2(5, 25)
+vpet/weight_range.pet_ham=Vector2(20, 60)
+vpet/weight_range.pet_tabemono=Vector2(15, 50)
 
 [autoload]
 

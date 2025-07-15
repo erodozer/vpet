@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GameResource" load_steps=4 format=3 uid="uid://bg8qma42vxg42"]
+
+[ext_resource type="Texture2D" uid="uid://cln32514nae38" path="res://theme/tabemono/resources/games/picross.png" id="1_bf2s3"]
+[ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="2_xk7qw"]
+[ext_resource type="Resource" uid="uid://17brybp333ta" path="res://resources/unlockables/game_picross.tres" id="3_yyps1"]
+
+[resource]
+script = ExtResource("2_xk7qw")
+game = "picross"
+unlock = ExtResource("3_yyps1")
+icon = ExtResource("1_bf2s3")

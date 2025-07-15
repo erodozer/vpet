@@ -1,4 +1,4 @@
-extends Control
+extends TabContainer
 
 var show_details = false
 
@@ -6,13 +6,17 @@ var show_details = false
 func _ready():
 	GameState.connect("stats_changed", Callable(self, "_update_stats"))
 
-func toggle_details(active = null):
-	if active == null:
-		show_details = !show_details
+func toggle_details():
+	if current_tab == 1:
+		current_tab = 0
 	else:
-		show_details = active
-	get_node("%BasicDisplay").visible = not show_details
-	get_node("%DetailedDisplay").visible = show_details
+		current_tab = 1
+
+func toggle_counters():
+	if current_tab == 2:
+		current_tab = 0
+	else:
+		current_tab = 2
 
 func _update_stats(stats):
 	
@@ -37,8 +41,8 @@ func _update_stats(stats):
 
 	get_node("%Weight").text = "%.1f %s" % [
 		lerp(
-			ProjectSettings.get_setting_with_override("application/vpet/weight_minimum"),
-			ProjectSettings.get_setting_with_override("application/vpet/weight_maximum"),
+			ProjectSettings.get_setting_with_override("application/vpet/weight_range").x,
+			ProjectSettings.get_setting_with_override("application/vpet/weight_range").y,
 			clamp(stats.weight / 100.0, 0.0, 1.0)
 		),
 		ProjectSettings.get_setting_with_override("application/vpet/weight_unit"),

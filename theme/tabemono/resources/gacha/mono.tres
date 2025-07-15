@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GachaCardResource" load_steps=2 format=3 uid="uid://bwgla22oodxof"]
+
+[ext_resource type="Script" uid="uid://crb3c2d1tsmi4" path="res://resources/GachaCardResource.gd" id="1_tr87y"]
+
+[resource]
+script = ExtResource("1_tr87y")
+price = 250
+metadata/_custom_type_script = "uid://crb3c2d1tsmi4"
