@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ShopResource" load_steps=2 format=3 uid="uid://lbq76w630t2l"]
+
+[ext_resource type="Script" uid="uid://cm55ffjlgedb" path="res://resources/ShopResource.gd" id="1_hslf4"]
+
+[resource]
+script = ExtResource("1_hslf4")
+flag = "game.rhythm"
+display_name = "Rhythm Game"
+description = "Dance to music with your fav DJ.  Cheers!"
+cost = 25000

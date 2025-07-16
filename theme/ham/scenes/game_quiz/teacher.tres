@@ -1,0 +1,114 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://ds08vtd5qpi87"]
+
+[ext_resource type="Texture2D" uid="uid://pf2xixj5j6ai" path="res://theme/ham/scenes/game_quiz/teacher.png" id="1_e0pfb"]
+[ext_resource type="Texture2D" uid="uid://5sw8456k0ti6" path="res://theme/ham/scenes/game_quiz/teacher_c_01.png" id="2_ubgpi"]
+[ext_resource type="Texture2D" uid="uid://bamli7nk8nk73" path="res://theme/ham/scenes/game_quiz/teacher_c_02.png" id="3_owpyy"]
+[ext_resource type="Texture2D" uid="uid://b3nvxppufttsj" path="res://theme/ham/scenes/game_quiz/teacher_c_03.png" id="4_5ocbb"]
+[ext_resource type="Texture2D" uid="uid://e1a803t4nwyy" path="res://theme/ham/scenes/game_quiz/teacher_i_01.png" id="5_q4b7m"]
+[ext_resource type="Texture2D" uid="uid://i0rmodgwjpv0" path="res://theme/ham/scenes/game_quiz/teacher_i_02.png" id="6_ijmql"]
+[ext_resource type="Texture2D" uid="uid://bc1wsl85o21lk" path="res://theme/ham/scenes/game_quiz/teacher_i_03.png" id="7_0tvxj"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e0pfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ubgpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_owpyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5ocbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5ocbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5ocbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_owpyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ubgpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_e0pfb")
+}],
+"loop": false,
+"name": &"correct",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e0pfb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e0pfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q4b7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ijmql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ijmql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q4b7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_e0pfb")
+}],
+"loop": false,
+"name": &"incorrect",
+"speed": 14.0
+}]

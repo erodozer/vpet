@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ShopResource" load_steps=2 format=3 uid="uid://dnnnnkpyywtx"]
+
+[ext_resource type="Script" uid="uid://cm55ffjlgedb" path="res://resources/ShopResource.gd" id="1_nywwj"]
+
+[resource]
+script = ExtResource("1_nywwj")
+flag = "game.rhythm"
+display_name = "Club Mono"
+description = "Dance to music with yyour fav DJ.  Cheers!"
+cost = 75000

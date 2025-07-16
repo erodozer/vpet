@@ -1,15 +1,11 @@
-[gd_resource type="Resource" script_class="GameResource" load_steps=5 format=3 uid="uid://c2nufarxermn5"]
+[gd_resource type="Resource" script_class="GameResource" load_steps=4 format=3 uid="uid://c2nufarxermn5"]
 
-[ext_resource type="Texture2D" uid="uid://bunxtk64ph182" path="res://scenes/home/ui/controls/icons.png" id="1_7ttkb"]
+[ext_resource type="Texture2D" uid="uid://ntge5iverqxv" path="res://theme/tabemono/resources/games/gacha.png" id="1_kmfa6"]
 [ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="2_cyyn5"]
 [ext_resource type="Resource" uid="uid://4jbi7bvix4ht" path="res://resources/unlockables/game_gacha.tres" id="3_7gp6g"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jpvax"]
-atlas = ExtResource("1_7ttkb")
-region = Rect2(17, 170, 17, 17)
 
 [resource]
 script = ExtResource("2_cyyn5")
 game = "gacha"
 unlock = ExtResource("3_7gp6g")
-icon = SubResource("AtlasTexture_jpvax")
+icon = ExtResource("1_kmfa6")

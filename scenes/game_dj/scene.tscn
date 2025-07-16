@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://buobblw738bkc"]
+
+[ext_resource type="Script" uid="uid://dls43sywyn308" path="res://scenes/game_dj/scene.gd" id="1_53pig"]
+[ext_resource type="PackedScene" uid="uid://lkt0umh2vcyf" path="res://ui/game_background.tscn" id="2_52j38"]
+[ext_resource type="Theme" uid="uid://bfmrdx6ah36lt" path="res://ui/ui_theme.tres" id="4_ac5jj"]
+[ext_resource type="PackedScene" uid="uid://synrdtextp0s" path="res://scenes/game_dj/stage/stage.tscn" id="5_bd2vv"]
+[ext_resource type="PackedScene" uid="uid://dgahce6k2pcri" path="res://scenes/game_dj/meter/hype_meter.tscn" id="7_ac5jj"]
+[ext_resource type="PackedScene" uid="uid://bipfm4wt4pb6y" path="res://scenes/game_dj/lane/lane.tscn" id="8_bd2vv"]
+[ext_resource type="PackedScene" uid="uid://tyd6hlyrgac7" path="res://ui/results.tscn" id="8_jth5p"]
+[ext_resource type="PackedScene" uid="uid://c7bgokun8hd3y" path="res://scenes/game_dj/meter/combo.tscn" id="9_ac5jj"]
+
+[node name="Rhythm" type="Node" groups=["scene"]]
+script = ExtResource("1_53pig")
+
+[node name="Background" parent="." instance=ExtResource("2_52j38")]
+
+[node name="Stage" parent="Background" instance=ExtResource("5_bd2vv")]
+
+[node name="Control" type="VBoxContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_ac5jj")
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="HypeMeter" parent="Control" instance=ExtResource("7_ac5jj")]
+layout_mode = 2
+
+[node name="Lane" parent="Control" instance=ExtResource("8_bd2vv")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Combo" parent="Control/Lane" instance=ExtResource("9_ac5jj")]
+unique_name_in_owner = true
+layout_mode = 0
+anchors_preset = 0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 48.0
+offset_right = 160.0
+offset_bottom = 60.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Results" parent="." instance=ExtResource("8_jth5p")]
+unique_name_in_owner = true
+
+[node name="Song" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = -5.0
+
+[connection signal="notes_ready" from="." to="Control/Lane" method="render_notes"]
+[connection signal="play_note" from="." to="Background/Stage" method="_on_rhythm_play_note"]
+[connection signal="play_note" from="." to="Control/HypeMeter" method="_on_rhythm_play_note"]
+[connection signal="play_note" from="." to="Control/Lane/Combo" method="_on_rhythm_play_note"]
+[connection signal="hype_level" from="Control/HypeMeter" to="Background/Stage" method="_on_hype_level_updated"]
+[connection signal="play_note" from="Control/Lane" to="." method="_on_note_played"]

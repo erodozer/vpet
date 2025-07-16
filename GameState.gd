@@ -53,6 +53,9 @@ func _ready():
 		var test_json_conv = JSON.new()
 		test_json_conv.parse(save_game.get_line())
 		var data = test_json_conv.get_data()
+		if data == null:
+			push_error("could not parse save data")
+			data = {}
 		save_game.close()
 		
 		self.stats = data.get("stats", {})

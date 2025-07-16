@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=3 uid="uid://bipfm4wt4pb6y"]
+
+[ext_resource type="Texture2D" uid="uid://blcua3oo6k64j" path="res://scenes/game_dj/lane/lane.png" id="1_cg8nc"]
+[ext_resource type="Script" uid="uid://bdg10pekteki3" path="res://scenes/game_dj/lane/lane.gd" id="1_mmgxq"]
+[ext_resource type="Texture2D" uid="uid://djmjlyoemcdao" path="res://scenes/game_dj/lane/cursor.png" id="1_pqm8h"]
+[ext_resource type="Texture2D" uid="uid://blt6g6uklocwk" path="res://scenes/game_dj/lane/highlight.png" id="4_r2t18"]
+
+[sub_resource type="Gradient" id="Gradient_mmgxq"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cg8nc"]
+gradient = SubResource("Gradient_mmgxq")
+width = 2
+height = 2
+
+[sub_resource type="Gradient" id="Gradient_wtgwj"]
+offsets = PackedFloat32Array(0.528736, 1)
+colors = PackedColorArray(1, 1, 0, 1, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_c6au8"]
+gradient = SubResource("Gradient_wtgwj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_t6lv8"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(0, 24, 1)
+spread = 12.0
+initial_velocity_min = 62.54
+initial_velocity_max = 62.54
+scale_max = 1.5
+color_ramp = SubResource("GradientTexture1D_c6au8")
+
+[node name="Lane" type="TextureRect"]
+texture = ExtResource("1_cg8nc")
+script = ExtResource("1_mmgxq")
+
+[node name="Highlight" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(50, 24)
+scale = Vector2(1, 1e-05)
+texture = ExtResource("4_r2t18")
+
+[node name="Cursor" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(130, 24)
+texture = ExtResource("1_pqm8h")
+
+[node name="Explode" type="GPUParticles2D" parent="Cursor"]
+unique_name_in_owner = true
+emitting = false
+amount = 16
+texture = SubResource("GradientTexture2D_cg8nc")
+lifetime = 0.2
+one_shot = true
+explosiveness = 0.57
+process_material = SubResource("ParticleProcessMaterial_t6lv8")
+
+[node name="Notes" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 24)

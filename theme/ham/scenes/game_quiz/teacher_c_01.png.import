@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3nvxppufttsj"
-path="res://.godot/imported/teacher_c_03.png-bea9eeb76ecb9b957f09e2ac73bb9ef4.ctex"
+uid="uid://5sw8456k0ti6"
+path="res://.godot/imported/teacher_c_01.png-79a59aaee0f9fef3d4d27a135d4262dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/game_quiz/teacher_c_03.png"
-dest_files=["res://.godot/imported/teacher_c_03.png-bea9eeb76ecb9b957f09e2ac73bb9ef4.ctex"]
+source_file="res://theme/ham/scenes/game_quiz/teacher_c_01.png"
+dest_files=["res://.godot/imported/teacher_c_01.png-79a59aaee0f9fef3d4d27a135d4262dd.ctex"]
 
 [params]
 

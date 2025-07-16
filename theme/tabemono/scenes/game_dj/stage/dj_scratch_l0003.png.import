@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i0rmodgwjpv0"
-path="res://.godot/imported/teacher_i_02.png-346116dc7784765326a0072adda556b6.ctex"
+uid="uid://dbyjujsjve5ge"
+path="res://.godot/imported/dj_scratch_l0003.png-381f6fe25c7dc40f9b4964e26303816b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/game_quiz/teacher_i_02.png"
-dest_files=["res://.godot/imported/teacher_i_02.png-346116dc7784765326a0072adda556b6.ctex"]
+source_file="res://theme/tabemono/scenes/game_dj/stage/dj_scratch_l0003.png"
+dest_files=["res://.godot/imported/dj_scratch_l0003.png-381f6fe25c7dc40f9b4964e26303816b.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

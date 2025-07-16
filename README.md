@@ -1,13 +1,14 @@
 # VPet
 
-An interactive virtual pet designed around varior vtubers and/or their mascots.
+An interactive virtual pet designed around various vtubers and/or their mascots.
 
 Currently included are
 - [Clover Inari](https://erodozer.itch.io/pet-the-fox)
 - [Hampwned](https://erodozer.itch.io/hamagotchi)
 - [Gigi Murin](https://erodozer.itch.io/gremgotchi)'s Gremurins
+- [Mono Monet](https://erodozer/itch.io/tabemono)'s Tabemonos
 
-Keep the pet in good health and accumulate currency.
+Keep the pet in good health and accumulate points to spoil them.
 
 Designed to be played with either a mouse or touch interface.
 Experimental keyboard and gamepad support
@@ -64,6 +65,7 @@ To add a new theme you must
 To save on size, when exporting the project, export only with the resources selected for the theme the executable will run with.
 
 Files within the theme's subdirectory must be placed and named exactly according to the directory tree relative to the project root for overriding.
+Executing the project through the editor will generate an enumerated list of overridden files in the theme directory for the active theme.  This file is required by the project in order to skin resources, as enumerating files within the `res://` filesystem is not available in Godot exported runtimes.  These files should be checked into version control.
 
 ### Configuring features and resources
 

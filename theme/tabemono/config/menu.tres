@@ -7,15 +7,15 @@
 [ext_resource type="Resource" uid="uid://dw2ux6l0mjv08" path="res://theme/tabemono/resources/food/sushi.tres" id="5_2m602"]
 [ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="5_jxd0w"]
 [ext_resource type="Resource" uid="uid://b6u5mo24eugkg" path="res://resources/games/match.tres" id="6_2m602"]
-[ext_resource type="Resource" uid="uid://bwhbnwdba8ifr" path="res://resources/games/picross.tres" id="8_de3xg"]
 [ext_resource type="Script" uid="uid://b7d3r20npjor2" path="res://resources/Menu.gd" id="9_64wac"]
+[ext_resource type="Resource" uid="uid://dkkvp4xxddf87" path="res://resources/games/rhythm.tres" id="9_d8y1l"]
 [ext_resource type="Resource" uid="uid://c2nufarxermn5" path="res://resources/games/gacha.tres" id="9_uej3l"]
 [ext_resource type="Script" uid="uid://cm55ffjlgedb" path="res://resources/ShopResource.gd" id="10_6ae3v"]
 [ext_resource type="Resource" uid="uid://ijo2lfp7njot" path="res://theme/tabemono/resources/unlockables/lettuce.tres" id="12_64wac"]
 [ext_resource type="Resource" uid="uid://d2w2id214hpeu" path="res://theme/tabemono/resources/unlockables/beer.tres" id="13_6ae3v"]
 [ext_resource type="Resource" uid="uid://bcjvkuuyfewyj" path="res://theme/tabemono/resources/unlockables/sushi.tres" id="14_261qr"]
 [ext_resource type="Resource" uid="uid://ylanugfo0dbw" path="res://resources/unlockables/feedpet.tres" id="15_s2cxi"]
-[ext_resource type="Resource" uid="uid://17brybp333ta" path="res://resources/unlockables/game_picross.tres" id="15_uwbtb"]
+[ext_resource type="Resource" uid="uid://dnnnnkpyywtx" path="res://theme/tabemono/resources/unlockables/game_dj.tres" id="15_y7x53"]
 [ext_resource type="Resource" uid="uid://3i7d8oqwx13j" path="res://resources/unlockables/overfeed.tres" id="16_ohmml"]
 [ext_resource type="Resource" uid="uid://4jbi7bvix4ht" path="res://resources/unlockables/game_gacha.tres" id="16_qxth4"]
 [ext_resource type="Resource" uid="uid://c62ljxf7cdmao" path="res://resources/unlockables/soap.tres" id="17_elhqb"]
@@ -25,5 +25,5 @@
 [resource]
 script = ExtResource("9_64wac")
 food = Array[ExtResource("1_o5h5p")]([ExtResource("2_d8y1l"), ExtResource("3_y7x53"), ExtResource("4_jxd0w"), ExtResource("5_2m602")])
-games = Array[ExtResource("5_jxd0w")]([ExtResource("6_2m602"), ExtResource("8_de3xg"), ExtResource("9_uej3l")])
-shop = Array[ExtResource("10_6ae3v")]([ExtResource("12_64wac"), ExtResource("13_6ae3v"), ExtResource("14_261qr"), ExtResource("15_uwbtb"), ExtResource("16_qxth4"), ExtResource("17_elhqb"), ExtResource("15_s2cxi"), ExtResource("16_ohmml"), ExtResource("18_5ityr"), ExtResource("19_rjm0g")])
+games = Array[ExtResource("5_jxd0w")]([ExtResource("6_2m602"), ExtResource("9_uej3l"), ExtResource("9_d8y1l")])
+shop = Array[ExtResource("10_6ae3v")]([ExtResource("12_64wac"), ExtResource("13_6ae3v"), ExtResource("14_261qr"), ExtResource("15_y7x53"), ExtResource("16_qxth4"), ExtResource("17_elhqb"), ExtResource("15_s2cxi"), ExtResource("16_ohmml"), ExtResource("18_5ityr"), ExtResource("19_rjm0g")])

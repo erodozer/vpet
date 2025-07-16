@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://synrdtextp0s"]
+
+[ext_resource type="SpriteFrames" uid="uid://m748uriylnia" path="res://scenes/game_dj/stage/stage.tres" id="1_q5egw"]
+[ext_resource type="SpriteFrames" uid="uid://ckuyua1i5nhyl" path="res://scenes/game_dj/stage/dj.tres" id="2_dsfdp"]
+[ext_resource type="AudioStream" uid="uid://b13h6g3flf6r5" path="res://scenes/game_dj/stage/scratch_01.wav" id="2_w5mqs"]
+[ext_resource type="Script" uid="uid://dkip2cd2dtgko" path="res://scenes/game_dj/stage/stage.gd" id="3_drf0o"]
+[ext_resource type="AudioStream" uid="uid://uveec37wvqp3" path="res://scenes/game_dj/stage/scratch_02.wav" id="3_o8xm3"]
+[ext_resource type="SpriteFrames" uid="uid://dushx8aen3ymk" path="res://pet/frames.tres" id="6_o8xm3"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("3_drf0o")
+scratch_samples = Array[AudioStream]([ExtResource("2_w5mqs"), ExtResource("3_o8xm3")])
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(160, 54)
+offset_right = 160.0
+offset_bottom = 48.0
+color = Color(0.152941, 0.152941, 0.152941, 1)
+
+[node name="Stage" type="AnimatedSprite2D" parent="."]
+position = Vector2(80, 32)
+sprite_frames = ExtResource("1_q5egw")
+autoplay = "default"
+
+[node name="DJ" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(80, 32)
+sprite_frames = ExtResource("2_dsfdp")
+animation = &"scratch"
+autoplay = "default"
+
+[node name="Pet" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(132, 75)
+sprite_frames = ExtResource("6_o8xm3")
+animation = &"idle"
+autoplay = "sit"
+
+[node name="ScratchFx" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true

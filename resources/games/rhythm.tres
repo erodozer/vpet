@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GameResource" load_steps=5 format=3 uid="uid://dkkvp4xxddf87"]
+
+[ext_resource type="Texture2D" uid="uid://bunxtk64ph182" path="res://scenes/home/ui/controls/icons.png" id="1_nopsc"]
+[ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="2_ayjb1"]
+[ext_resource type="Resource" uid="uid://lbq76w630t2l" path="res://resources/unlockables/game_dj.tres" id="3_nopsc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpvax"]
+atlas = ExtResource("1_nopsc")
+region = Rect2(17, 170, 17, 17)
+
+[resource]
+script = ExtResource("2_ayjb1")
+game = "dj"
+unlock = ExtResource("3_nopsc")
+icon = SubResource("AtlasTexture_jpvax")
