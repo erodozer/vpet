@@ -4,6 +4,7 @@ class_name ResourceMenu
 @export var food: Array[FoodResource] = []
 @export var games: Array[GameResource] = []
 @export var shop: Array[ShopResource] = []
+@export var counters: Array[String] = []
 
 func get_default(items: Array):
 	return items[0]

@@ -152,6 +152,11 @@ func _game(game):
 	# pause processing while lookin for food
 	NoClick.visible = true
 	
+	var counter = "game.%s" % game.game
+	GameState.counters = {
+		counter: GameState.counters.get(counter, 0) + 1
+	}
+
 	SceneManager.change_scene("game_" + game.game)
 	
 	NoClick.visible = false
@@ -190,7 +195,11 @@ func _bathe():
 	GameState.timers = {
 		GameState.GameActions.Bathe: GameState.now() + BATH_COOLDOWN
 	}
-	
+	var counter = "bathed"
+	GameState.counters = {
+		counter: GameState.counters.get(counter, 0) + 1
+	}
+
 	await get_tree().create_timer(3.0).timeout
 	await get_node("Transition").fade_in()
 	wash.visible = false

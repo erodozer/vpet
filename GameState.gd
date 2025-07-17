@@ -18,6 +18,10 @@ var timers = {
 	"update": now(),
 } : set = _update_timers
 
+var counters: Dictionary[String, int] = {
+	
+} : set = _update_counters
+
 var save_sync = 0
 var death_timer = 0
 
@@ -45,6 +49,7 @@ var TWITCH_ENABLED = false
 
 signal stats_changed(stats)
 signal timers_changed(timers)
+signal counters_changed(counters)
 
 func _ready():
 	if FileAccess.file_exists("user://pet.save"):
@@ -116,6 +121,12 @@ func _update_timers(change):
 	}
 	emit_signal("timers_changed", timers)
 	
+func _update_counters(change):
+	if change == {}:
+		counters = {}
+	counters = counters.merged(change, true)
+	emit_signal("counters_changed", counters)
+	
 func is_overfed():
 	return stats.weight >= 80
 
@@ -130,6 +141,7 @@ func save_data():
 			"timers": timers,
 			"unlocks": unlocks,
 			"extra": extra,
+			"counters": counters
 		})
 	)
 	save_game.close()
@@ -293,6 +305,7 @@ func reset(reset_timers = true, reset_stats = true, hard = false):
 		}
 	
 	if hard:
+		counters = {}
 		unlocks = {}
 
 func _process(_delta):

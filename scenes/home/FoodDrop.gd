@@ -38,3 +38,8 @@ func eat():
 	GameState.timers = {
 		"eat": GameState.now() + food.cooldown
 	}
+	
+	var counter = "food.%s" % food.name
+	GameState.counters = {
+		counter: GameState.counters.get(counter, 0) + 1
+	}

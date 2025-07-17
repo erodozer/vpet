@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=17 format=3 uid="uid://bfmrdx6ah36lt"]
+[gd_resource type="Theme" load_steps=18 format=3 uid="uid://bfmrdx6ah36lt"]
 
 [ext_resource type="FontFile" uid="uid://3heiwkvujho0" path="res://ui/fonts/EarlyGameBoySTD.ttf" id="1_cnyj1"]
 [ext_resource type="StyleBox" uid="uid://dwah4gfye68fp" path="res://ui/panel.tres" id="2_16ksv"]
@@ -85,6 +85,10 @@ anti_aliasing = false
 fallbacks = Array[Font]([ExtResource("2_kbk24")])
 base_font = ExtResource("3_kbk24")
 
+[sub_resource type="FontVariation" id="FontVariation_mbvn8"]
+base_font = ExtResource("4_mbvn8")
+spacing_top = -3
+
 [sub_resource type="StyleBoxFlat" id="15"]
 content_margin_left = 4.0
 content_margin_right = 4.0
@@ -144,6 +148,9 @@ Label/fonts/font = SubResource("FontVariation_cnyj1")
 Label/styles/normal = null
 NumericLabel/base_type = &"Label"
 NumericLabel/fonts/font = ExtResource("4_mbvn8")
+PaddedLabel/base_type = &"Label"
+PaddedLabel/fonts/font = SubResource("FontVariation_mbvn8")
+PaddedLabel/styles/normal = ExtResource("2_16ksv")
 Panel/styles/panel = ExtResource("2_16ksv")
 PanelContainer/styles/panel = ExtResource("2_16ksv")
 ScrollContainer/styles/bg = null

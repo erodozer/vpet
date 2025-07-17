@@ -6,5 +6,5 @@
 script = ExtResource("1_nywwj")
 flag = "game.rhythm"
 display_name = "Club Mono"
-description = "Dance to music with yyour fav DJ.  Cheers!"
+description = "Dance to music with your fav DJ.  Cheers!"
 cost = 75000

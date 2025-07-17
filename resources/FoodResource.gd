@@ -7,3 +7,10 @@ class_name FoodResource
 @export var unlock: ShopResource
 @export var icon: Texture2D
 @export var animation: SpriteFrames
+
+var name : String :
+	get():
+		if self.resource_name != "":
+			return self.resource_name
+		return self.resource_path.get_file().split(".")[0]
+	

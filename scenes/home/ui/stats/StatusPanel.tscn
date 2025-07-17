@@ -1,18 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://cvkideptcxtuk"]
 
-[ext_resource type="Theme" uid="uid://nftx016qubrw" path="res://scenes/home/ui/stats/theme.tres" id="1_08kce"]
 [ext_resource type="Texture2D" uid="uid://25gh2odtifhv" path="res://scenes/home/ui/stats/heart.png" id="2"]
+[ext_resource type="Resource" uid="uid://cmpo574c33e4r" path="res://config/menu.tres" id="3_dibi5"]
 [ext_resource type="Texture2D" uid="uid://b2l8td6ax26uf" path="res://scenes/home/ui/stats/fun.png" id="4"]
 [ext_resource type="Script" uid="uid://cxl15g5432h25" path="res://scenes/home/ui/stats/StatusPanel.gd" id="5"]
 
 [node name="PanelContainer" type="TabContainer"]
 offset_right = 97.0
 offset_bottom = 115.0
-theme = ExtResource("1_08kce")
 current_tab = 0
 clip_tabs = false
 tabs_visible = false
 script = ExtResource("5")
+menu = ExtResource("3_dibi5")
 
 [node name="BasicDisplay" type="GridContainer" parent="."]
 unique_name_in_owner = true
@@ -23,8 +23,8 @@ columns = 2
 metadata/_tab_index = 0
 
 [node name="Label" type="Label" parent="BasicDisplay"]
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+theme_type_variation = &"NumericLabel"
 text = "Food"
 
 [node name="PanelContainer" type="PanelContainer" parent="BasicDisplay"]
@@ -41,8 +41,8 @@ allow_greater = true
 texture_progress = ExtResource("2")
 
 [node name="Label2" type="Label" parent="BasicDisplay"]
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+theme_type_variation = &"NumericLabel"
 text = "Mood"
 
 [node name="PanelContainer2" type="PanelContainer" parent="BasicDisplay"]
@@ -59,45 +59,36 @@ allow_greater = true
 texture_progress = ExtResource("4")
 
 [node name="Label3" type="Label" parent="BasicDisplay"]
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+theme_type_variation = &"NumericLabel"
 text = "Weight"
 
-[node name="PanelContainer3" type="PanelContainer" parent="BasicDisplay"]
-layout_mode = 2
-
-[node name="Weight" type="Label" parent="BasicDisplay/PanelContainer3"]
+[node name="Weight" type="Label" parent="BasicDisplay"]
 unique_name_in_owner = true
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+theme_type_variation = &"PaddedLabel"
 text = "15.6 lbs"
 
 [node name="Label4" type="Label" parent="BasicDisplay"]
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+theme_type_variation = &"NumericLabel"
 text = "Age"
 
-[node name="PanelContainer4" type="PanelContainer" parent="BasicDisplay"]
-layout_mode = 2
-
-[node name="Age" type="Label" parent="BasicDisplay/PanelContainer4"]
+[node name="Age" type="Label" parent="BasicDisplay"]
 unique_name_in_owner = true
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+theme_type_variation = &"PaddedLabel"
 text = "00d 02h 02m"
 
 [node name="Label5" type="Label" parent="BasicDisplay"]
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+theme_type_variation = &"NumericLabel"
 text = "Status"
 
-[node name="PanelContainer5" type="PanelContainer" parent="BasicDisplay"]
-layout_mode = 2
-
-[node name="Mood" type="Label" parent="BasicDisplay/PanelContainer5"]
+[node name="Mood" type="Label" parent="BasicDisplay"]
 unique_name_in_owner = true
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+theme_type_variation = &"PaddedLabel"
 text = "Stinky"
 
 [node name="DetailedDisplay" type="GridContainer" parent="."]
@@ -113,73 +104,72 @@ metadata/_tab_index = 1
 modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_type_variation = &"NumericLabel"
 text = "Hunger"
 
-[node name="PanelContainer" type="PanelContainer" parent="DetailedDisplay"]
+[node name="HungryValue" type="Label" parent="DetailedDisplay"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="HungryValue" type="Label" parent="DetailedDisplay/PanelContainer"]
-unique_name_in_owner = true
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
-layout_mode = 2
+theme_type_variation = &"PaddedLabel"
 text = "0.0"
+horizontal_alignment = 2
 
 [node name="Label2" type="Label" parent="DetailedDisplay"]
 modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+theme_type_variation = &"NumericLabel"
 text = "Boredom"
 
-[node name="PanelContainer2" type="PanelContainer" parent="DetailedDisplay"]
-layout_mode = 2
-
-[node name="BoredomValue" type="Label" parent="DetailedDisplay/PanelContainer2"]
+[node name="BoredomValue" type="Label" parent="DetailedDisplay"]
 unique_name_in_owner = true
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"PaddedLabel"
 text = "0.0"
+horizontal_alignment = 2
 
 [node name="Label3" type="Label" parent="DetailedDisplay"]
 modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+theme_type_variation = &"NumericLabel"
 text = "Tired"
 
-[node name="PanelContainer3" type="PanelContainer" parent="DetailedDisplay"]
-layout_mode = 2
-
-[node name="TirednessValue" type="Label" parent="DetailedDisplay/PanelContainer3"]
+[node name="TirednessValue" type="Label" parent="DetailedDisplay"]
 unique_name_in_owner = true
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"PaddedLabel"
 text = "0.0"
+horizontal_alignment = 2
 
 [node name="Label4" type="Label" parent="DetailedDisplay"]
 modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+theme_type_variation = &"NumericLabel"
 text = "Dirty"
 
-[node name="PanelContainer4" type="PanelContainer" parent="DetailedDisplay"]
-layout_mode = 2
-
-[node name="DirtyValue" type="Label" parent="DetailedDisplay/PanelContainer4"]
+[node name="DirtyValue" type="Label" parent="DetailedDisplay"]
 unique_name_in_owner = true
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"PaddedLabel"
 text = "0.0"
+horizontal_alignment = 2
 
 [node name="Label5" type="Label" parent="DetailedDisplay"]
 modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+theme_type_variation = &"NumericLabel"
 text = "Sick"
 
-[node name="PanelContainer5" type="PanelContainer" parent="DetailedDisplay"]
-layout_mode = 2
-
-[node name="SickValue" type="Label" parent="DetailedDisplay/PanelContainer5"]
+[node name="SickValue" type="Label" parent="DetailedDisplay"]
 unique_name_in_owner = true
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
 layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"PaddedLabel"
 text = "0.0"
+horizontal_alignment = 2
 
 [node name="CounterDisplay" type="GridContainer" parent="."]
 unique_name_in_owner = true
@@ -189,18 +179,3 @@ theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 1
 columns = 2
 metadata/_tab_index = 2
-
-[node name="Label" type="Label" parent="CounterDisplay"]
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Hunger"
-
-[node name="PanelContainer" type="PanelContainer" parent="CounterDisplay"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="HungryValue" type="Label" parent="CounterDisplay/PanelContainer"]
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
-layout_mode = 2
-text = "0.0"
