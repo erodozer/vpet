@@ -146,6 +146,9 @@ res://theme/tabemono/resources/gacha/yumi.png
 res://theme/tabemono/resources/gacha/yumi.tres
 res://theme/tabemono/resources/games/picross.png
 res://theme/tabemono/resources/games/picross.tres
+res://theme/tabemono/resources/songs/song001.tres
+res://theme/tabemono/resources/songs/song002.tres
+res://theme/tabemono/resources/songs/song003.tres
 res://theme/tabemono/resources/unlockables/beer.tres
 res://theme/tabemono/resources/unlockables/game_dj.tres
 res://theme/tabemono/resources/unlockables/game_gacha.tres
@@ -153,8 +156,6 @@ res://theme/tabemono/resources/unlockables/lettuce.tres
 res://theme/tabemono/resources/unlockables/sushi.tres
 res://theme/tabemono/scenes/game_dj/lane/cursor.png
 res://theme/tabemono/scenes/game_dj/lane/note.png
-res://theme/tabemono/scenes/game_dj/songs/song001.tres
-res://theme/tabemono/scenes/game_dj/songs/song002.tres
 res://theme/tabemono/scenes/game_dj/stage/dj.tres
 res://theme/tabemono/scenes/game_dj/stage/dj_fine0000.png
 res://theme/tabemono/scenes/game_dj/stage/dj_fine0001.png

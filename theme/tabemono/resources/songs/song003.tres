@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DJSongResource" load_steps=3 format=3 uid="uid://2myvy0ag0dph"]
+
+[ext_resource type="AudioStream" uid="uid://86q5iq5g4n3f" path="res://theme/tabemono/resources/songs/Alive In The Moment.mp3" id="1_5l25o"]
+[ext_resource type="Script" uid="uid://83c28y4wg2yg" path="res://resources/DjSongResource.gd" id="2_urrfh"]
+
+[resource]
+script = ExtResource("2_urrfh")
+title = "Alive In The Moment"
+audio = ExtResource("1_5l25o")
+start_offset = 10.0
+bpm = 150
+metadata/_custom_type_script = "uid://83c28y4wg2yg"

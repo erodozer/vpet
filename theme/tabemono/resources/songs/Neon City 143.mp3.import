@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d2mnjrlhllo85"
+path="res://.godot/imported/Neon City 143.mp3-21b5e43ce9a987ecd89370addb841400.mp3str"
+
+[deps]
+
+source_file="res://theme/tabemono/resources/songs/Neon City 143.mp3"
+dest_files=["res://.godot/imported/Neon City 143.mp3-21b5e43ce9a987ecd89370addb841400.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

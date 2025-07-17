@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="DJSongResource" load_steps=3 format=3 uid="uid://cn2t6r06rs8d3"]
 
-[ext_resource type="AudioStream" uid="uid://btu81mkvirmiw" path="res://theme/tabemono/scenes/game_dj/songs/PLAY▷BACK.mp3" id="1_dathg"]
+[ext_resource type="AudioStream" uid="uid://btu81mkvirmiw" path="res://theme/tabemono/resources/songs/PLAY▷BACK.mp3" id="1_dathg"]
 [ext_resource type="Script" uid="uid://83c28y4wg2yg" path="res://resources/DjSongResource.gd" id="2_0cs2v"]
 
 [resource]

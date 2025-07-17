@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://86q5iq5g4n3f"
+path="res://.godot/imported/Alive In The Moment.mp3-ad6ff0717a776688cb5d87cdb47470ed.mp3str"
+
+[deps]
+
+source_file="res://theme/tabemono/resources/songs/Alive In The Moment.mp3"
+dest_files=["res://.godot/imported/Alive In The Moment.mp3-ad6ff0717a776688cb5d87cdb47470ed.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

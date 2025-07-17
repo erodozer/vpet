@@ -9,6 +9,11 @@ content_margin_bottom = 2.0
 bg_color = Color(0, 0, 0, 1)
 
 [node name="Metadata" type="PanelContainer"]
+clip_contents = true
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 15.0
+grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_52j38")
 script = ExtResource("1_j6a0y")
 
@@ -17,16 +22,24 @@ layout_mode = 2
 
 [node name="Duration" type="Label" parent="HBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(48, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 theme_type_variation = &"NumericLabel"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "-2:40/1:20"
+text = "2:40 / 1:20"
 
-[node name="SongTitle" type="Label" parent="HBoxContainer"]
-unique_name_in_owner = true
+[node name="Control" type="Control" parent="HBoxContainer"]
+clip_contents = true
 layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SongTitle" type="Label" parent="HBoxContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 138.0
+offset_bottom = 12.0
+size_flags_horizontal = 3
 theme_type_variation = &"BoldLabel"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Playback"
+text = "Alive in the moment"
 horizontal_alignment = 2

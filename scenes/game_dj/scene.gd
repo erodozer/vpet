@@ -26,7 +26,7 @@ func _start():
 func _game():
 	var song: DJSongResource = debug_song
 	if song == null:
-		var songfiles = AppSkin.enumerate_dir("res://scenes/game_dj/songs", "tres")
+		var songfiles = AppSkin.enumerate_dir("res://resources/songs", "tres")
 		var songfile = songfiles.pick_random()
 		if songfile == null:
 			return
