@@ -16,8 +16,8 @@
 [ext_resource type="Resource" uid="uid://bcjvkuuyfewyj" path="res://theme/tabemono/resources/unlockables/sushi.tres" id="14_261qr"]
 [ext_resource type="Resource" uid="uid://ylanugfo0dbw" path="res://resources/unlockables/feedpet.tres" id="15_s2cxi"]
 [ext_resource type="Resource" uid="uid://dnnnnkpyywtx" path="res://theme/tabemono/resources/unlockables/game_dj.tres" id="15_y7x53"]
+[ext_resource type="Resource" uid="uid://c53u373woe633" path="res://theme/tabemono/resources/unlockables/game_gacha.tres" id="16_d8y1l"]
 [ext_resource type="Resource" uid="uid://3i7d8oqwx13j" path="res://resources/unlockables/overfeed.tres" id="16_ohmml"]
-[ext_resource type="Resource" uid="uid://4jbi7bvix4ht" path="res://resources/unlockables/game_gacha.tres" id="16_qxth4"]
 [ext_resource type="Resource" uid="uid://c62ljxf7cdmao" path="res://resources/unlockables/soap.tres" id="17_elhqb"]
 [ext_resource type="Resource" uid="uid://cec3vgn6hmlcs" path="res://resources/unlockables/resettimers.tres" id="18_5ityr"]
 [ext_resource type="Resource" uid="uid://bm23jlwt4gmsk" path="res://resources/unlockables/resetgame.tres" id="19_rjm0g"]
@@ -26,4 +26,4 @@
 script = ExtResource("9_64wac")
 food = Array[ExtResource("1_o5h5p")]([ExtResource("2_d8y1l"), ExtResource("3_y7x53"), ExtResource("4_jxd0w"), ExtResource("5_2m602")])
 games = Array[ExtResource("5_jxd0w")]([ExtResource("6_2m602"), ExtResource("9_uej3l"), ExtResource("9_d8y1l")])
-shop = Array[ExtResource("10_6ae3v")]([ExtResource("12_64wac"), ExtResource("13_6ae3v"), ExtResource("14_261qr"), ExtResource("15_y7x53"), ExtResource("16_qxth4"), ExtResource("17_elhqb"), ExtResource("15_s2cxi"), ExtResource("16_ohmml"), ExtResource("18_5ityr"), ExtResource("19_rjm0g")])
+shop = Array[ExtResource("10_6ae3v")]([ExtResource("12_64wac"), ExtResource("13_6ae3v"), ExtResource("14_261qr"), ExtResource("15_y7x53"), ExtResource("16_d8y1l"), ExtResource("17_elhqb"), ExtResource("15_s2cxi"), ExtResource("16_ohmml"), ExtResource("18_5ityr"), ExtResource("19_rjm0g")])

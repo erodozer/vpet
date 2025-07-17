@@ -5,6 +5,7 @@ const Rating = preload("../enum.gd").Rating
 const HypeLevel = preload("../enum.gd").HypeLevel
 
 @onready var meter: Range = get_node("%ProgressBar")
+@onready var cheers = get_node("%Cheers")
 
 var hype: float = 30 :
 	set(v):
@@ -12,8 +13,10 @@ var hype: float = 30 :
 		meter.value = v
 		if hype > 70:
 			hype_level.emit(HypeLevel.PARTY)
+			cheers.visible = true
 		else:
 			hype_level.emit(HypeLevel.GROOVE)
+			cheers.visible = false
 		
 signal hype_level(hype: HypeLevel)
 

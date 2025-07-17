@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgahce6k2pcri"]
+[gd_scene load_steps=7 format=3 uid="uid://dgahce6k2pcri"]
 
 [ext_resource type="FontFile" uid="uid://3heiwkvujho0" path="res://ui/fonts/EarlyGameBoySTD.ttf" id="1_57di3"]
 [ext_resource type="Script" uid="uid://cp01gdcnmxdfw" path="res://scenes/game_dj/meter/hype_meter.gd" id="1_rgdad"]
@@ -26,6 +26,21 @@ Label/constants/shadow_offset_y = 0
 Label/fonts/font = SubResource("2")
 Label/styles/normal = null
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rgdad"]
+bg_color = Color(0, 0, 0, 1)
+skew = Vector2(1, 0)
+expand_margin_left = 3.0
+expand_margin_bottom = 2.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nrq0"]
+content_margin_top = 1.0
+content_margin_bottom = 2.0
+bg_color = Color(0.857712, 0, 0.392232, 1)
+skew = Vector2(1, 0)
+expand_margin_right = 3.0
+anti_aliasing = false
+
 [node name="HypeMeter" type="MarginContainer"]
 size_flags_horizontal = 0
 theme_override_constants/margin_left = 4
@@ -33,17 +48,43 @@ theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 script = ExtResource("1_rgdad")
 
-[node name="HBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 theme = SubResource("3")
 
-[node name="Label" type="Label" parent="HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
-text = "Hype"
 
-[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer"]
+[node name="Label" type="RichTextLabel" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"BoldFloatingLabel"
+text = "Hype"
+fit_content = true
+scroll_active = false
+
+[node name="Cheers" type="RichTextLabel" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 0
+bbcode_enabled = true
+text = "[wave amp=24
+.0 freq=10 connected=0]CHEERS![/wave]"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_rgdad")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2nrq0")
+value = 30.0
 show_percentage = false

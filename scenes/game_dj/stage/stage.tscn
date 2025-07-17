@@ -31,7 +31,7 @@ autoplay = "default"
 
 [node name="Pet" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(132, 75)
+position = Vector2(132, 72)
 sprite_frames = ExtResource("6_o8xm3")
 animation = &"idle"
 autoplay = "sit"

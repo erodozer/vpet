@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bipfm4wt4pb6y"]
+[gd_scene load_steps=11 format=3 uid="uid://bipfm4wt4pb6y"]
 
 [ext_resource type="Texture2D" uid="uid://blcua3oo6k64j" path="res://scenes/game_dj/lane/lane.png" id="1_cg8nc"]
 [ext_resource type="Script" uid="uid://bdg10pekteki3" path="res://scenes/game_dj/lane/lane.gd" id="1_mmgxq"]
 [ext_resource type="Texture2D" uid="uid://djmjlyoemcdao" path="res://scenes/game_dj/lane/cursor.png" id="1_pqm8h"]
 [ext_resource type="Texture2D" uid="uid://blt6g6uklocwk" path="res://scenes/game_dj/lane/highlight.png" id="4_r2t18"]
+[ext_resource type="Script" uid="uid://bwweq3pakhmsf" path="res://scenes/game_dj/lane/rating_popup.gd" id="6_c6au8"]
 
 [sub_resource type="Gradient" id="Gradient_mmgxq"]
 
@@ -21,15 +22,15 @@ gradient = SubResource("Gradient_wtgwj")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_t6lv8"]
 particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(0, 24, 1)
-spread = 12.0
+spread = 180.0
 initial_velocity_min = 62.54
 initial_velocity_max = 62.54
 scale_max = 1.5
 color_ramp = SubResource("GradientTexture1D_c6au8")
 
 [node name="Lane" type="TextureRect"]
+offset_right = 160.0
+offset_bottom = 48.0
 texture = ExtResource("1_cg8nc")
 script = ExtResource("1_mmgxq")
 
@@ -39,13 +40,24 @@ position = Vector2(50, 24)
 scale = Vector2(1, 1e-05)
 texture = ExtResource("4_r2t18")
 
-[node name="Cursor" type="Sprite2D" parent="."]
+[node name="Cursor" type="TextureRect" parent="."]
 unique_name_in_owner = true
-position = Vector2(130, 24)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = 4.0
+offset_right = -13.0
+grow_horizontal = 0
+grow_vertical = 2
 texture = ExtResource("1_pqm8h")
+stretch_mode = 3
 
 [node name="Explode" type="GPUParticles2D" parent="Cursor"]
 unique_name_in_owner = true
+position = Vector2(17, 24)
 emitting = false
 amount = 16
 texture = SubResource("GradientTexture2D_cg8nc")
@@ -54,6 +66,34 @@ one_shot = true
 explosiveness = 0.57
 process_material = SubResource("ParticleProcessMaterial_t6lv8")
 
-[node name="Notes" type="Node2D" parent="."]
+[node name="Rating" type="RichTextLabel" parent="Cursor"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 13.0
+grow_horizontal = 2
+theme_type_variation = &"BoldFloatingLabel"
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_offset_x = 0
+bbcode_enabled = true
+text = "[color=yellow]wow[/color]"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+script = ExtResource("6_c6au8")
+
+[node name="Notes" type="Control" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, 24)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 2.0
+offset_bottom = 2.0
+grow_vertical = 2
+
+[connection signal="play_note" from="." to="Cursor/Rating" method="_on_play_note"]

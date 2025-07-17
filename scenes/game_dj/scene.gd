@@ -3,8 +3,10 @@ extends Node
 const gdsh = preload("res://addons/godash/godash.gd")
 const Rating = preload("./enum.gd").Rating
 
+@export var debug_song: DJSongResource
+
 var progress = 0
-var notes = []
+var notes: Array[float] = []
 var hit = 0
 var combo = 0 :
 	set(v):
@@ -16,24 +18,27 @@ signal play_note(
 	rating: Rating,
 	combo: int
 )
-signal notes_ready(notes: Array[float])
+signal notes_ready(notes: Array[float], song: DJSongResource)
 
 func _start():
 	_game()
 
 func _game():
-	var songfiles = AppSkin.enumerate_dir("res://scenes/game_dj/songs", "tres")
-	var songfile = songfiles.pick_random()
-	if songfile == null:
-		return
-	var song: DJSongResource = load(songfile)
+	var song: DJSongResource = debug_song
+	if song == null:
+		var songfiles = AppSkin.enumerate_dir("res://scenes/game_dj/songs", "tres")
+		var songfile = songfiles.pick_random()
+		if songfile == null:
+			return
+		song = load(songfile)
+	
 	var playback: AudioStreamPlayer = get_node("%Song")
 	playback.stream = song.audio
 	playback.finished.connect(self.game_finished)
 	
 	var t = song.start_offset
 	var d = song.duration
-	var notes: Array[float] = []
+	notes = []
 	while t + 2.0 < d:
 		t += [
 				0.25,
@@ -44,7 +49,7 @@ func _game():
 			].pick_random()
 		notes.append(t)
 		
-	notes_ready.emit(notes)
+	notes_ready.emit(notes, song)
 	
 	playback.play()
 
@@ -55,7 +60,7 @@ func game_finished():
 	var score = 1000 * float(hit) / len(notes)
 	score += 500 if perfect_combo else 0
 	score += 500 * float(max_combo) / len(notes)
-	var happy = inverse_lerp(0, 2000, score)
+	var happy = inverse_lerp(0, 2000, score) * 100
 
 	NoClick.show()
 	%Results/%Currency.text = "+%d" % [score]

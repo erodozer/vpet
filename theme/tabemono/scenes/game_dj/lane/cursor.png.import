@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ntge5iverqxv"
-path="res://.godot/imported/gacha.png-4c14fe7c0bb351ff77e727883576551d.ctex"
+uid="uid://03uy1y8h2ac8"
+path="res://.godot/imported/cursor.png-a04591d0b33cf1bae3f70e944fcf5ac0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://theme/tabemono/resources/games/gacha.png"
-dest_files=["res://.godot/imported/gacha.png-4c14fe7c0bb351ff77e727883576551d.ctex"]
+source_file="res://theme/tabemono/scenes/game_dj/lane/cursor.png"
+dest_files=["res://.godot/imported/cursor.png-a04591d0b33cf1bae3f70e944fcf5ac0.ctex"]
 
 [params]
 

@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://c7bgokun8hd3y"]
+[gd_scene load_steps=6 format=3 uid="uid://c7bgokun8hd3y"]
 
-[ext_resource type="FontFile" uid="uid://3heiwkvujho0" path="res://ui/fonts/EarlyGameBoySTD.ttf" id="1_vdmvg"]
 [ext_resource type="Script" uid="uid://cfmiuv2t3rgq2" path="res://scenes/game_dj/meter/combo.gd" id="2_cauf5"]
 
 [sub_resource type="Animation" id="Animation_8finx"]
@@ -15,7 +14,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 48)]
+"values": [Vector2(0, 36)]
 }
 
 [sub_resource type="Animation" id="Animation_0ray7"]
@@ -31,7 +30,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(-2, -2),
 "update": 0,
-"values": [Vector2(0, 32), Vector2(0, 48)]
+"values": [Vector2(0, 24), Vector2(0, 36)]
 }
 
 [sub_resource type="Animation" id="Animation_ac5jj"]
@@ -47,7 +46,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(-2, 1),
 "update": 0,
-"values": [Vector2(0, 48), Vector2(0, 32)]
+"values": [Vector2(0, 48), Vector2(0, 24)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0ray7"]
@@ -62,11 +61,11 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -112.0
-offset_bottom = -100.0
+offset_top = -108.0
+offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("1_vdmvg")
+theme_type_variation = &"BoldFloatingLabel"
 bbcode_enabled = true
 text = "[rainbow]20 combo[/rainbow]"
 fit_content = true

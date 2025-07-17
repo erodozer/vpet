@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://udkq2b3b2wny"]
+
+[ext_resource type="Script" uid="uid://b2fea8wdf47em" path="res://scenes/game_dj/metadata/metadata.gd" id="1_j6a0y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_52j38"]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Metadata" type="PanelContainer"]
+theme_override_styles/panel = SubResource("StyleBoxFlat_52j38")
+script = ExtResource("1_j6a0y")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Duration" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"NumericLabel"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "-2:40/1:20"
+
+[node name="SongTitle" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"BoldLabel"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Playback"
+horizontal_alignment = 2
