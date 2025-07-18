@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://b48qfcwpyrkc2"]
+
+[ext_resource type="Texture2D" uid="uid://bcl2k4vdwsu40" path="res://theme/tabemono/scenes/home/environment/bath.png" id="1_i44ai"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i44ai")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

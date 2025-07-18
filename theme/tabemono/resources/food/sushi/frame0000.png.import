@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2mna3v0bi0u6"
-path="res://.godot/imported/background_bath.png-dad9854bb16db51e1c12a065b63bae0b.ctex"
+uid="uid://du5gfjew66xiq"
+path="res://.godot/imported/frame0000.png-24de18cb48312245327d1f3415a2dae3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://theme/tabemono/scenes/home/environment/background_bath.png"
-dest_files=["res://.godot/imported/background_bath.png-dad9854bb16db51e1c12a065b63bae0b.ctex"]
+source_file="res://theme/tabemono/resources/food/sushi/frame0000.png"
+dest_files=["res://.godot/imported/frame0000.png-24de18cb48312245327d1f3415a2dae3.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

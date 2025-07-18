@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FoodResource" load_steps=13 format=3 uid="uid://hxnsymsk3w4n"]
+[gd_resource type="Resource" script_class="FoodResource" load_steps=14 format=3 uid="uid://hxnsymsk3w4n"]
 
 [ext_resource type="Texture2D" uid="uid://dshxo7pky6na3" path="res://theme/tabemono/resources/food/lettuce/frame0000.png" id="1_yyr8u"]
 [ext_resource type="Texture2D" uid="uid://c2bgsrujuowwr" path="res://theme/tabemono/resources/food/lettuce/frame0001.png" id="2_pm7rl"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dxjg53101i4l7" path="res://theme/tabemono/resources/food/lettuce/eat0004.png" id="9_ug53d"]
 [ext_resource type="Script" uid="uid://7w43b6hsn11b" path="res://resources/FoodResource.gd" id="10_27req"]
 [ext_resource type="Texture2D" uid="uid://c1rqxk2b326lg" path="res://theme/tabemono/resources/food/lettuce/icon.png" id="10_327j5"]
+[ext_resource type="Resource" uid="uid://ijo2lfp7njot" path="res://theme/tabemono/resources/unlockables/lettuce.tres" id="12_yyr8u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6xh2f"]
 animations = [{
@@ -54,8 +55,9 @@ animations = [{
 
 [resource]
 script = ExtResource("10_27req")
-hungry = 60.0
-boredom = 10.0
+hungry = 200.0
+boredom = -10.0
 cooldown = 30.0
+unlock = ExtResource("12_yyr8u")
 icon = ExtResource("10_327j5")
 animation = SubResource("SpriteFrames_6xh2f")

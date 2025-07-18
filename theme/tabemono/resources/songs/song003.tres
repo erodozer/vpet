@@ -8,5 +8,5 @@ script = ExtResource("2_urrfh")
 title = "Alive In The Moment"
 audio = ExtResource("1_5l25o")
 start_offset = 10.0
-bpm = 150
+bpm = 135
 metadata/_custom_type_script = "uid://83c28y4wg2yg"

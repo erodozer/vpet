@@ -41,6 +41,9 @@ vpet/name="Pet"
 vpet/weight_range=Vector2(5, 25)
 vpet/weight_range.pet_ham=Vector2(20, 60)
 vpet/weight_range.pet_tabemono=Vector2(15, 50)
+config/name.pet_tabemono="Yo, Tabemono!"
+config/icon.pet_tabemono="uid://5cblo3jotuxo"
+config/windows_native_icon.pet_tabemono="res://theme/tabemono/icon.ico"
 
 [autoload]
 
@@ -59,7 +62,7 @@ gdscript/warnings/return_value_discarded=false
 window/size/viewport_width=160
 window/size/viewport_height=144
 window/size/window_width_override=800
-window/size/window_height_override=600
+window/size/window_height_override=720
 window/subwindows/embed_subwindows=false
 window/stretch/mode="viewport"
 window/integer_resolution_handler/base_width=160

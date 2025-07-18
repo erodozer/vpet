@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FoodResource" load_steps=21 format=3 uid="uid://bkdhbswxet1xn"]
+[gd_resource type="Resource" script_class="FoodResource" load_steps=22 format=3 uid="uid://bkdhbswxet1xn"]
 
 [ext_resource type="Texture2D" uid="uid://cfssi5ftx2gnc" path="res://theme/tabemono/resources/food/beer/frame0000.png" id="1_qt5jy"]
 [ext_resource type="Texture2D" uid="uid://bt6qm7mspmvy7" path="res://theme/tabemono/resources/food/beer/frame0001.png" id="2_x4rlg"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cpl6dhv7onx6s" path="res://theme/tabemono/resources/food/beer/eat0007.png" id="16_utgag"]
 [ext_resource type="Texture2D" uid="uid://c3w0poutwwpx2" path="res://theme/tabemono/resources/food/beer/eat0008.png" id="17_o1u3t"]
 [ext_resource type="Texture2D" uid="uid://d36vmynrt4w7m" path="res://theme/tabemono/resources/food/beer/icon.png" id="18_yjeo0"]
+[ext_resource type="Resource" uid="uid://d2w2id214hpeu" path="res://theme/tabemono/resources/unlockables/beer.tres" id="20_x4rlg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gt8ev"]
 animations = [{
@@ -87,7 +88,8 @@ animations = [{
 [resource]
 script = ExtResource("10_3a3gt")
 hungry = 100.0
-boredom = 30.0
+boredom = 40.0
 cooldown = 30.0
+unlock = ExtResource("20_x4rlg")
 icon = ExtResource("18_yjeo0")
 animation = SubResource("SpriteFrames_gt8ev")

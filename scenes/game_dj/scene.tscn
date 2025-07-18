@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://buobblw738bkc"]
+[gd_scene load_steps=10 format=3 uid="uid://buobblw738bkc"]
 
 [ext_resource type="Script" uid="uid://dls43sywyn308" path="res://scenes/game_dj/scene.gd" id="1_53pig"]
 [ext_resource type="PackedScene" uid="uid://lkt0umh2vcyf" path="res://ui/game_background.tscn" id="2_52j38"]
-[ext_resource type="Resource" uid="uid://2myvy0ag0dph" path="res://theme/tabemono/resources/songs/song003.tres" id="2_bd2vv"]
 [ext_resource type="Theme" uid="uid://bfmrdx6ah36lt" path="res://ui/ui_theme.tres" id="4_ac5jj"]
 [ext_resource type="PackedScene" uid="uid://synrdtextp0s" path="res://scenes/game_dj/stage/stage.tscn" id="5_bd2vv"]
 [ext_resource type="PackedScene" uid="uid://dgahce6k2pcri" path="res://scenes/game_dj/meter/hype_meter.tscn" id="7_ac5jj"]
@@ -13,7 +12,6 @@
 
 [node name="Rhythm" type="Node" groups=["scene"]]
 script = ExtResource("1_53pig")
-debug_song = ExtResource("2_bd2vv")
 
 [node name="Background" parent="." instance=ExtResource("2_52j38")]
 

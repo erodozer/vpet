@@ -1,0 +1,21 @@
+/usr/bin/ffmpeg -hide_banner -y -y -r 18 -start_number 0 -start_number_range 1 -i /home/erodozer/Documents/code/pet.clover/theme/tabemono/frame%04d.png -i /home/erodozer/Documents/code/pet.clover/theme/tabemono/KritaTempPalettegen_%06d.png -lavfi [0:v][1:v]paletteuse=dither=sierra2_4a:diff_mode=none -f gif -loop 0 -gifflags +transdiff /home/erodozer/Documents/code/pet.clover/theme/tabemono/loading.gif
+=====================================================
+Input #0, image2, from '/home/erodozer/Documents/code/pet.clover/theme/tabemono/frame%04d.png':
+  Duration: 00:00:00.40, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 240x240 [SAR 11811:11811 DAR 1:1], 25 fps, 25 tbr, 25 tbn
+Input #1, image2, from '/home/erodozer/Documents/code/pet.clover/theme/tabemono/KritaTempPalettegen_%06d.png':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: N/A
+  Stream #1:0: Video: png, rgba(pc, gbr/unknown/unknown), 16x16 [SAR 1:1 DAR 1:1], 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 (png) -> paletteuse
+  Stream #1:0 (png) -> paletteuse
+  paletteuse:default -> Stream #0:0 (gif)
+Press [q] to stop, [?] for help
+Output #0, gif, to '/home/erodozer/Documents/code/pet.clover/theme/tabemono/loading.gif':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: gif, pal8(pc, gbr/unknown/unknown, progressive), 240x240 [SAR 1:1 DAR 1:1], q=2-31, 200 kb/s, 18 fps, 100 tbn
+      Metadata:
+        encoder         : Lavc61.19.101 gif
+[out#0/gif @ 0x60fbe5500380] video:19KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.104696%
+frame=   10 fps=0.0 q=-0.0 Lsize=      19KiB time=00:00:00.55 bitrate= 275.4kbits/s speed=46.7x    

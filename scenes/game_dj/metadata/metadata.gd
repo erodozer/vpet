@@ -31,9 +31,10 @@ func _process(delta: float) -> void:
 	if player.stream == null:
 		return
 		
+	var pos = player.get_playback_position() if player.playing else player.stream.get_length()
 	duration_label.text = "%d:%02d / %d:%02d" % [
-		int(player.get_playback_position()) / 60,
-		int(player.get_playback_position()) % 60,
+		int(pos) / 60,
+		int(pos) % 60,
 		int(player.stream.get_length()) / 60,
 		int(player.stream.get_length()) % 60,
 	]

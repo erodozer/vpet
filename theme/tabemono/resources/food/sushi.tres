@@ -1,48 +1,49 @@
-[gd_resource type="Resource" script_class="FoodResource" load_steps=18 format=3 uid="uid://dw2ux6l0mjv08"]
+[gd_resource type="Resource" script_class="FoodResource" load_steps=19 format=3 uid="uid://dw2ux6l0mjv08"]
 
-[ext_resource type="Texture2D" uid="uid://b25qswvxkomfh" path="res://theme/grem/resources/food/fries/fries_0.png" id="1_36eo8"]
-[ext_resource type="Texture2D" uid="uid://bc3je8xjgl62j" path="res://theme/grem/resources/food/fries/fries_1.png" id="2_hldmb"]
-[ext_resource type="Texture2D" uid="uid://b1imbxcrttu61" path="res://theme/grem/resources/food/fries/fries_2.png" id="3_neorw"]
-[ext_resource type="Texture2D" uid="uid://bi2qfvx0nctoe" path="res://theme/grem/resources/food/fries/fries_3.png" id="4_36dt1"]
-[ext_resource type="Texture2D" uid="uid://0aye7wbynruh" path="res://theme/grem/resources/food/fries/fries_4.png" id="5_ojbia"]
-[ext_resource type="Texture2D" uid="uid://cv8bxd6hkqfqo" path="res://theme/grem/resources/food/fries/fries_5.png" id="6_8mast"]
-[ext_resource type="Texture2D" uid="uid://bck4r4krw3mb3" path="res://theme/grem/resources/food/fries/fries_6.png" id="7_7326o"]
-[ext_resource type="Texture2D" uid="uid://cejl735us1w1h" path="res://theme/grem/resources/food/fries/fries_7.png" id="8_xerae"]
-[ext_resource type="Texture2D" uid="uid://c3jrvyupprh5g" path="res://theme/grem/resources/food/fries/fries_eat_1.png" id="9_g8c85"]
-[ext_resource type="Texture2D" uid="uid://b0ctoc15210fw" path="res://theme/grem/resources/food/fries/fries_eat_2.png" id="10_rjh8v"]
-[ext_resource type="Texture2D" uid="uid://dtnebm8ewla7v" path="res://theme/grem/resources/food/fries/fries_eat_3.png" id="11_wrhkb"]
-[ext_resource type="Texture2D" uid="uid://du4t8fsgrbor1" path="res://theme/grem/resources/food/fries/fries_eat_4.png" id="12_rttti"]
-[ext_resource type="Texture2D" uid="uid://dsaj0wvxm5rnw" path="res://theme/grem/resources/food/fries/fries_eat_5.png" id="13_cl85u"]
-[ext_resource type="Texture2D" uid="uid://dbjxpo0bhux1v" path="res://theme/grem/resources/food/fries/icon.png" id="14_xl8xi"]
+[ext_resource type="Texture2D" uid="uid://du5gfjew66xiq" path="res://theme/tabemono/resources/food/sushi/frame0000.png" id="1_6imlr"]
+[ext_resource type="Texture2D" uid="uid://clvgh8dsltrge" path="res://theme/tabemono/resources/food/sushi/frame0001.png" id="2_0nogn"]
+[ext_resource type="Texture2D" uid="uid://doe5g6p7wccto" path="res://theme/tabemono/resources/food/sushi/frame0002.png" id="3_typv6"]
+[ext_resource type="Texture2D" uid="uid://ctybcw5k8tw0f" path="res://theme/tabemono/resources/food/sushi/frame0003.png" id="4_3wxtb"]
+[ext_resource type="Texture2D" uid="uid://onwu6ugh5uwk" path="res://theme/tabemono/resources/food/sushi/frame0004.png" id="5_bgln1"]
+[ext_resource type="Texture2D" uid="uid://ipliovntvmvo" path="res://theme/tabemono/resources/food/sushi/frame0005.png" id="6_cvr61"]
+[ext_resource type="Texture2D" uid="uid://c4udyv5pibt78" path="res://theme/tabemono/resources/food/sushi/frame0006.png" id="7_1gr0k"]
+[ext_resource type="Texture2D" uid="uid://jdew51fe2r26" path="res://theme/tabemono/resources/food/sushi/frame0007.png" id="8_8srou"]
+[ext_resource type="Texture2D" uid="uid://dsbp06vnsp5e8" path="res://theme/tabemono/resources/food/sushi/eat0000.png" id="9_c5303"]
+[ext_resource type="Texture2D" uid="uid://cw5iq138m08h4" path="res://theme/tabemono/resources/food/sushi/eat0001.png" id="10_nbkhm"]
+[ext_resource type="Texture2D" uid="uid://ddvvxd1u38x5b" path="res://theme/tabemono/resources/food/sushi/eat0002.png" id="11_5bpx5"]
+[ext_resource type="Texture2D" uid="uid://bnyphkyt85dok" path="res://theme/tabemono/resources/food/sushi/eat0003.png" id="12_45hbv"]
+[ext_resource type="Texture2D" uid="uid://c7u8hgywi446k" path="res://theme/tabemono/resources/food/sushi/eat0004.png" id="13_xdlwr"]
+[ext_resource type="Texture2D" uid="uid://bp5djljhqqshh" path="res://theme/tabemono/resources/food/sushi/eat0005.png" id="14_qbo2j"]
+[ext_resource type="Texture2D" uid="uid://crdb8ppdxcxdl" path="res://theme/tabemono/resources/food/sushi/icon.png" id="15_bpijj"]
 [ext_resource type="Script" uid="uid://7w43b6hsn11b" path="res://resources/FoodResource.gd" id="15_way3q"]
-[ext_resource type="Resource" uid="uid://umasdboj3i8h" path="res://theme/grem/resources/unlockables/fries.tres" id="16_813k6"]
+[ext_resource type="Resource" uid="uid://bcjvkuuyfewyj" path="res://theme/tabemono/resources/unlockables/sushi.tres" id="17_6imlr"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_yyixg"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ugyo1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_36eo8")
+"texture": ExtResource("1_6imlr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_hldmb")
+"texture": ExtResource("2_0nogn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_neorw")
+"texture": ExtResource("3_typv6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_36dt1")
+"texture": ExtResource("4_3wxtb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_ojbia")
+"texture": ExtResource("5_bgln1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_8mast")
+"texture": ExtResource("6_cvr61")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_7326o")
+"texture": ExtResource("7_1gr0k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_xerae")
+"texture": ExtResource("8_8srou")
 }],
 "loop": true,
 "name": &"default",
@@ -50,19 +51,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_g8c85")
+"texture": ExtResource("9_c5303")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_rjh8v")
+"texture": ExtResource("10_nbkhm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_wrhkb")
+"texture": ExtResource("11_5bpx5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_rttti")
+"texture": ExtResource("12_45hbv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_cl85u")
+"texture": ExtResource("13_xdlwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qbo2j")
 }],
 "loop": false,
 "name": &"eat",
@@ -72,8 +76,8 @@ animations = [{
 [resource]
 script = ExtResource("15_way3q")
 hungry = 150.0
-boredom = 0.0
+boredom = 25.0
 cooldown = 40.0
-unlock = ExtResource("16_813k6")
-icon = ExtResource("14_xl8xi")
-animation = SubResource("SpriteFrames_yyixg")
+unlock = ExtResource("17_6imlr")
+icon = ExtResource("15_bpijj")
+animation = SubResource("SpriteFrames_ugyo1")

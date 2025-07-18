@@ -3,9 +3,9 @@ extends Control
 const Rating = preload("res://scenes/game_dj/enum.gd").Rating
 const SCROLL_RATE = 160 / 2.0
 
-const HIT_WINDOW = Vector2(-0.15, 0.15)
-const GOOD_WINDOW = Vector2(-0.07, 0.07)
-const GREAT_WINDOW = Vector2(-0.02, 0.03)
+const HIT_WINDOW = Vector2(-0.15, 0.10)
+const GOOD_WINDOW = Vector2(-0.10, 0.08)
+const GREAT_WINDOW = Vector2(-0.05, 0.03)
 
 @onready var note_sheet = get_node("%Notes")
 @onready var cursor = get_node("%Cursor")
@@ -31,7 +31,7 @@ func render_notes(notes: Array[float], song: DJSongResource):
 		var note = Sprite2D.new()
 		note.centered = true
 		note.texture = load("res://scenes/game_dj/lane/note.png")
-		note.position = Vector2(-scroll_rate * t + cursor.position.x, 0)
+		note.position = Vector2(-scroll_rate * t + cursor.position.x + (cursor.size.x / 2), 0)
 		note.set_meta("time", t)
 		
 		note_sheet.add_child(note)

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3myp8amfv1hk"
-path="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"
+uid="uid://bs46ta5h4mue2"
+path="res://.godot/imported/card_back.png-45bc0cca5af4c2411662855e675ba6a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=["res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"]
+source_file="res://theme/tabemono/scenes/game_match/cards/card_back.png"
+dest_files=["res://.godot/imported/card_back.png-45bc0cca5af4c2411662855e675ba6a8.ctex"]
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -1,12 +1,12 @@
 [gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://bjd2dti1vwhkq"]
 
-[ext_resource type="Texture2D" uid="uid://d2mna3v0bi0u6" path="res://theme/fox/scenes/home/environment/background_bath.png" id="1_ccn8m"]
+[ext_resource type="Texture2D" uid="uid://d2mna3v0bi0u6" path="res://theme/fox/scenes/home/environment/background_bath.png" id="1_jldo5"]
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ccn8m")
+"texture": ExtResource("1_jldo5")
 }],
 "loop": true,
 "name": &"default",

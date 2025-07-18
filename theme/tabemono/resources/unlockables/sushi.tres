@@ -6,5 +6,5 @@
 script = ExtResource("1_0f2t4")
 flag = "food.sushi"
 display_name = "Sushi"
-description = "A tasty treat.  How many can you eat?"
+description = "How many can you eat?"
 cost = 50000

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3myp8amfv1hk"
-path="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"
+uid="uid://c7u8hgywi446k"
+path="res://.godot/imported/eat0004.png-ceaf29539a3ae62493c68adffd50ffc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=["res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"]
+source_file="res://theme/tabemono/resources/food/sushi/eat0004.png"
+dest_files=["res://.godot/imported/eat0004.png-ceaf29539a3ae62493c68adffd50ffc0.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3myp8amfv1hk"
-path="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"
+uid="uid://bcl2k4vdwsu40"
+path="res://.godot/imported/bath.png-d6c8960cb8b35b255a499c776f8f8d11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=["res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"]
+source_file="res://theme/tabemono/scenes/home/environment/bath.png"
+dest_files=["res://.godot/imported/bath.png-d6c8960cb8b35b255a499c776f8f8d11.ctex"]
 
 [params]
 
