@@ -28,16 +28,16 @@ func _setup(_params):
 	var pity = GameState.extra.get("gacha", {}).get("pity", 0)
 	%Pity.text = "Pity %d of %d" % [pity, MAX_PITY]
 	
-	available_cards = AppSkin.enumerate_dir("res://resources/gacha/").map(
-		func (p):
-			return load(p)
-	)
+	available_cards = []
+	for p in AppSkin.enumerate_dir("res://resources/gacha/"):
+		available_cards.append(load(p))
+	update_score(0)
 	
 func quit():
 	SceneManager.change_scene("home")
 	
 func update_score(amount: float):
-	%ScoreLabel.text = "%.2f GG" % [amount]
+	%ScoreLabel.text = "%.2f %s" % [amount, ProjectSettings.get_setting_with_override("application/vpet/gacha_points")]
 	
 func rarity_category(rarity: float) -> Rarity:
 	if rarity < 0.5: # 50% chance

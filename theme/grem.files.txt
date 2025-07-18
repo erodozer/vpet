@@ -1,7 +1,5 @@
 res://theme/grem/icon.png
-res://theme/grem/config/food.tres
-res://theme/grem/config/games.tres
-res://theme/grem/config/shop.tres
+res://theme/grem/config/menu.tres
 res://theme/grem/pet/frames.tres
 res://theme/grem/pet/pet_correct_1.png
 res://theme/grem/pet/pet_correct_2.png

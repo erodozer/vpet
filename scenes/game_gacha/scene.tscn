@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://buu2wbhdyk8kn"]
+[gd_scene load_steps=20 format=3 uid="uid://buu2wbhdyk8kn"]
 
 [ext_resource type="PackedScene" uid="uid://b2wsuygqtasn6" path="res://ui/pointer/pointer.tscn" id="1_aik24"]
 [ext_resource type="Script" uid="uid://br7hyhwy2l5v8" path="res://scenes/game_gacha/scene.gd" id="1_oewvr"]
@@ -20,8 +20,12 @@ shadow_size = 0
 shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(0, 1)
 
+[sub_resource type="FontVariation" id="FontVariation_sjtpt"]
+fallbacks = Array[Font]([ExtResource("12_lalol")])
+base_font = ExtResource("8_k2wfb")
+
 [sub_resource type="LabelSettings" id="LabelSettings_n3la4"]
-font = ExtResource("8_k2wfb")
+font = SubResource("FontVariation_sjtpt")
 font_size = 24
 font_color = Color(1, 1, 0, 1)
 outline_size = 4
@@ -338,7 +342,7 @@ tracks/12/keys = {
 "times": PackedFloat32Array(0, 1.15, 1.35),
 "transitions": PackedFloat32Array(1, 0.5, 0.5),
 "update": 0,
-"values": [Vector2(0, 144), Vector2(0, 144), Vector2(0, 114)]
+"values": [Vector2(0, 144), Vector2(0, 144), Vector2(0, 124)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iwt84"]
@@ -506,7 +510,7 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -80.0
 offset_right = 80.0
-offset_bottom = 34.0
+offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "0.00 GG"

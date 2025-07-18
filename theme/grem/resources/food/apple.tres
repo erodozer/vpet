@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://b8rju4xuony6v" path="res://theme/grem/resources/food/apple/apple_eat_5.png" id="12_5w3ii"]
 [ext_resource type="Texture2D" uid="uid://dk20ply5xn0hj" path="res://theme/grem/resources/food/apple/apple_eat_6.png" id="13_qivvo"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_xeqxa"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_wbqmh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -77,4 +77,4 @@ hungry = 80.0
 boredom = 0.0
 cooldown = 20.0
 icon = ExtResource("8_lpqku")
-animation = SubResource("SpriteFrames_xeqxa")
+animation = SubResource("SpriteFrames_wbqmh")

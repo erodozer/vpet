@@ -24,7 +24,7 @@ config/windows_native_icon.pet_grem="res://theme/grem/gigi.ico"
 config/name.pet_grem="Gremgotchi"
 config/name.pet_ham="Hamagotchi"
 config/name.pet_clover="Pet the Fox"
-vpet/theme="tabemono"
+vpet/theme="grem"
 vpet/weight_unit="lbs"
 vpet/weight_unit.pet_ham="g"
 vpet/theme.pet_clover="fox"
@@ -44,6 +44,8 @@ vpet/weight_range.pet_tabemono=Vector2(15, 50)
 config/name.pet_tabemono="Yo, Tabemono!"
 config/icon.pet_tabemono="uid://5cblo3jotuxo"
 config/windows_native_icon.pet_tabemono="res://theme/tabemono/icon.ico"
+vpet/gacha_points="GG"
+vpet/gacha_points.pet_tabemono="MB"
 
 [autoload]
 

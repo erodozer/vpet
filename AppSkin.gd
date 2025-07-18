@@ -30,7 +30,8 @@ func loaded():
 
 @export var hold_cache = true
 const overrides = [".png", ".tscn", ".tres", ".json", ".res"]
-var _theme_files = []
+var _theme_files: Array[String] = []
+var _theme_resources: Array[Resource] = []
 
 signal theme_applied
 var _loading = true
@@ -61,10 +62,11 @@ func apply(theme = ProjectSettings.get_setting_with_override("application/vpet/t
 		var res = ResourceLoader.load(path)
 		print("found: " + res.resource_path)
 		var source_path = "res://%s" % res.resource_path.substr(len("res://theme/%s/" % theme))
+		_theme_files.append(path)
 		if ResourceLoader.exists(source_path):
 			res.take_over_path(source_path)
 			if hold_cache:
-				_theme_files.append(res)
+				_theme_resources.append(res)
 			print("replacing %s" % source_path)
 			
 	_loading = false
@@ -75,4 +77,7 @@ func _exit_tree():
 	_theme_files = []
 	
 func enumerate_dir(path: String, ext = "tres") -> Array:
-	return gdsh.enumerate_dir("res://theme/%s/%s" % [_theme, path.substr(len("res://"))], [ext])
+	return _theme_files.filter(
+		func (f: String):
+			return f.begins_with("res://theme/%s/%s" % [_theme, path.substr(len("res://"))]) and f.ends_with(ext)
+	)
