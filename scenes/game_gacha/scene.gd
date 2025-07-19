@@ -98,8 +98,6 @@ func render_deck(cards: Array, records: Dictionary, history: Dictionary):
 			c = 0
 			r += 1
 	
-		
-	
 func _on_button_pressed(btn: Button):
 	var cost: int = btn.get_meta("cost")
 	if cost == 0:
@@ -111,8 +109,11 @@ func _on_button_pressed(btn: Button):
 	if GameState.stats.honey < cost:
 		return
 		
+	for i in %Purchase.get_children():
+		if i is Button:
+			i.disabled = true
+		
 	var state = GameState.extra.get("gacha", {})
-	NoClick.show()
 	$AnimationPlayer.play("select")
 	await $AnimationPlayer.animation_finished
 	
@@ -205,5 +206,4 @@ func _on_button_pressed(btn: Button):
 		"pity": pity,
 		"cards": card_history
 	}
-	NoClick.hide()
 	quit()

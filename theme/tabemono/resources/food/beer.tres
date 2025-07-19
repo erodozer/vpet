@@ -87,9 +87,9 @@ animations = [{
 
 [resource]
 script = ExtResource("10_3a3gt")
-hungry = 100.0
-boredom = 40.0
-cooldown = 30.0
+hungry = 80.0
+boredom = -40.0
+cooldown = 3.0
 unlock = ExtResource("20_x4rlg")
 icon = ExtResource("18_yjeo0")
 animation = SubResource("SpriteFrames_gt8ev")

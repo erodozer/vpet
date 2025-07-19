@@ -43,3 +43,5 @@ theme_type_variation = &"NumericLabel"
 text = "40000"
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

@@ -1,6 +1,4 @@
-res://theme/fox/config/food.tres
-res://theme/fox/config/games.tres
-res://theme/fox/config/shop.tres
+res://theme/fox/config/menu.tres
 res://theme/fox/pet/frames.tres
 res://theme/fox/pet/manuka.png
 res://theme/fox/pet/pet_bath_0.png
@@ -71,14 +69,14 @@ res://theme/fox/resources/food/soju/soju_eat_3.png
 res://theme/fox/resources/food/soju/soju_eat_4.png
 res://theme/fox/resources/unlockables/fries.tres
 res://theme/fox/resources/unlockables/soju.tres
-res://theme/fox/scenes/home/bath_environment.tres
-res://theme/fox/scenes/home/environment.tres
 res://theme/fox/scenes/home/pet.tscn
+res://theme/fox/scenes/home/bath/bath_environment.tres
 res://theme/fox/scenes/home/environment/background_bath.png
 res://theme/fox/scenes/home/environment/background_lights_01.png
 res://theme/fox/scenes/home/environment/background_lights_02.png
 res://theme/fox/scenes/home/environment/background_lightsoff.png
 res://theme/fox/scenes/home/environment/background_lightson.png
+res://theme/fox/scenes/home/environment/environment.tres
 res://theme/fox/scenes/home/environment/foreground_lights_01.png
 res://theme/fox/scenes/home/environment/foreground_lights_02.png
 res://theme/fox/scenes/home/environment/foreground_lightsoff.png

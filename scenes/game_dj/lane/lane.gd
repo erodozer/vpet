@@ -11,13 +11,26 @@ const GREAT_WINDOW = Vector2(-0.05, 0.03)
 @onready var cursor = get_node("%Cursor")
 @onready var particles = get_node("%Explode")
 
+@export var player: AudioStreamPlayer
+
 var notes: Array[Node] = []
-var progress: float = 0.0
+var progress: float = 0.0 :
+	set(v):
+		progress = v
+		note_sheet.position.x = v * scroll_rate
+	
 var index = 0
 
 var scroll_rate = SCROLL_RATE
 
 signal play_note(rating: Rating)
+
+func _ready() -> void:
+	get_window().focus_entered.connect(
+		func ():
+			if player.stream != null:
+				progress = player.get_playback_position() if player.playing else player.stream.get_length()
+	)
 
 func current_note():
 	if index >= len(notes):
@@ -104,8 +117,9 @@ func _input(event: InputEvent) -> void:
 		play_note.emit(Rating.BAD)
 	
 func _process(delta: float) -> void:
+	if player.stream == null:
+		return
 	progress += delta
-	note_sheet.position.x = progress * scroll_rate
 	
 	var note = current_note()
 	if note == null:

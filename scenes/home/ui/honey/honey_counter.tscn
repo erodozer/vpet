@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvgro5p43ir7r"]
+
+[ext_resource type="Script" uid="uid://cgwemptoes38o" path="res://scenes/home/ui/honey/honey_counter.gd" id="1_qoy3a"]
+[ext_resource type="Texture2D" uid="uid://c2q4hdkscev71" path="res://scenes/home/ui/honey/currency.png" id="1_yynur"]
+[ext_resource type="FontFile" uid="uid://cu56gylq7usm7" path="res://ui/fonts/Minimum.ttf" id="2_qoy3a"]
+
+[sub_resource type="FontFile" id="4"]
+fallbacks = Array[Font]([ExtResource("2_qoy3a")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="HoneyCounter" type="PanelContainer"]
+custom_minimum_size = Vector2(49, 24)
+script = ExtResource("1_qoy3a")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("1_yynur")
+stretch_mode = 4
+
+[node name="Amount" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("4")
+text = "0"

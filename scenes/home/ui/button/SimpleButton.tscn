@@ -46,7 +46,7 @@ animations = [{
 "speed": 24.0
 }]
 
-[node name="Food" type="Button"]
+[node name="Button" type="Button"]
 show_behind_parent = true
 custom_minimum_size = Vector2(15, 15)
 offset_right = 15.0
@@ -78,3 +78,5 @@ position = Vector2(-3, -3)
 sprite_frames = SubResource("6")
 animation = &"on"
 centered = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

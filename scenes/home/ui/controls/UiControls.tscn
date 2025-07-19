@@ -1,14 +1,12 @@
-[gd_scene load_steps=34 format=3 uid="uid://lhxe71vragto"]
+[gd_scene load_steps=31 format=3 uid="uid://lhxe71vragto"]
 
 [ext_resource type="Script" uid="uid://c85n7t43sh1d4" path="res://scenes/home/ui/controls/UiControls.gd" id="1_45cbp"]
 [ext_resource type="Theme" uid="uid://bfmrdx6ah36lt" path="res://ui/ui_theme.tres" id="2_fferf"]
 [ext_resource type="Resource" uid="uid://cmpo574c33e4r" path="res://config/menu.tres" id="2_vkbdu"]
 [ext_resource type="Shader" uid="uid://c4pt0ljhyev6h" path="res://ui/scroll.gdshader" id="3_ogr13"]
 [ext_resource type="Texture2D" uid="uid://dsdtq1sgpro7c" path="res://ui/tiled_hud.png" id="4_publw"]
-[ext_resource type="PackedScene" uid="uid://r0g0xsty3gr7" path="res://scenes/home/ui/clock/Clock.tscn" id="5_i8es8"]
-[ext_resource type="Script" uid="uid://tjxl4dutf3wa" path="res://scenes/home/ui/clock/ClockLabel.gd" id="6_q1rh6"]
-[ext_resource type="Texture2D" uid="uid://c2q4hdkscev71" path="res://scenes/home/ui/stats/currency.png" id="7_rulgf"]
-[ext_resource type="FontFile" uid="uid://cu56gylq7usm7" path="res://ui/fonts/Minimum.ttf" id="8_wlrfu"]
+[ext_resource type="PackedScene" uid="uid://cjqtp2ppib6tj" path="res://scenes/home/ui/petname/pet_name.tscn" id="6_3ljjg"]
+[ext_resource type="PackedScene" uid="uid://bvgro5p43ir7r" path="res://scenes/home/ui/honey/honey_counter.tscn" id="8_wrbkn"]
 [ext_resource type="PackedScene" uid="uid://g71xw0hneqtu" path="res://scenes/home/ui/button/SimpleButton.tscn" id="9_of6ik"]
 [ext_resource type="Texture2D" uid="uid://bunxtk64ph182" path="res://scenes/home/ui/controls/icons.png" id="10_8nnr7"]
 
@@ -22,18 +20,6 @@ expand_margin_bottom = 2.0
 [sub_resource type="ShaderMaterial" id="3"]
 shader = ExtResource("3_ogr13")
 shader_parameter/speed = Vector2(0, -0.3)
-
-[sub_resource type="FontFile" id="4"]
-fallbacks = Array[Font]([ExtResource("8_wlrfu")])
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [sub_resource type="StyleBoxFlat" id="2"]
 content_margin_top = 0.0
@@ -145,51 +131,15 @@ offset_right = 156.0
 offset_bottom = 26.0
 theme_override_constants/separation = 2
 
-[node name="Clock" parent="TopPanel/HBoxContainer" instance=ExtResource("5_i8es8")]
-unique_name_in_owner = true
-layout_mode = 2
-focus_mode = 0
-toggle_mode = true
-
-[node name="PanelContainer" type="PanelContainer" parent="TopPanel/HBoxContainer"]
-custom_minimum_size = Vector2(74, 0)
+[node name="PetName" parent="TopPanel/HBoxContainer" instance=ExtResource("6_3ljjg")]
 layout_mode = 2
 
-[node name="PetName" type="Label" parent="TopPanel/HBoxContainer/PanelContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Clover"
-
-[node name="CurrentTime" type="Label" parent="TopPanel/HBoxContainer/PanelContainer"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-script = ExtResource("6_q1rh6")
-
-[node name="Control" type="Control" parent="TopPanel/HBoxContainer"]
+[node name="Spacer" type="Control" parent="TopPanel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HoneyCounter" type="PanelContainer" parent="TopPanel/HBoxContainer"]
+[node name="HoneyCounter" parent="TopPanel/HBoxContainer" instance=ExtResource("8_wrbkn")]
 layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="TopPanel/HBoxContainer/HoneyCounter"]
-layout_mode = 2
-
-[node name="Icon" type="TextureRect" parent="TopPanel/HBoxContainer/HoneyCounter/HBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("7_rulgf")
-stretch_mode = 4
-
-[node name="HoneyCounter" type="Label" parent="TopPanel/HBoxContainer/HoneyCounter/HBoxContainer"]
-unique_name_in_owner = true
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
-custom_minimum_size = Vector2(24, 0)
-layout_mode = 2
-theme_override_fonts/font = SubResource("4")
-text = "0"
 
 [node name="BottomPanel" type="Panel" parent="."]
 texture_filter = 1
@@ -239,6 +189,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 toggle_mode = false
 submenu = "stats"
+close_on_use = false
 
 [node name="icon_on" parent="BottomPanel/Controls/Details" index="1"]
 texture = SubResource("AtlasTexture_fpuxr")
@@ -249,6 +200,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 toggle_mode = false
 submenu = "stats"
+close_on_use = false
 
 [node name="icon_on" parent="BottomPanel/Controls/Counters" index="1"]
 texture = SubResource("AtlasTexture_ply7n")
@@ -266,6 +218,7 @@ texture = SubResource("AtlasTexture_o1c06")
 
 [node name="Light" parent="BottomPanel/Controls" instance=ExtResource("9_of6ik")]
 layout_mode = 2
+close_on_use = false
 
 [node name="icon_off" parent="BottomPanel/Controls/Light" index="0"]
 texture = SubResource("AtlasTexture_ng3dl")
@@ -321,19 +274,19 @@ texture = SubResource("AtlasTexture_xwxqk")
 [node name="border" parent="BottomPanel/Controls/Bath" index="2"]
 show_behind_parent = false
 
-[node name="Health" parent="BottomPanel/Controls" instance=ExtResource("9_of6ik")]
+[node name="Stats" parent="BottomPanel/Controls" instance=ExtResource("9_of6ik")]
 layout_mode = 2
 toggle_mode = false
 
-[node name="icon_off" parent="BottomPanel/Controls/Health" index="0"]
+[node name="icon_off" parent="BottomPanel/Controls/Stats" index="0"]
 show_behind_parent = false
 texture = SubResource("AtlasTexture_jjy0l")
 
-[node name="icon_on" parent="BottomPanel/Controls/Health" index="1"]
+[node name="icon_on" parent="BottomPanel/Controls/Stats" index="1"]
 show_behind_parent = false
 texture = SubResource("AtlasTexture_1ckev")
 
-[node name="border" parent="BottomPanel/Controls/Health" index="2"]
+[node name="border" parent="BottomPanel/Controls/Stats" index="2"]
 show_behind_parent = false
 
 [node name="Gift" parent="BottomPanel/Controls" instance=ExtResource("9_of6ik")]
@@ -360,5 +313,5 @@ show_behind_parent = false
 [editable path="BottomPanel/Controls/Game"]
 [editable path="BottomPanel/Controls/Cure"]
 [editable path="BottomPanel/Controls/Bath"]
-[editable path="BottomPanel/Controls/Health"]
+[editable path="BottomPanel/Controls/Stats"]
 [editable path="BottomPanel/Controls/Gift"]

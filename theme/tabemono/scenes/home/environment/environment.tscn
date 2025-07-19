@@ -1,0 +1,518 @@
+[gd_scene load_steps=33 format=3 uid="uid://bo3l5kc4gprtx"]
+
+[ext_resource type="Texture2D" uid="uid://miggwxaihqok" path="res://theme/tabemono/scenes/home/environment/sky_0010.png" id="1_l8chq"]
+[ext_resource type="Script" uid="uid://cxpbl1wcfpqyq" path="res://scenes/home/environment/environment.gd" id="1_vnw30"]
+[ext_resource type="Texture2D" uid="uid://tuvfo73j41c3" path="res://theme/tabemono/scenes/home/environment/moon.png" id="2_f3vng"]
+[ext_resource type="Texture2D" uid="uid://g2j6hbfxprl6" path="res://theme/tabemono/scenes/home/environment/sky_0000.png" id="2_rixwv"]
+[ext_resource type="Texture2D" uid="uid://dwiqls7cd5714" path="res://theme/tabemono/scenes/home/environment/sky_0001.png" id="3_781qk"]
+[ext_resource type="Texture2D" uid="uid://by5ko7ldd3d8i" path="res://theme/tabemono/scenes/home/environment/sun.png" id="3_ab7gi"]
+[ext_resource type="Texture2D" uid="uid://bq7r3j50oiqxw" path="res://theme/tabemono/scenes/home/environment/sky_0002.png" id="4_af7g3"]
+[ext_resource type="SpriteFrames" uid="uid://dhwfauryxwctl" path="res://theme/tabemono/scenes/home/environment/environment.tres" id="5_bhe5c"]
+[ext_resource type="Texture2D" uid="uid://b8oc1dj0rb7rr" path="res://theme/tabemono/scenes/home/environment/sky_0003.png" id="5_tqvyf"]
+[ext_resource type="Texture2D" uid="uid://bkqy760x4yjm8" path="res://theme/tabemono/scenes/home/environment/sky_0004.png" id="6_efglh"]
+[ext_resource type="Texture2D" uid="uid://ih4ivh5tqf4n" path="res://theme/tabemono/scenes/home/environment/sky_0005.png" id="7_5xitd"]
+[ext_resource type="Texture2D" uid="uid://c8x0ngjmjfs82" path="res://theme/tabemono/scenes/home/environment/sky_0006.png" id="8_rwpqy"]
+[ext_resource type="Texture2D" uid="uid://d01k1f0fycr66" path="res://theme/tabemono/scenes/home/environment/sky_0007.png" id="9_hucun"]
+[ext_resource type="Texture2D" uid="uid://dirydv03ikbst" path="res://theme/tabemono/scenes/home/environment/sky_0008.png" id="10_t2qwl"]
+[ext_resource type="Texture2D" uid="uid://bnk2ysh48mkwf" path="res://theme/tabemono/scenes/home/environment/sky_0009.png" id="11_ef48v"]
+[ext_resource type="Texture2D" uid="uid://ip3rjhknupv7" path="res://theme/tabemono/scenes/home/environment/clouds_0010.png" id="14_ef48v"]
+[ext_resource type="Texture2D" uid="uid://pr78qbiwoxdh" path="res://theme/tabemono/scenes/home/environment/clouds_0000.png" id="15_m4hqi"]
+[ext_resource type="Texture2D" uid="uid://bgwjtowsm13mp" path="res://theme/tabemono/scenes/home/environment/clouds_0001.png" id="16_caeh1"]
+[ext_resource type="Texture2D" uid="uid://buh41sd0na821" path="res://theme/tabemono/scenes/home/environment/clouds_0002.png" id="17_qk11r"]
+[ext_resource type="Texture2D" uid="uid://qhhy8dbs4ccu" path="res://theme/tabemono/scenes/home/environment/clouds_0003.png" id="18_75je2"]
+[ext_resource type="Texture2D" uid="uid://dyjebrtbfalw2" path="res://theme/tabemono/scenes/home/environment/clouds_0004.png" id="19_jo46t"]
+[ext_resource type="Texture2D" uid="uid://cavo34t1up6v4" path="res://theme/tabemono/scenes/home/environment/clouds_0005.png" id="20_xnufw"]
+[ext_resource type="Texture2D" uid="uid://dhg2tnjn1rs3y" path="res://theme/tabemono/scenes/home/environment/clouds_0006.png" id="21_jr46d"]
+[ext_resource type="Texture2D" uid="uid://c4ruv3trjioyj" path="res://theme/tabemono/scenes/home/environment/clouds_0007.png" id="22_y55e5"]
+[ext_resource type="Texture2D" uid="uid://bbq0or73ymcmc" path="res://theme/tabemono/scenes/home/environment/clouds_0008.png" id="23_bfki0"]
+[ext_resource type="Texture2D" uid="uid://d11qukqjsvw4n" path="res://theme/tabemono/scenes/home/environment/clouds_0009.png" id="24_2x5cs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m4hqi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l8chq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rixwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_781qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_af7g3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tqvyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_efglh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5xitd")
+}],
+"loop": false,
+"name": &"lights_off",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_5xitd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rwpqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hucun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_t2qwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ef48v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_l8chq")
+}],
+"loop": false,
+"name": &"lights_on",
+"speed": 6.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tmyyq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ef48v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_m4hqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_caeh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_qk11r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_75je2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jo46t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xnufw")
+}],
+"loop": false,
+"name": &"lights_off",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_xnufw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jr46d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_y55e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_bfki0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_2x5cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ef48v")
+}],
+"loop": false,
+"name": &"lights_on",
+"speed": 6.0
+}]
+
+[sub_resource type="Animation" id="Animation_1d34y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Orbital:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.309]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Orbital/Sun:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.309]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Orbital/Moon:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.309]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sky:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sky:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lights_on"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Clouds:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lights_off"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Clouds:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Background:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Background:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lights_on"]
+}
+
+[sub_resource type="Animation" id="Animation_3dep5"]
+resource_name = "lights_off"
+length = 0.800003
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Orbital/Moon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [-4.97419, -2.79253]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Orbital:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [4.97419, 2.79253]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Orbital/Sun:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [-4.97419, -2.79253]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sky:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 5]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sky:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lights_off"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Clouds:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lights_off"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Clouds:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 5]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Background:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lights_off"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Background:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 5]
+}
+
+[sub_resource type="Animation" id="Animation_j4uih"]
+resource_name = "lights_on"
+length = 0.800003
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Orbital/Moon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [-2.79253, 1.309]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Orbital:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [2.79253, -1.309]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Orbital/Sun:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [-2.79253, 1.309]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sky:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lights_on"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sky:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 5]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Clouds:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lights_on"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Clouds:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 5]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Background:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lights_on"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Background:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6sg4j"]
+_data = {
+&"RESET": SubResource("Animation_1d34y"),
+&"lights_off": SubResource("Animation_3dep5"),
+&"lights_on": SubResource("Animation_j4uih")
+}
+
+[node name="Environment" type="Control"]
+clip_contents = true
+custom_minimum_size = Vector2(160, 80)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vnw30")
+
+[node name="Sky" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_m4hqi")
+animation = &"lights_on"
+frame = 5
+centered = false
+
+[node name="Orbital" type="Node2D" parent="."]
+position = Vector2(75, 48)
+rotation = -1.309
+
+[node name="Moon" type="Sprite2D" parent="Orbital"]
+position = Vector2(0, 41)
+rotation = 1.309
+texture = ExtResource("2_f3vng")
+
+[node name="Sun" type="Sprite2D" parent="Orbital"]
+position = Vector2(64, 0)
+rotation = 1.309
+texture = ExtResource("3_ab7gi")
+
+[node name="Clouds" type="AnimatedSprite2D" parent="."]
+position = Vector2(80, 40)
+sprite_frames = SubResource("SpriteFrames_tmyyq")
+animation = &"lights_off"
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+sprite_frames = ExtResource("5_bhe5c")
+animation = &"lights_on"
+frame = 5
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6sg4j")
+}

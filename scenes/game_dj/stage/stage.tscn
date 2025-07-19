@@ -26,7 +26,6 @@ autoplay = "default"
 unique_name_in_owner = true
 position = Vector2(80, 32)
 sprite_frames = ExtResource("2_dsfdp")
-animation = &"scratch"
 autoplay = "default"
 
 [node name="Pet" type="AnimatedSprite2D" parent="."]

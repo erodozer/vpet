@@ -132,12 +132,12 @@ res://theme/grem/scenes/game_quiz/teacher_correct_2.png
 res://theme/grem/scenes/game_quiz/teacher_correct_3.png
 res://theme/grem/scenes/game_quiz/teacher_wrong_1.png
 res://theme/grem/scenes/game_quiz/teacher_wrong_2.png
-res://theme/grem/scenes/home/bath_environment.tres
-res://theme/grem/scenes/home/environment.tres
 res://theme/grem/scenes/home/pet.tscn
-res://theme/grem/scenes/home/environment/bath_01.png
-res://theme/grem/scenes/home/environment/bath_02.png
-res://theme/grem/scenes/home/environment/bath_03.png
+res://theme/grem/scenes/home/bath/bath_01.png
+res://theme/grem/scenes/home/bath/bath_02.png
+res://theme/grem/scenes/home/bath/bath_03.png
+res://theme/grem/scenes/home/bath/bath_environment.tres
+res://theme/grem/scenes/home/environment/environment.tres
 res://theme/grem/scenes/home/environment/lights_on_00.png
 res://theme/grem/scenes/home/environment/lights_on_01.png
 res://theme/grem/scenes/home/environment/lights_on_02.png
@@ -145,7 +145,7 @@ res://theme/grem/scenes/home/environment/lights_on_03.png
 res://theme/grem/scenes/home/environment/lights_on_04.png
 res://theme/grem/scenes/home/ui/clock/clock.png
 res://theme/grem/scenes/home/ui/controls/icons.png
-res://theme/grem/scenes/home/ui/stats/currency.png
+res://theme/grem/scenes/home/ui/honey/currency.png
 res://theme/grem/ui/background.png
 res://theme/grem/ui/panel.png
 res://theme/grem/ui/tiled_hud.png

@@ -27,10 +27,14 @@ func _game():
 	var song: DJSongResource = debug_song
 	if song == null:
 		var songfiles = AppSkin.enumerate_dir("res://resources/songs")
-		var songfile = songfiles.pick_random()
-		if songfile == null:
-			return
+		assert(len(songfiles) > 0)
+		var idx: int = int(GameState.extra.get("rhythm", {}).get("next_song", 0)) % len(songfiles)
+		var songfile = songfiles[idx]
+		assert(songfile != null)
 		song = load(songfile)
+		GameState.extra["rhythm"] = {
+			"next_song": idx + 1
+		}
 	
 	var playback: AudioStreamPlayer = get_node("%Song")
 	playback.stream = song.audio

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://tyd6hlyrgac7"]
 
-[ext_resource type="Texture2D" uid="uid://c2q4hdkscev71" path="res://scenes/home/ui/stats/currency.png" id="3_j6273"]
+[ext_resource type="Texture2D" uid="uid://c2q4hdkscev71" path="res://scenes/home/ui/honey/currency.png" id="3_j6273"]
 [ext_resource type="Texture2D" uid="uid://b2l8td6ax26uf" path="res://scenes/home/ui/stats/fun.png" id="4_p0rs3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m34cc"]

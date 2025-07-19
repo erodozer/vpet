@@ -25,6 +25,17 @@ func _ready():
 			anims.idle.append(i)
 		elif i.begins_with("eat") and i != "eat:overfed":
 			anims.eat.append(i)
+			
+	if get_parent() != null:
+		var bounds = Vector2(
+			(get_parent() as Control).get_rect().size.x / -2 + (get_parent() as Control).position.x,
+			(get_parent() as Control).get_rect().size.x / 2 + (get_parent() as Control).position.x
+		)
+		left_bound = bounds.x
+		right_bound = bounds.y
+	else:
+		left_bound = position.x - 10
+		right_bound = position.x + 10
 	
 func _update_stats(stats):
 	dirty.visible = false
@@ -58,7 +69,7 @@ func move_to(target: Vector2, padding = 0):
 	
 	var facing_dest = sign(position.x - destination)
 	sprite.scale.x = facing_dest
-	if GameState.is_overfed() and sprite.sprite_frames.has_animation("walk:overfed"):
+	if GameState.is_fat and sprite.sprite_frames.has_animation("walk:overfed"):
 		sprite.play("walk:overfed")
 	else:
 		sprite.play("walk")
@@ -67,13 +78,13 @@ func move_to(target: Vector2, padding = 0):
 	await tween.finished
 	sprite.scale.x = facing
 	
-	if GameState.is_overfed() and sprite.sprite_frames.has_animation("idle:overfed"):
+	if GameState.is_fat and sprite.sprite_frames.has_animation("idle:overfed"):
 		sprite.play("idle:overfed")
 	else:
 		_play_random_anim("idle")
 	
 func eat():
-	if GameState.is_overfed() and sprite.sprite_frames.has_animation("eat:overfed"):
+	if GameState.is_fat and sprite.sprite_frames.has_animation("eat:overfed"):
 		sprite.play("eat:overfed")
 	else:
 		_play_random_anim("eat")

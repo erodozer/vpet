@@ -89,13 +89,6 @@ position = Vector2(-1, -4)
 amount = 24
 process_material = SubResource("ParticleProcessMaterial_yb7b1")
 
-[node name="FollowCamera" type="Camera2D" parent="."]
-offset = Vector2(0, -35)
-limit_left = 0
-limit_right = 160
-limit_smoothed = true
-editor_draw_limits = true
-
 [node name="Sickness" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -19)
 sprite_frames = SubResource("SpriteFrames_giojb")

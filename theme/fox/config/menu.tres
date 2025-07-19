@@ -1,12 +1,27 @@
-[gd_resource type="Resource" script_class="ResourceMenu" load_steps=5 format=3 uid="uid://cih6xl1pdj7mi"]
+[gd_resource type="Resource" script_class="ResourceMenu" load_steps=19 format=3 uid="uid://cih6xl1pdj7mi"]
 
 [ext_resource type="Script" uid="uid://7w43b6hsn11b" path="res://resources/FoodResource.gd" id="1_ox8l2"]
 [ext_resource type="Script" uid="uid://bs3olmdbb4xck" path="res://resources/GameResource.gd" id="2_aikes"]
+[ext_resource type="Resource" uid="uid://c6cp08mibk1my" path="res://theme/fox/resources/food/nuggie.tres" id="2_xbm06"]
+[ext_resource type="Resource" uid="uid://bijvcbc5ntll2" path="res://theme/fox/resources/food/fries.tres" id="3_7q1q6"]
 [ext_resource type="Script" uid="uid://b7d3r20npjor2" path="res://resources/Menu.gd" id="3_mjy2w"]
+[ext_resource type="Resource" uid="uid://ctqga4653okkg" path="res://theme/fox/resources/food/soju.tres" id="4_3rsxr"]
 [ext_resource type="Script" uid="uid://cm55ffjlgedb" path="res://resources/ShopResource.gd" id="4_8yg1r"]
+[ext_resource type="Resource" uid="uid://b6u5mo24eugkg" path="res://resources/games/match.tres" id="6_1jiyd"]
+[ext_resource type="Resource" uid="uid://0wjtnjgxtbfc" path="res://resources/games/hilo.tres" id="7_r33ay"]
+[ext_resource type="Resource" uid="uid://d2c6ppo3srw81" path="res://resources/games/plinko.tres" id="8_wdcbk"]
+[ext_resource type="Resource" uid="uid://ciesmoo3h50u1" path="res://theme/fox/resources/unlockables/fries.tres" id="11_vs7jx"]
+[ext_resource type="Resource" uid="uid://d1eqhbuhxqwaj" path="res://theme/fox/resources/unlockables/soju.tres" id="12_rvgwh"]
+[ext_resource type="Resource" uid="uid://crmqj1g0wo1he" path="res://resources/unlockables/game_hilo.tres" id="13_ipofw"]
+[ext_resource type="Resource" uid="uid://cnibaxqe5jqba" path="res://resources/unlockables/game_plinko.tres" id="14_rc1c6"]
+[ext_resource type="Resource" uid="uid://c62ljxf7cdmao" path="res://resources/unlockables/soap.tres" id="15_hg436"]
+[ext_resource type="Resource" uid="uid://ylanugfo0dbw" path="res://resources/unlockables/feedpet.tres" id="16_gs3em"]
+[ext_resource type="Resource" uid="uid://cec3vgn6hmlcs" path="res://resources/unlockables/resettimers.tres" id="17_i13tm"]
+[ext_resource type="Resource" uid="uid://bm23jlwt4gmsk" path="res://resources/unlockables/resetgame.tres" id="18_jtsy8"]
 
 [resource]
 script = ExtResource("3_mjy2w")
-food = Array[ExtResource("1_ox8l2")]([])
-games = Array[ExtResource("2_aikes")]([])
-shop = Array[ExtResource("4_8yg1r")]([])
+food = Array[ExtResource("1_ox8l2")]([ExtResource("2_xbm06"), ExtResource("3_7q1q6"), ExtResource("4_3rsxr")])
+games = Array[ExtResource("2_aikes")]([ExtResource("6_1jiyd"), ExtResource("7_r33ay"), ExtResource("8_wdcbk")])
+shop = Array[ExtResource("4_8yg1r")]([ExtResource("11_vs7jx"), ExtResource("12_rvgwh"), ExtResource("13_ipofw"), ExtResource("14_rc1c6"), ExtResource("15_hg436"), ExtResource("16_gs3em"), ExtResource("17_i13tm"), ExtResource("18_jtsy8")])
+counters = Array[String]([])

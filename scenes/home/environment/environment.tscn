@@ -1,0 +1,140 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgqqe22sptt5s"]
+
+[ext_resource type="SpriteFrames" uid="uid://cxt5213k5mxo3" path="res://scenes/home/environment/environment.tres" id="1_e4c5b"]
+[ext_resource type="Script" uid="uid://cxpbl1wcfpqyq" path="res://scenes/home/environment/environment.gd" id="1_j2tju"]
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"lights_off",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"lights_on",
+"speed": 8.0
+}]
+
+[sub_resource type="Animation" id="Animation_j2tju"]
+resource_name = "lights_off"
+length = 1.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Foreground")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"lights_off", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"lights_off", 1.0, false],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_e10oh"]
+resource_name = "lights_on"
+length = 1.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Foreground")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"lights_on", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"lights_on", 1.0, false],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_78xm4"]
+_data = {
+&"lights_off": SubResource("Animation_j2tju"),
+&"lights_on": SubResource("Animation_e10oh")
+}
+
+[node name="Environment" type="Control"]
+clip_contents = true
+custom_minimum_size = Vector2(160, 80)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 160.0
+offset_bottom = 80.0
+script = ExtResource("1_j2tju")
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+sprite_frames = ExtResource("1_e4c5b")
+animation = &"lights_off"
+centered = false
+
+[node name="Foreground" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+z_index = 1
+sprite_frames = SubResource("2")
+animation = &"lights_on"
+frame = 3
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_78xm4")
+}

@@ -25,6 +25,7 @@ func move_to(global_pos: Vector2):
 		"global_position", global_pos,
 		0.08
 	).from(from).set_ease(Tween.EASE_IN_OUT)
+	get_node("Tick").play()
 	await t.finished
 	
 	if global_pos.y < from.y:

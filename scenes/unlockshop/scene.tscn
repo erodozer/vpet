@@ -4,25 +4,17 @@
 [ext_resource type="FontFile" uid="uid://cu56gylq7usm7" path="res://ui/fonts/Minimum.ttf" id="2"]
 [ext_resource type="Shader" uid="uid://c4pt0ljhyev6h" path="res://ui/scroll.gdshader" id="3"]
 [ext_resource type="Resource" uid="uid://cmpo574c33e4r" path="res://config/menu.tres" id="3_s6bll"]
-[ext_resource type="Texture2D" uid="uid://c2q4hdkscev71" path="res://scenes/home/ui/stats/currency.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://dsdtq1sgpro7c" path="res://ui/tiled_hud.png" id="5"]
 [ext_resource type="Script" uid="uid://c6khqjoyb02oj" path="res://scenes/unlockshop/UnlockShop.gd" id="7"]
+[ext_resource type="PackedScene" uid="uid://bvgro5p43ir7r" path="res://scenes/home/ui/honey/honey_counter.tscn" id="7_s6bll"]
 [ext_resource type="Texture2D" uid="uid://p7ybyhakw5kv" path="res://scenes/unlockshop/panel.png" id="8"]
 [ext_resource type="PackedScene" uid="uid://g71xw0hneqtu" path="res://scenes/home/ui/button/SimpleButton.tscn" id="9"]
 [ext_resource type="Texture2D" uid="uid://bunxtk64ph182" path="res://scenes/home/ui/controls/icons.png" id="9_3ouqi"]
+[ext_resource type="AudioStream" uid="uid://cru22pp2chg81" path="res://scenes/unlockshop/buy.wav" id="9_eepkj"]
 
 [sub_resource type="ShaderMaterial" id="5"]
 shader = ExtResource("3")
 shader_parameter/speed = Vector2(0, -0.3)
-
-[sub_resource type="FontFile" id="6"]
-fallbacks = Array[Font]([ExtResource("2")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_82sba"]
 line_spacing = -4.0
@@ -75,30 +67,12 @@ offset_bottom = 144.0
 pivot_offset = Vector2(-50, -68)
 color = Color(0.92549, 0.917647, 0.921569, 1)
 
-[node name="HoneyCounter" type="PanelContainer" parent="."]
+[node name="HoneyCounter" parent="." instance=ExtResource("7_s6bll")]
 layout_mode = 0
-offset_left = 105.0
-offset_top = 3.0
-offset_right = 152.0
-offset_bottom = 27.0
-theme = ExtResource("1")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HoneyCounter"]
-layout_mode = 2
-
-[node name="Icon" type="TextureRect" parent="HoneyCounter/HBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("4")
-stretch_mode = 4
-
-[node name="HoneyCounter" type="Label" parent="HoneyCounter/HBoxContainer"]
-unique_name_in_owner = true
-modulate = Color(0.0588235, 0.0352941, 0.0352941, 1)
-custom_minimum_size = Vector2(24, 0)
-layout_mode = 2
-theme_override_fonts/font = SubResource("6")
-text = "0"
+offset_left = 107.0
+offset_top = 2.0
+offset_right = 156.0
+offset_bottom = 26.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -153,6 +127,9 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 text = "Buy"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/MarginContainer/HBoxContainer/BuyButton"]
+stream = ExtResource("9_eepkj")
 
 [node name="Back" parent="." instance=ExtResource("9")]
 layout_mode = 0

@@ -1,7 +1,5 @@
 extends Node
 
-# number of seconds between turns
-const UPDATE_FREQ = 1.0
 const SAVE_FREQ = 60.0  # limit autosave frequency so we don't wear out drives
 
 class GameActions:
@@ -9,6 +7,11 @@ class GameActions:
 	const Bathe = "bathe"
 	const Play = "game"
 	const Medicine = "medicine"
+	
+enum TimeMode {
+	Slow,
+	Fast
+}
 
 var timers = {
 	GameActions.Eat: 0,
@@ -39,6 +42,7 @@ var stats = {
 } : set = _update_stats
 
 var lights_on = true
+var time_scale: TimeMode = TimeMode.Slow
 
 var unlocks = {}: set = _update_unlocks
 
@@ -50,6 +54,72 @@ var TWITCH_ENABLED = false
 signal stats_changed(stats)
 signal timers_changed(timers)
 signal counters_changed(counters)
+
+# stat driven properties
+var is_starving: bool :
+	get():
+		return stats.hungry < 40.0
+var is_statiated: bool :
+	get():
+		return stats.hungry > 80.0
+var is_well_fed: bool :
+	get():
+		return stats.hungry > 130.0
+var is_stuffed: bool :
+	get():
+		if is_underweight:
+			return stats.hungry > 80
+		if is_malnourished:
+			return stats.hungry > 60
+		return stats.hungry > 200.0
+var is_malnourished: bool :
+	get():
+		return stats.weight < 25.0
+var is_underweight: bool :
+	get():
+		return stats.weight < 40.0
+var is_fat: bool :
+	get():
+		return stats.weight >= 80.0
+var is_dirty: bool :
+	get():
+		return stats.dirty > 30
+var is_filthy: bool :
+	get():
+		return stats.dirty > 80
+var is_clean: bool :
+	get():
+		return stats.dirty < 20
+var is_unwell: bool :
+	get():
+		return stats.sick > 25
+var is_sick: bool :
+	get():
+		return stats.sick > 50
+var is_rested: bool :
+	get():
+		return stats.tired < 25
+var is_sleepy: bool :
+	get():
+		return stats.tired > 40
+var is_exhausted: bool :
+	get():
+		return stats.tired > 70
+var is_bored: bool :
+	get():
+		return stats.boredom > 40
+var is_discontent: bool :
+	get():
+		return stats.boredom > 80
+
+## time in seconds between turns
+var update_frequency: float :
+	get():
+		match time_scale:
+			TimeMode.Fast:
+				return 1.0
+			_:
+				return 3.0
 
 func _ready():
 	if FileAccess.file_exists("user://pet.save"):
@@ -67,6 +137,12 @@ func _ready():
 		self.timers = data.get("timers", {})
 		self.unlocks = data.get("unlocks", {})
 		self.extra = data.get("extra", {})
+		self.lights_on = data.get("lights", true)
+		match data.get("mode", "slow"):
+			"fast":
+				self.time_scale = TimeMode.Fast
+			_:
+				self.time_scale = TimeMode.Slow
 		
 	await AppSkin.loaded()
 		
@@ -126,9 +202,6 @@ func _update_counters(change):
 		counters = {}
 	counters = counters.merged(change, true)
 	emit_signal("counters_changed", counters)
-	
-func is_overfed():
-	return stats.weight >= 80
 
 func save_data():
 	if now() < save_sync:
@@ -141,7 +214,9 @@ func save_data():
 			"timers": timers,
 			"unlocks": unlocks,
 			"extra": extra,
-			"counters": counters
+			"counters": counters,
+			"lights": lights_on,
+			"mode": "fast" if time_scale == TimeMode.Fast else "slow"
 		})
 	)
 	save_game.close()
@@ -149,71 +224,68 @@ func save_data():
 	save_sync = now() + SAVE_FREQ
 
 func execute_turn():
-	var change = stats.duplicate()
+	var change = {}
 	
 	if TWITCH_ENABLED and stats.is_asleep:
-		change.hungry -= 0.05
-		change.dirty += 0.0
-		change.boredom += 0.0
-		change.tired += 0.0
+		change.hungry = -0.05
+		change.dirty = 0.0
+		change.boredom = 0.0
+		change.tired = 0.0
 	elif TWITCH_ENABLED:
-		change.hungry -= 0.28
-		change.dirty += 0.13
-		change.boredom += 0.03
-		change.tired += 0.04
+		change.hungry = -0.28
+		change.dirty = 0.13
+		change.boredom = 0.03
+		change.tired = 0.04
 	elif stats.is_asleep:
-		change.hungry -= 0.05
-		change.dirty += 0.0
-		change.boredom += 0.0
-		change.tired += 0.0
+		change.hungry = -0.1
+		change.dirty = 0.0
+		change.boredom = 0.0
+		change.tired = -0.5
+		change.sick = -0.25
 	else:
-		change.hungry -= 0.15
-		change.dirty += 0.08
-		change.boredom += 0.1
-		change.tired += 0.03
+		change.hungry = -0.3
+		change.dirty = 0.05
+		change.boredom = 0.1
+		change.tired = 0.03
 	
-	# increase weight when overfed
-	if stats.hungry > 150.0:
-		change.weight += 1.0
 	# lose weight when starving
-	elif stats.hungry < 40:
-		change.weight -= 0.05
-	# return to healthy weight when moderately full
-	elif stats.hungry > 80 and stats.weight < 40.0:
-		change.weight += 0.5
-	elif stats.hungry > 60 and stats.weight < 25.0:
-		change.weight += 0.5
+	if is_starving:
+		change.weight = -0.05
+	# increase weight when stuffed or returning to healthy weight
+	elif is_stuffed:
+		change.weight = 0.08
+	# slight weight gain when overfed
+	elif is_well_fed:
+		change.weight = 0.01
 		
 	# cover tiredness and sickness by sleeping
 	if stats.is_asleep:
-		change.tired -= 0.4
-		change.sick -= 0.2
-		
 		# wake up if lights are on
 		if lights_on:
 			change.is_asleep = false
-	else:
-		# get sick from not being clean
-		if stats.dirty > 30.0:
-			change.sick += 0.2
-		elif stats.dirty > 60.0:
-			change.sick += 0.4
-		elif stats.dirty < 20.0:
-			change.sick -= 0.2
+	# get sick from not being clean
+	elif is_filthy:
+		change.sick = 0.3
+	elif is_dirty:
+		change.sick = 0.075
+	elif is_clean:
+		change.sick = -0.15
 		
-	if stats.sick > 50.0:
-		change.tired += 0.1
+	# get tired faster if sick
+	if is_sick and lights_on:
+		change.tired = 0.165
 		
-	# go to bed when lights off and tired
-	if stats.tired > 45 and not lights_on:
+	# go to bed when lights off and tired or sick
+	if is_sleepy and not lights_on:
 		change.is_asleep = true
-	if stats.sick > 30 and not lights_on:
+	if is_unwell and not lights_on:
 		change.is_asleep = true
 	
-	var score = honey_score()
-	change.honey += score
+	# calculate honey earned per turn
+	var score = 10.0
 	
-	change.age += UPDATE_FREQ
+	change.honey = score
+	change.age = update_frequency
 	
 	# punish the fox for not producing honey
 	if score <= 1.0 and death_timer <= 0:
@@ -221,9 +293,16 @@ func execute_turn():
 	elif score > 1.0:
 		death_timer = 0
 	
-	self.stats = change
+	var update = stats.duplicate()
+	for s in change.keys():
+		if change[s] is float:
+			update[s] += change[s]
+		else:
+			update[s] = change[s]
+	
+	self.stats = update
 	self.timers = {
-		"update": now() + UPDATE_FREQ
+		"update": now() + update_frequency
 	}
 	
 func honey_score():
@@ -232,31 +311,31 @@ func honey_score():
 	
 	# the fox likes to be stinky
 	# but not too stinky
-	if stats.dirty > 70.0:
+	if is_filthy:
 		happy -= 2.0
-	elif stats.dirty > 30.0:
+	elif is_dirty:
 		happy += 1.0
 		
 	# produce less honey when unhealthy weight
-	if stats.weight < 20.0:
+	if is_malnourished:
 		happy -= 2.0
-	elif stats.weight < 40.0:
+	elif is_underweight:
 		happy -= 0.5
-	elif stats.weight > 80.0:
-		happy -= 1.0
+	elif is_fat:
+		happy += 1.0
 	
 	# produce significantly less when sick
-	if stats.sick > 75.0:
+	if is_sick:
 		happy -= 6.0
 		
 	# not happy if lights are on while tired
-	if stats.tired > 70 and lights_on:
+	if is_exhausted and lights_on:
 		happy -= 3.0
 	# scared of dark
-	elif stats.tired < 20 and not lights_on:
+	elif is_rested and not lights_on:
 		happy -= 0.5
 	# very happy when well rested
-	elif stats.tired < 20:
+	elif is_rested:
 		happy += 2.0
 	
 	# happy when sleeping
@@ -264,14 +343,14 @@ func honey_score():
 		happy += 0.5
 	
 	# keep fed
-	if stats.hungry < 30:
+	if is_starving:
 		happy -= 3.0
-	elif stats.hungry > 80:
+	elif is_statiated:
 		happy += 1.0
 		
-	if stats.boredom > 80:
+	if is_discontent:
 		happy -= 4.0
-	elif stats.boredom > 40:
+	elif is_bored:
 		happy -= 2.0
 		
 	return clamp(happy, 0.0, 15.0)
@@ -286,7 +365,7 @@ func reset(reset_timers = true, reset_stats = true, hard = false):
 			GameState.GameActions.Bathe: 0,
 			GameState.GameActions.Play: 0,
 			GameState.GameActions.Medicine: 0,
-			"update": now() + UPDATE_FREQ,
+			"update": now() + update_frequency,
 		}
 		death_timer = 0
 
@@ -314,5 +393,7 @@ func _process(_delta):
 	
 func _input(event):
 	if event.is_action_pressed("free_money"):
-		stats.honey += 10000
+		stats = stats.merged({
+			"honey": stats.honey + 10000
+		}, true)
 		

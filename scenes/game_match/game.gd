@@ -161,6 +161,7 @@ func _swap(a: Control, b: Control):
 		.set_trans(Tween.TRANS_QUAD)
 	b.show_behind_parent = true
 	
+	get_node("ShuffleFx").play()
 	await tween.finished
 
 	b.show_behind_parent = false

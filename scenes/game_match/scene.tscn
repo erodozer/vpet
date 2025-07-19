@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dpqj4v03iq3ed"]
+[gd_scene load_steps=12 format=3 uid="uid://dpqj4v03iq3ed"]
 
 [ext_resource type="Script" uid="uid://dhawxuga5bv7q" path="res://scenes/game_match/game.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dd78sx7uk8fsq" path="res://scenes/game_match/cards/Card.tscn" id="2"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://3heiwkvujho0" path="res://ui/fonts/EarlyGameBoySTD.ttf" id="7"]
 [ext_resource type="PackedScene" uid="uid://tyd6hlyrgac7" path="res://ui/results.tscn" id="7_00jjb"]
 [ext_resource type="PackedScene" uid="uid://b2wsuygqtasn6" path="res://ui/pointer/pointer.tscn" id="8_tguy3"]
+[ext_resource type="AudioStream" uid="uid://c2fyriurs7qlu" path="res://scenes/game_match/shuffle.wav" id="9_duor7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3gk0t"]
 font = ExtResource("7")
@@ -178,3 +179,6 @@ offset_left = -79.0
 offset_top = 28.0
 offset_right = -79.0
 offset_bottom = 28.0
+
+[node name="ShuffleFx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_duor7")

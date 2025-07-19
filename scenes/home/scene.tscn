@@ -1,15 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://dkaal7dxlbvqy"]
+[gd_scene load_steps=12 format=3 uid="uid://dkaal7dxlbvqy"]
 
 [ext_resource type="Script" uid="uid://dndkaqg82y36j" path="res://scenes/home/scene.gd" id="1_oq1jp"]
 [ext_resource type="PackedScene" uid="uid://lhxe71vragto" path="res://scenes/home/ui/controls/UiControls.tscn" id="2_all1x"]
 [ext_resource type="PackedScene" uid="uid://cvkideptcxtuk" path="res://scenes/home/ui/stats/StatusPanel.tscn" id="3_mh4k8"]
-[ext_resource type="PackedScene" uid="uid://dgqqe22sptt5s" path="res://scenes/home/environment.tscn" id="4_8dksl"]
+[ext_resource type="PackedScene" uid="uid://dgqqe22sptt5s" path="res://scenes/home/environment/environment.tscn" id="4_8dksl"]
 [ext_resource type="PackedScene" uid="uid://bvtoltqxhmabq" path="res://scenes/home/pet.tscn" id="5_kljsm"]
+[ext_resource type="Script" uid="uid://m1vkaahuuot0" path="res://scenes/home/follow_camera.gd" id="6_8wfen"]
 [ext_resource type="Shader" uid="uid://lgyt71md3vdg" path="res://ui/outline2D.gdshader" id="6_uvsj3"]
-[ext_resource type="Script" uid="uid://bf2tsixyjo2sk" path="res://scenes/home/FoodDrop.gd" id="8_vpc07"]
-[ext_resource type="SpriteFrames" uid="uid://bb0oo3x5m0thd" path="res://scenes/home/bath_environment.tres" id="9_op16t"]
-[ext_resource type="SpriteFrames" uid="uid://dushx8aen3ymk" path="res://pet/frames.tres" id="9_v1iox"]
-[ext_resource type="PackedScene" uid="uid://07vynairarcd" path="res://scenes/home/ui/transition/Transition.tscn" id="20_cauwi"]
+[ext_resource type="PackedScene" uid="uid://dplgv2ol5oouq" path="res://scenes/home/bath/bath.tscn" id="8_8dksl"]
+[ext_resource type="Script" uid="uid://bf2tsixyjo2sk" path="res://scenes/home/eat/food_drop.gd" id="8_vpc07"]
 
 [sub_resource type="ShaderMaterial" id="15"]
 shader = ExtResource("6_uvsj3")
@@ -24,9 +23,10 @@ shader_parameter/add_margins = true
 [node name="HomeScene" type="Node2D" groups=["scene"]]
 script = ExtResource("1_oq1jp")
 
-[node name="UIControls" parent="." instance=ExtResource("2_all1x")]
+[node name="UIControls" parent="." node_paths=PackedStringArray("pet") instance=ExtResource("2_all1x")]
 unique_name_in_owner = true
 layer = 3
+pet = NodePath("../ShopView/Bounds/Pet")
 
 [node name="StatusPanel" parent="UIControls" instance=ExtResource("3_mh4k8")]
 unique_name_in_owner = true
@@ -43,44 +43,42 @@ unique_name_in_owner = true
 
 [node name="Environment" parent="ShopView" instance=ExtResource("4_8dksl")]
 
-[node name="Pet" parent="ShopView" instance=ExtResource("5_kljsm")]
+[node name="Bounds" type="Control" parent="ShopView"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 54.0
+offset_top = 75.0
+offset_right = 104.0
+offset_bottom = 75.0
 
-[node name="LeftBound" type="Node2D" parent="ShopView"]
-unique_name_in_owner = true
-position = Vector2(54, 75)
+[node name="Pet" parent="ShopView/Bounds" instance=ExtResource("5_kljsm")]
+position = Vector2(27, 0)
 
-[node name="RightBound" type="Node2D" parent="ShopView"]
-unique_name_in_owner = true
-position = Vector2(104, 75)
+[node name="FollowCamera" type="Camera2D" parent="ShopView/Bounds/Pet"]
+offset = Vector2(0, -35)
+limit_left = 0
+limit_right = 160
+limit_smoothed = true
+editor_draw_limits = true
+script = ExtResource("6_8wfen")
 
-[node name="FoodDrop" type="AnimatedSprite2D" parent="ShopView"]
-unique_name_in_owner = true
+[node name="FoodDrop" type="AnimatedSprite2D" parent="ShopView/Bounds" node_paths=PackedStringArray("pet")]
 material = SubResource("15")
-position = Vector2(105, -39)
+position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_m0315")
 script = ExtResource("8_vpc07")
+pet = NodePath("../Pet")
 
-[node name="WashScene" type="Node2D" parent="."]
+[node name="Bath" parent="." node_paths=PackedStringArray("pet") instance=ExtResource("8_8dksl")]
 unique_name_in_owner = true
-process_mode = 3
-visible = false
-
-[node name="Background" type="AnimatedSprite2D" parent="WashScene"]
-sprite_frames = ExtResource("9_op16t")
-centered = false
-
-[node name="Pet" type="Node2D" parent="WashScene"]
-position = Vector2(81, 75)
-
-[node name="Sprite2D" type="AnimatedSprite2D" parent="WashScene/Pet"]
-process_mode = 3
-position = Vector2(0, -19)
-sprite_frames = ExtResource("9_v1iox")
-animation = &"bath"
-
-[node name="Transition" parent="." instance=ExtResource("20_cauwi")]
-visible = false
-offset_left = 0.0
-offset_right = 160.0
+pet = NodePath("../ShopView/Bounds/Pet")
 
 [connection signal="action_pressed" from="UIControls" to="." method="_on_UIControls_action_pressed"]
+[connection signal="action_pressed" from="UIControls" to="UIControls/StatusPanel" method="_on_ui_controls_action_pressed"]
+[connection signal="action_pressed" from="UIControls" to="ShopView/Environment" method="_on_ui_controls_action_pressed"]
+[connection signal="action_pressed" from="UIControls" to="ShopView/Bounds/FoodDrop" method="_on_ui_controls_action_pressed"]
+[connection signal="action_pressed" from="UIControls" to="Bath" method="_on_ui_controls_action_pressed"]
+[connection signal="submenu_closed" from="UIControls" to="UIControls/StatusPanel" method="_on_ui_controls_submenu_closed"]
+[connection signal="submenu_closed" from="UIControls" to="ShopView/Bounds/Pet/FollowCamera" method="_on_ui_controls_submenu_closed"]
+[connection signal="submenu_opened" from="UIControls" to="UIControls/StatusPanel" method="_on_ui_controls_submenu_opened"]
+[connection signal="submenu_opened" from="UIControls" to="ShopView/Bounds/Pet/FollowCamera" method="_on_ui_controls_submenu_opened"]

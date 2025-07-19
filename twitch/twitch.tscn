@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://eds21g6rcude"]
 
-[ext_resource type="Script" uid="uid://btix3i5sdmj3v" path="res://addons/tmi/tmi.gd" id="1_gb0fu"]
+[ext_resource type="Script" uid="uid://bhgu5xy40o70k" path="res://addons/tmi/tmi.gd" id="1_gb0fu"]
 [ext_resource type="PackedScene" uid="uid://bp2l4iy86r03u" path="res://twitch/twitch_config.tscn" id="2_8650l"]
 
 [node name="Twitch" type="Node"]

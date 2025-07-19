@@ -9,12 +9,10 @@ func _ready():
 		var btn = preload("./ItemButton.tscn").instantiate()
 		btn.set_meta("item", i)
 		btn.focus_entered.connect(select_item.bind(i))
+		btn.focus_entered.connect(btn.get_node("AudioStreamPlayer").play)
 		get_node("%Unlockables").add_child(btn)
 		btn.get_node("%Label").text = i.display_name
 		btn.get_node("%Price").text = "%d" % i.cost if not GameState.unlocks.get(i.flag, false) else "SOLD"
-		
-	GameState.stats_changed.connect(_update_money)
-	_update_money(GameState.stats)
 	
 	var first = get_node("%Unlockables").get_child(0)
 	first.grab_focus()
@@ -27,11 +25,6 @@ func _unhandled_input(event):
 		_on_BuyButton_pressed()
 		accept_event()
 	
-func _update_money(stats):
-	var honey = stats.honey
-	
-	get_node("%HoneyCounter").text = "%d" % honey
-		
 func select_item(item):
 	get_node("%ItemDescription").text = item.description
 	get_node("%BuyButton").disabled = item.cost > GameState.stats.honey or GameState.unlocks.get(item.flag, false)
@@ -44,6 +37,7 @@ func select_item(item):
 	).from(0.0)
 
 func _on_BuyButton_pressed():
+	get_node("%BuyButton/AudioStreamPlayer").play()
 	var item = selected
 	if item.cost > GameState.stats.honey:
 		return

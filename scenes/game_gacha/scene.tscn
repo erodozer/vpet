@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://jgnijk2go4ar" path="res://scenes/game_gacha/booster.png" id="7_5o654"]
 [ext_resource type="FontFile" uid="uid://3heiwkvujho0" path="res://ui/fonts/EarlyGameBoySTD.ttf" id="8_k2wfb"]
 [ext_resource type="PackedScene" uid="uid://tyd6hlyrgac7" path="res://ui/results.tscn" id="8_q31ew"]
-[ext_resource type="Texture2D" uid="uid://c2q4hdkscev71" path="res://scenes/home/ui/stats/currency.png" id="10_mnm25"]
+[ext_resource type="Texture2D" uid="uid://c2q4hdkscev71" path="res://scenes/home/ui/honey/currency.png" id="10_mnm25"]
 [ext_resource type="FontFile" uid="uid://ossjr40b5ax6" path="res://ui/fonts/SymphonyoftheNightfont.ttf" id="12_lalol"]
 [ext_resource type="AudioStream" uid="uid://g8t7u8if4o0j" path="res://scenes/game_gacha/open.wav" id="14_xcw7r"]
 
@@ -479,15 +479,16 @@ layout_mode = 2
 texture = ExtResource("10_mnm25")
 stretch_mode = 3
 
-[node name="Pity" type="Label" parent="UI"]
+[node name="Pity" type="RichTextLabel" parent="UI"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 72.0
+offset_left = 7.0
 offset_top = 128.0
 offset_right = 156.0
 offset_bottom = 140.0
+theme_type_variation = &"BoldFloatingLabel"
 text = "Pity 0 of 10"
-label_settings = ExtResource("5_1g2ms")
+fit_content = true
 horizontal_alignment = 2
 
 [node name="Label2" type="Label" parent="UI"]

@@ -75,9 +75,9 @@ animations = [{
 
 [resource]
 script = ExtResource("15_way3q")
-hungry = 150.0
-boredom = 25.0
-cooldown = 40.0
+hungry = 30.0
+boredom = -10.0
+cooldown = 0.5
 unlock = ExtResource("17_6imlr")
 icon = ExtResource("15_bpijj")
 animation = SubResource("SpriteFrames_ugyo1")

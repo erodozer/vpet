@@ -3,17 +3,29 @@ extends Button
 @onready var border_tex: AnimatedSprite2D = get_node("border")
 @onready var off_icon = get_node("icon_off")
 @onready var on_icon = get_node("icon_on")
+@onready var tick = get_node("AudioStreamPlayer")
 
 @export_enum("None", GameState.GameActions.Eat, GameState.GameActions.Bathe, GameState.GameActions.Play, GameState.GameActions.Medicine) var bind_to_timer = "None"
 @export_enum("None", "food", "game", "stats") var submenu = "None"
+@export var close_on_use: bool = true
 @export var unlocked: bool = true
 @export var item: Resource = null
+
+var action: String :
+	get():
+		return submenu if submenu != "None" else name.to_lower()
 
 func _ready():
 	connect("focus_entered", Callable(self, "_on_focus_entered"))
 	connect("focus_exited", Callable(self, "_on_focus_exited"))
 	connect("mouse_entered", Callable(self, "_on_mouse_entered"))
 	connect("mouse_exited", Callable(self, "_on_mouse_exited"))
+	
+func is_entrypoint():
+	return self.name.to_lower() in ["food", "game", "stats"]
+
+func is_cancel():
+	return self.name.to_lower() == "back"
 	
 func disable_action(state):
 	off_icon.visible = state
@@ -41,6 +53,7 @@ func _on_mouse_entered():
 
 func _on_focus_entered():
 	border_tex.play("on")
+	tick.play()
 	show_behind_parent = false
 	
 func _on_focus_exited():

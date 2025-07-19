@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dplgv2ol5oouq"]
+
+[ext_resource type="Script" uid="uid://bm58uib1g50re" path="res://scenes/home/bath/bath.gd" id="1_5dj61"]
+[ext_resource type="SpriteFrames" uid="uid://bb0oo3x5m0thd" path="res://scenes/home/bath/bath_environment.tres" id="2_7m6bw"]
+[ext_resource type="SpriteFrames" uid="uid://dushx8aen3ymk" path="res://pet/frames.tres" id="3_4itce"]
+[ext_resource type="PackedScene" uid="uid://07vynairarcd" path="res://scenes/home/ui/transition/Transition.tscn" id="4_qlimh"]
+
+[node name="WashScene" type="Node2D" node_paths=PackedStringArray("pet")]
+process_mode = 3
+script = ExtResource("1_5dj61")
+pet = NodePath("")
+
+[node name="View" type="Node2D" parent="."]
+visible = false
+
+[node name="Background" type="AnimatedSprite2D" parent="View"]
+sprite_frames = ExtResource("2_7m6bw")
+centered = false
+
+[node name="Pet" type="AnimatedSprite2D" parent="View"]
+process_mode = 3
+position = Vector2(81, 56)
+sprite_frames = ExtResource("3_4itce")
+animation = &"bath"
+
+[node name="Transition" parent="." instance=ExtResource("4_qlimh")]

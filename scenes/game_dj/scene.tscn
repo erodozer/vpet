@@ -32,9 +32,10 @@ alignment = 2
 [node name="HypeMeter" parent="Control" instance=ExtResource("7_ac5jj")]
 layout_mode = 2
 
-[node name="Lane" parent="Control" instance=ExtResource("8_bd2vv")]
+[node name="Lane" parent="Control" node_paths=PackedStringArray("player") instance=ExtResource("8_bd2vv")]
 unique_name_in_owner = true
 layout_mode = 2
+player = NodePath("../../Song")
 
 [node name="Combo" parent="Control/Lane" instance=ExtResource("9_ac5jj")]
 unique_name_in_owner = true

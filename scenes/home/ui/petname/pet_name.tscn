@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjqtp2ppib6tj"]
+
+[ext_resource type="PackedScene" uid="uid://r0g0xsty3gr7" path="res://scenes/home/ui/clock/Clock.tscn" id="1_cuvmg"]
+[ext_resource type="Script" uid="uid://b6cdqtqooc50b" path="res://scenes/home/ui/petname/label.gd" id="2_nsahe"]
+[ext_resource type="Script" uid="uid://tjxl4dutf3wa" path="res://scenes/home/ui/clock/ClockLabel.gd" id="2_uf87d"]
+
+[node name="PetName" type="HBoxContainer"]
+
+[node name="Clock" parent="." instance=ExtResource("1_cuvmg")]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+
+[node name="PanelContainer" type="TabContainer" parent="."]
+custom_minimum_size = Vector2(74, 0)
+layout_mode = 2
+current_tab = 0
+tabs_visible = false
+
+[node name="Label" type="Label" parent="PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Clover"
+script = ExtResource("2_nsahe")
+metadata/_tab_index = 0
+
+[node name="TimeScale" type="Label" parent="PanelContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "MODE: Fast"
+script = ExtResource("2_uf87d")
+metadata/_tab_index = 1
+
+[connection signal="toggled" from="Clock" to="PanelContainer/TimeScale" method="set_visible"]
+[connection signal="gui_input" from="PanelContainer/TimeScale" to="PanelContainer/TimeScale" method="_on_gui_input"]

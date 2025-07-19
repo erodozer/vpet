@@ -77,19 +77,19 @@ func _update_stats(stats):
 	
 	# determine mood	
 	var mood = "Happy"
-	if stats.hungry < 50.0:
+	if GameState.is_starving:
 		mood = "Hungry"
-	if stats.weight < 20.0:
+	if GameState.is_malnourished:
 		mood = "Malnurished"
-	if stats.weight > 80.0:
+	if GameState.is_fat:
 		mood = "Overweight"
-	if stats.boredom > 70.0:
+	if GameState.is_bored:
 		mood = "Bored"
-	if stats.dirty > 50.0:
+	if GameState.is_filthy:
 		mood = "Stinky"
-	if stats.tired > 70.0:
+	if GameState.is_exhausted:
 		mood = "Tired"
-	if stats.sick > 75.0:
+	if GameState.is_sick:
 		mood = "Sick"
 	
 	get_node("%Mood").text = mood
@@ -117,3 +117,27 @@ func _update_stats(stats):
 	get_node("%SickValue").text = "%.1f" % stats.sick
 	get_node("%DirtyValue").text = "%.1f" % stats.dirty
 	
+
+func _on_ui_controls_submenu_opened(menu: String) -> void:
+	if menu != "stats":
+		return
+		
+	current_tab = 0
+	var tween = create_tween()
+	tween.tween_property(self, "position:x", 64.0, 0.3)
+
+func _on_ui_controls_submenu_closed(menu: String) -> void:
+	if menu != "stats":
+		return
+	
+	var tween = create_tween()
+	tween.tween_property(self, "position:x", 160.0, 0.3)
+
+func _on_ui_controls_action_pressed(action_type: String, item: Variant) -> void:
+	if action_type != "stats":
+		return
+
+	if item == "details":
+		toggle_details()
+	elif item == "counters":
+		toggle_counters()
